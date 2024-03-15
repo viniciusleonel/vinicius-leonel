@@ -1,9 +1,11 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main>
-      <h1>Teste</h1>
-    </main>
+    <>
+      
+      <main className="bg-custom-background">
+        <h1>Teste</h1>
+      </main>
+    </>
+    
   );
 }

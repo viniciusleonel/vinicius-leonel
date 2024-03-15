@@ -1,5 +1,11 @@
+'use client'
+
+import Nav from "../components/Nav/Nav"
+
 export default function Home () {
     return (
-        <h2>Entrei na home</h2>
+        <>
+            <Nav />        
+        </>
     )
 }
