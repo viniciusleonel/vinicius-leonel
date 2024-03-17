@@ -20,3 +20,22 @@ export default function RootLayout({
     </html>
   );
 }
+
+// import { Inter } from "next/font/google";
+// import "./globals.css";
+
+// const inter = Inter({ subsets: ["latin"] });
+
+// export default function RootLayout({
+//   children,
+//   isDarkMode, // Recebendo isDarkMode como uma propriedade
+// }: Readonly<{
+//   children: React.ReactNode;
+//   isDarkMode: boolean; // Definindo o tipo da propriedade
+// }>) {
+//   return (
+//     <html lang="pt-bt" className={isDarkMode ? 'dark' : ''}>
+//       <body className={inter.className}>{children}</body>
+//     </html>
+//   );
+// }

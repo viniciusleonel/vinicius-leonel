@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ToggleButton from "../ToggleButton/toggleButton";
 
 export default function Nav () {
 
@@ -32,10 +33,11 @@ export default function Nav () {
                     <a onClick={listProjBack} className=" cursor-pointer hover:text-color-aqua">Back-end</a>
                     <a onClick={listProjFront} className=" cursor-pointer hover:text-color-aqua">Front-end</a>
                     <a onClick={listProjMobile} className=" cursor-pointer hover:text-color-aqua">Mobile</a>
+                    <ToggleButton />
                 </div>
             </div>
             {backList && (
-                <div className="dropdown-menu">
+                <div className="dropdown-menu absolute">
                     <a href="#link1" className="dropdown-item">back</a>
                     <a href="#link2" className="dropdown-item">Link 2</a>
                     <a href="#link3" className="dropdown-item">Link 3</a>
@@ -43,7 +45,7 @@ export default function Nav () {
             )}
 
             {frontList && (
-                <div className="dropdown-menu">
+                <div className="dropdown-menu absolute">
                     <a href="#link1" className="dropdown-item">front</a>
                     <a href="#link2" className="dropdown-item">Link 2</a>
                     <a href="#link3" className="dropdown-item">Link 3</a>
@@ -51,7 +53,7 @@ export default function Nav () {
             )}
 
             {mobileList && (
-                <div className="dropdown-menu">
+                <div className="dropdown-menu absolute">
                     <a href="#link1" className="dropdown-item">mobile</a>
                     <a href="#link2" className="dropdown-item">Link 2</a>
                     <a href="#link3" className="dropdown-item">Link 3</a>

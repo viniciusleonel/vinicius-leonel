@@ -9,8 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'custom-background': '#182128',
-        'color-aqua': '#00ffff',
+        
       },
     },
   },
