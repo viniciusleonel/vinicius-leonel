@@ -1,90 +1,35 @@
-import Image from 'next/image';
-import { useState } from 'react';
-import moonIcon from '../../../../public/images/icons/moon.svg';
-import sunIcon from '../../../../public/images/icons/sun-svgrepo-com.svg';
-import lightsOnIcon from '../../../../public/images/icons/lights-on.svg';
-import lightsOffIcon from '../../../../public/images/icons/lights-off.svg';
+// app/components/ThemeSwitch.tsx
+'use client'
 
-export default function ToggleButton (){
+import { FiSun, FiMoon } from "react-icons/fi"
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
+import Image from "next/image"
 
-    window.onload = () => {
+export default function ThemeSwitch() {
+    const [mounted, setMounted] = useState(false)
+    const { setTheme, resolvedTheme } = useTheme()
 
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    }
+    useEffect(() =>  setMounted(true), [])
 
-    const [lightsOff, setLightsOff] = useState(true)
-    const [lightsOn, setLightsOn] = useState(false)
-    const [moon, setMoon] = useState(true)
-    const [sun, setSun] = useState(false)
-
-    function toogleIcon() {
-        setMoon(!moon)
-        setSun(!sun)
-    }
-
-    return (
-        <div className=" rounded-full bg-white flex items-center justify-center">
-            <button onClick={toogleIcon} className='flex items-center justify-center'>
-                {moon && (
-                    <Image
-                    src={moonIcon} 
-                    alt="Descrição da imagem" 
-                    className=' size-8 flex justify-start'
-                >
-                </Image>
-                )}
-
-                {sun && (
-                    <Image
-                    src={sunIcon} 
-                    alt="Descrição da imagem" 
-                    className=' size-8 flex justify-start'
-                >
-                </Image>
-                )}
-            </button>
-            
-        </div>
+    if (!mounted) return (
+        <Image
+        src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
+        width={36}
+        height={36}
+        sizes="36x36"
+        alt="Loading Light/Dark Toggle"
+        priority={false}
+        title="Loading Light/Dark Toggle"
+        />
     )
+
+    if (resolvedTheme === 'dark') {
+        return <FiSun onClick={() => setTheme('light')} />
+    }
+
+    if (resolvedTheme === 'light') {
+        return <FiMoon onClick={() => setTheme('dark')} />
+    }
+
 }
-
-
-// // ToggleButton.jsx
-// import React, { useState, useEffect } from 'react';
-// import Image from 'next/image';
-// import moonIcon from '../../../../public/images/icons/moon.svg';
-// import sunIcon from '../../../../public/images/icons/sun-svgrepo-com.svg';
-
-// export default function ToggleButton() {
-//     const [isDarkMode, setIsDarkMode] = useState(false);
-
-//     useEffect(() => {
-//         const currentTheme = localStorage.getItem('theme');
-//         if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-//             setIsDarkMode(true);
-//         }
-//     }, []);
-
-//     const toggleDarkMode = () => {
-//         const newTheme = isDarkMode ? 'light' : 'dark';
-//         localStorage.setItem('theme', newTheme);
-//         setIsDarkMode(!isDarkMode);
-//     };
-
-//     return (
-//         <div className=' rounded-full flex items-center justify-center'>
-//             <button onClick={toggleDarkMode} className="flex items-center justify-center">
-//                 <Image
-//                     src={isDarkMode ? moonIcon : sunIcon}
-//                     alt={isDarkMode ? 'Ícone da lua' : 'Ícone do sol'}
-//                     width={32}
-//                     height={32}
-//                 />
-//             </button>
-//         </div>
-//     );
-// }

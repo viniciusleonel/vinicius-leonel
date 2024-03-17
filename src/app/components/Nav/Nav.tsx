@@ -26,10 +26,10 @@ export default function Nav () {
     }
 
     return (
-        <nav className="p-5 border-b border-color-aqua">
+        <nav className="p-5 border-b border-cyan-400">
             <div className="flex justify-between items-center">
                 <h2 className=" text-3xl ps-10">Full Stack Developer</h2>
-                <div className=" text-lg flex justify-end gap-16 pe-10">
+                <div className=" text-lg flex justify-end items-center gap-16 pe-10">
                     <a onClick={listProjBack} className=" cursor-pointer hover:text-color-aqua">Back-end</a>
                     <a onClick={listProjFront} className=" cursor-pointer hover:text-color-aqua">Front-end</a>
                     <a onClick={listProjMobile} className=" cursor-pointer hover:text-color-aqua">Mobile</a>

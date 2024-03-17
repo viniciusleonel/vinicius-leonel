@@ -2,13 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #182128;
-    color: white;
-}
-
-/* .dark-mode {
-    --bg-custom-background: #182128;
-    --text-color-aqua: #00ffff;
-} */
-
