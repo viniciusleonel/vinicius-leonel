@@ -60,7 +60,7 @@ export default function Nav ({title} : NavProps) {
 
             {mobileList && (
                 <div className="dropdown-menu absolute">
-                    <a href="#link1" className="dropdown-item">mobile</a>
+                    <a href="/vollmed/user" className="dropdown-item">mobile</a>
                     <a href="#link2" className="dropdown-item">Link 2</a>
                     <a href="#link3" className="dropdown-item">Link 3</a>
                 </div>
