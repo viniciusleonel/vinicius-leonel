@@ -40,7 +40,7 @@ export default function ToggleButton() {
             {resolvedTheme === 'dark' ? (
                 <button onClick={() => { setTheme('light'); playClickSound(clickOn);}} 
                 className='sm:pt-0 pt-2  '>
-                    <IoBulbOutline />
+                    <IoBulbOutline className='dark:hover:text-yellow-400' />
                 </button>
             ) : (
                 <button onClick={() => { setTheme('dark'); playClickSound(clickOff);}} 

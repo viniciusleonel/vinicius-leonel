@@ -19,7 +19,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        
+        'bg-default': '#182128'
       },
     },
   },

@@ -2,7 +2,11 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ToggleButton from "../ToggleButton/toggleButton";
 
-export default function Nav () {
+interface NavProps {
+    title: string 
+}
+
+export default function Nav ({title} : NavProps) {
 
     const [backList, setBack] = useState(false)
     const [frontList, setFront] = useState(false)
@@ -27,10 +31,10 @@ export default function Nav () {
     }
 
     return (
-        <nav className="p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-300">
+        <nav className="fixed w-full p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-300">
             <div className="flex justify-evenly md:justify-between items-center">
                 <GiHamburgerMenu className="md:hidden text-cyan-300 size-5" />
-                <h2 className="text-xl sm:text-3xl sm:ps-10">Full Stack Developer</h2>
+                <h2 className="text-xl sm:text-3xl sm:ps-10">{title}</h2>
                 <div className=" text-lg flex justify-end items-center sm:gap-12 sm:pe-10">
                     <a onClick={listProjBack} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Back-end</a>
                     <a onClick={listProjFront} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Front-end</a>
