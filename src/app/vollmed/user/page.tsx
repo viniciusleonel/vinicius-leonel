@@ -5,6 +5,7 @@ import Nav from "../../components/Nav/Nav"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from "react"
+import { postUserToAPI } from '../../services/vollmedApi';
 
 // Schema representa a estrutura do formulario
 const createUserFromSchema = z.object({
@@ -19,6 +20,11 @@ const createUserFromSchema = z.object({
 
 type CreateUserFormData = z.infer<typeof createUserFromSchema>
 
+interface UserProps {
+    login: string,
+    senha: string
+}
+
 export default function VollMed () {
 
     const { register, handleSubmit, formState:{errors}, control} = useForm<CreateUserFormData>({
@@ -27,9 +33,17 @@ export default function VollMed () {
 
     const [outPut, setOutPut ] = useState('')
 
-
-    function createUser(data: CreateUserFormData) {
-        setOutPut(JSON.stringify(data, null, 2))
+    async function createUser(data: CreateUserFormData) {
+        try {
+            const userData: UserProps = {
+                login: data.email,
+                senha: data.password
+            };
+            const response = await postUserToAPI(userData);
+            setOutPut(JSON.stringify(response, null, 2));
+        } catch (error: any) {
+            setOutPut('Erro ao cadastrar usuário: ' + error.message);
+        }
     }
 
     return (
