@@ -11,7 +11,7 @@ interface UserProps {
 
 export async function postUserToAPI(userData: UserProps) {
     try {
-        const response = await axios.post('http://18.231.9.214:8080/usuarios', userData);
+        const response = await axios.post('http://52.67.21.32:8080/usuarios', userData);
         return response.data; // Retorna os dados da resposta da API
     } catch (error: any) {
         throw new Error('Erro ao enviar os dados para a API: ' + error.message);
