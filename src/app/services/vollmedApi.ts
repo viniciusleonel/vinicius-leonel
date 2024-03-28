@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios, { AxiosInstance } from "axios"
 
-export const vollmedApi = axios.create({
-    baseURL: "http://18.231.9.214:8080/"
+export const vollmedApi: AxiosInstance = axios.create({
+    baseURL: "http://localhost:8080/"
 })
 
 interface UserProps {
@@ -9,9 +9,9 @@ interface UserProps {
     senha: string;
 }
 
-export async function postUserToAPI(userData: UserProps) {
+export async function postUserToAPI(path: string, userData: UserProps) {
     try {
-        const response = await axios.post('http://52.67.21.32:8080/usuarios', userData);
+        const response = await vollmedApi.post(path, userData)
         return response.data; // Retorna os dados da resposta da API
     } catch (error: any) {
         throw new Error('Erro ao enviar os dados para a API: ' + error.message);

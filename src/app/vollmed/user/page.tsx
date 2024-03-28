@@ -39,7 +39,7 @@ export default function VollMed () {
                 login: data.email,
                 senha: data.password
             };
-            const response = await postUserToAPI(userData);
+            const response = await postUserToAPI("/usuarios", userData);
             setOutPut(JSON.stringify(response, null, 2));
         } catch (error: any) {
             setOutPut('Erro ao cadastrar usuário: ' + error.message);
