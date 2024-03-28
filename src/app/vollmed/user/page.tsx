@@ -5,7 +5,7 @@ import Nav from "../../components/Nav/Nav"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from "react"
-import { postUserToAPI } from '../../services/vollmedApi';
+import { CustomError, postUserToAPI } from '../../services/vollmedApi';
 
 // Schema representa a estrutura do formulario
 const createUserFromSchema = z.object({
@@ -42,7 +42,8 @@ export default function VollMed () {
             const response = await postUserToAPI("/usuarios", userData);
             setOutPut(JSON.stringify(response, null, 2));
         } catch (error: any) {
-            setOutPut('Erro ao cadastrar usuário: ' + error.message);
+            const typedError = error as CustomError
+            setOutPut(typedError.name);
         }
     }
 
@@ -82,7 +83,7 @@ export default function VollMed () {
                     Cadastrar
                     </button>
 
-                    <pre>{outPut}</pre>
+                    <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPut}</span>
                 </form>
             </main>    
         </div>
