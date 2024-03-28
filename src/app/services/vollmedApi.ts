@@ -30,6 +30,6 @@ export async function postUserToAPI(path: string, userData: UserProps) {
                 throw new Error(typedError.response.statusText)
             }
         }
-        throw typedError
+        throw typedError.message
     }
 }
