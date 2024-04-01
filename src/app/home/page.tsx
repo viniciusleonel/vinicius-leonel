@@ -1,13 +1,24 @@
 'use client'
 
 import Nav from "../components/Nav/Nav"
+import Skills from "../components/Skills/skills"
 
 export default function Home () {
     return (
-        <div >
-            <Nav
-                title='Full Stack Developer'
-            />        
+        <div className="flex flex-col">
+            <div className="">
+                <Nav
+                    title='Full Stack Developer'
+                />   
+            </div>     
+
+            <div className="mt-20">
+                <h2>About</h2>    
+            </div>  
+
+            <div className="pt-8 px-60 mt-20">
+                <Skills />
+            </div>
         </div>
     )
 }
