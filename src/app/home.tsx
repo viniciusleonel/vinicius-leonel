@@ -1,6 +1,6 @@
 'use client'
 
-import Nav from "./components/Nav/nav"
+import Nav from "./components/Nav/Nav"
 
 export default function Home () {
     return (
