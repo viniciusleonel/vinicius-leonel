@@ -8,71 +8,65 @@ export default function Skills () {
             
                 <Image 
                     src='/images/icons/html.svg'
-                    alt="teste"
+                    alt="html icon"
                     height={50}
                     width={50}
                 />
                 <Image 
                     src='/images/icons/css.svg'
-                    alt="teste"
+                    alt="css icon"
                     height={50}
                     width={50}
                 />
                 <Image 
                     src='/images/icons/tailwind-css.svg'
-                    alt="teste"
+                    alt="tailwind css icon"
                     height={50}
                     width={50}
                 />
                 <Image 
                     src='/images/icons/javascript.svg'
-                    alt="teste"
+                    alt="javascript icon"
                     height={50}
                     width={50}
                     className=""
                 />
                 <Image 
                     src='/images/icons/ts.svg'
-                    alt="teste"
+                    alt="typescript icon"
                     height={50}
                     width={50}
                 />
                 <Image 
                     src='/images/icons/nodejs.svg'
-                    alt="teste"
+                    alt="nodejs icon"
                     height={50}
                     width={80}
                     className=""
                 />
                 <Image 
                     src='/images/icons/nextjs.svg'
-                    alt="teste"
+                    alt="nextjs icon"
                     height={50}
                     width={45}
-                    className=" bg-zinc-50  rounded-full"
+                    className=" dark:bg-zinc-50  rounded-full"
                 />
                 
                 <Image 
                     src='/images/icons/react.svg'
-                    alt="teste"
+                    alt="react icon"
                     height={50}
                     width={50}
                 />
-                {/* <Image 
-                    src='/images/icons/kotlin.svg'
-                    alt="teste"
-                    height={50}
-                    width={50}
-                /> */}
                 <Image 
                     src='/images/icons/java.svg'
-                    alt="teste"
+                    alt="java icon"
                     height={50}
                     width={55}
                 />
                 <Image 
                     src='/images/icons/spring.svg'
-                    alt="teste"
+                    alt="spring icon"
                     height={50}
                     width={50}
                 />

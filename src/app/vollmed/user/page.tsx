@@ -1,7 +1,7 @@
 'use client'
 
 import { z } from "zod"
-import Nav from "../../components/Nav/Nav"
+import Nav from "../../components/Nav/nav"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from "react"

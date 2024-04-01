@@ -1,7 +1,8 @@
 'use client'
 
-import Nav from "../components/Nav/Nav"
+import Nav from "../components/Nav/nav"
 import Skills from "../components/Skills/skills"
+import About from "../components/Contact/contact"
 
 export default function Home () {
     return (
@@ -12,11 +13,11 @@ export default function Home () {
                 />   
             </div>     
 
-            <div className="mt-20">
-                <h2>About</h2>    
+            <div className="mt-20 pt-8 px-6 sm:px-10 md:px-16 lg:px-60">
+                <About />    
             </div>  
 
-            <div className="pt-8 px-6 sm:px-10 md:px-16 lg:px-60 mt-20">
+            <div className="pt-8 px-6 sm:px-10 md:px-16 lg:px-60 ">
                 <Skills />
             </div>
         </div>
