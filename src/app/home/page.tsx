@@ -16,7 +16,7 @@ export default function Home () {
                 <h2>About</h2>    
             </div>  
 
-            <div className="pt-8 px-60 mt-20">
+            <div className="pt-8 px-6 sm:px-10 md:px-16 lg:px-60 mt-20">
                 <Skills />
             </div>
         </div>
