@@ -18,6 +18,18 @@ const config: Config = {
       // => @media (min-width: 1440px) { ... }
     },
     extend: {
+      keyframes: {
+        'lgScreenMove': {
+          to: { transform: 'translateX(calc(-100% + 2.8rem))' },
+        },
+        'move': {
+          to: { transform: 'translateX(calc(-100% - .7rem))' },
+        },
+      },
+      animation: {
+        move: 'move 30s linear infinite',
+        lgScreenMove: 'lgScreenMove 30s linear infinite',
+      },
       colors: {
         'bg-default': '#182128'
       },
