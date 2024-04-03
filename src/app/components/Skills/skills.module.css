@@ -10,4 +10,6 @@
     animation-play-state: paused;
 }
 
-
+.pauseAnimation {
+    animation-play-state: paused;
+}
