@@ -1,15 +1,8 @@
 .skillsAnimationContainer { 
     overflow: hidden; 
     -webkit-mask: 
-        linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
     mask: 
-        linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
 
-.skillsAnimationContainer:hover .skillsAnimation {
-    animation-play-state: paused;
-}
-
-.pauseAnimation {
-    animation-play-state: paused;
-}

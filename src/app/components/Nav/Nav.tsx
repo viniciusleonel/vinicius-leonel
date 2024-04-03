@@ -31,7 +31,7 @@ export default function Nav ({title} : NavProps) {
     }
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-300 bg-white dark:bg-black">
+        <nav className="fixed top-0 left-0 w-full z-50 p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-300 bg-cyan-100 dark:bg-bg-default">
             <div className="flex justify-between items-center">
                 <GiHamburgerMenu className="md:hidden text-cyan-300 text-2xl" />
                 <h2 className="text-xl sm:text-3xl">{title}</h2>

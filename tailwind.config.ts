@@ -20,10 +20,10 @@ const config: Config = {
     extend: {
       keyframes: {
         'lgScreenMove': {
-          to: { transform: 'translateX(calc(-100% + 2.8rem))' },
+          to: { transform: 'translateX(calc(-100% + 2.7rem))' },
         },
         'mdScreenMove': {
-          to: { transform: 'translateX(calc(-100% - .7rem))' },
+          to: { transform: 'translateX(calc(-100% - .8rem))' },
         },
         'smScreenMove': {
           to: { transform: 'translateX(calc(-100% - 5.5rem))' },
@@ -35,7 +35,7 @@ const config: Config = {
         lgScreenMove: 'lgScreenMove 30s linear infinite',
       },
       colors: {
-        'bg-default': '#182128'
+        'bg-default': '#121212'
       },
     },
   },

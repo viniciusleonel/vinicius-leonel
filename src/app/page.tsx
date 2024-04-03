@@ -6,7 +6,7 @@ import About from "./components/Contact/contact"
 
 export default function Home () {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-cyan-100 dark:bg-bg-default">
             <div className="">
                 <Nav
                     title='Full Stack Developer'
