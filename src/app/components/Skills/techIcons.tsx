@@ -53,8 +53,7 @@ export function NextJsIcon () {
     src='/images/icons/nextjs.svg'
     alt="nextjs icon"
     height={50}
-    width={45}
-    className="my-6 bg-zinc-50 rounded-full"
+    width={50}
 />
 }
 export function ReactIcon () {
@@ -62,7 +61,7 @@ export function ReactIcon () {
     src='/images/icons/react.svg'
     alt="react icon"
     height={50}
-    width={50}
+    width={48}
 />
 }
 export function JavaIcon () {

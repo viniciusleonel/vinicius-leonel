@@ -22,12 +22,16 @@ const config: Config = {
         'lgScreenMove': {
           to: { transform: 'translateX(calc(-100% + 2.8rem))' },
         },
-        'move': {
+        'mdScreenMove': {
           to: { transform: 'translateX(calc(-100% - .7rem))' },
+        },
+        'smScreenMove': {
+          to: { transform: 'translateX(calc(-100% - 5.5rem))' },
         },
       },
       animation: {
-        move: 'move 30s linear infinite',
+        smScreenMove: 'smScreenMove 30s linear infinite',
+        mdScreenMove: 'mdScreenMove 30s linear infinite',
         lgScreenMove: 'lgScreenMove 30s linear infinite',
       },
       colors: {
