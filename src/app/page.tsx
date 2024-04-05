@@ -15,8 +15,7 @@ export default function Home () {
             />      
             <About />    
             <ProjectList />
-            <Skills />
-            
+            <Skills />   
         </div>
     )
 }
