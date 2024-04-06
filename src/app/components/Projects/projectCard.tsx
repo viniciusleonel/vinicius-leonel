@@ -15,10 +15,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="min-w-[10rem] max-w-[10rem] sm:min-w-[14rem] sm:max-w-[14rem] md:min-w-[16rem] md:max-w-[16rem] lg:min-w-[20rem] lg:max-w-[20rem]   border-2 rounded-3xl border-cyan-300">
-            <div className="relative h-36 md:h-52 ">
+        <div className="w-[10rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-300">
+            <div className="relative h-36 sm:h-44 lg:h-52 ">
                 <Image
-                className="min-h-36 max-h-36 md:min-h-52 md:max-h-52 rounded-t-3xl border-b-2 border-cyan-300"
+                className=" rounded-t-3xl border-b-2 border-cyan-300"
                 src={imgCardSrc || "/images/default.jpg"}
                 alt={imgAlt}
                 layout="fill"
@@ -27,8 +27,8 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
             </div>
             <div className=" text-center p-4">
                 <h4 className="text-2xl pb-2">{title}</h4>
-                <div className="overflow-y-auto max-h-44">
-                    <p className="text-sm md:text-base text-zinc-800 dark:text-zinc-400">{description}</p>
+                <div className=" overflow-y-auto max-h-44">
+                    <p className=" text-sm lg:text-base text-zinc-800 dark:text-zinc-400">{description}</p>
                 </div>
                 <div className=" flex w-full gap-2 pt-4 justify-between items-center">
                 <div className="flex">

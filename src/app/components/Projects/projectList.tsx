@@ -10,12 +10,16 @@ export function ProjectList () {
                         imgCardSrc="/images/cleanSky.jpg" 
                         imgAlt="teste"
                         title="Title"
-                        description="Descriptionisicinghfkjxgjg,cg,chckh.k fxhfhgrs rnsrnhdm elit. Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem."
+                        description="Descriptionisicinghfkjxgjg
+                        fsdfdsfdsfsd
+                        fdsffffffffffffffffs
+                        fsdfffffffsfdsfs
+                        fsdddddddddddfs,cg,chckh.k fxhfhgrs rnsrnhdm elit. Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem."
                         techIcons={[<JavaIcon key="java"/>, <SpringIcon key="spring"/>] }
                         linkSite="https://github.com/viniciusleonel"
                         linkGitHub="https://github.com/viniciusleonel"
                     />
-                    <ProjectCard
+                    {/* <ProjectCard
                         imgCardSrc=""
                         imgAlt="teste" 
                         title="Title"
@@ -23,7 +27,7 @@ export function ProjectList () {
                         techIcons={[<NodeIcon key="node"/>, <SpringIcon key="spring"/>] }
                         linkSite="https://github.com/viniciusleonel"
                         linkGitHub="https://github.com/viniciusleonel"
-                    />
+                    /> */}
                     
                 </div>
             </div>

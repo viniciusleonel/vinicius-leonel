@@ -4,13 +4,11 @@
 
 ::-webkit-scrollbar {
     /* display: none; Oculta a barra de rolagem */
-    
 }
 
 /* Estilizando a barra de rolagem */
 ::-webkit-scrollbar {
     width: 4px; /* Largura da barra de rolagem */
-    
 }
 
 /* Estilizando o polegar da barra de rolagem */
