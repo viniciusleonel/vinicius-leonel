@@ -15,7 +15,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="relative h-[28rem] lg:h-[30rem] w-[10rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-300">
+        <div className="relative h-[28rem] lg:h-[30rem] w-full sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-300">
             <div className="relative h-36 sm:h-44 lg:h-52 ">
                 <Image
                 className=" rounded-t-3xl border-b-2 border-cyan-300"

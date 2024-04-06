@@ -42,8 +42,7 @@ export default function About () {
                         <div className="me-6 sm:hidden">
                             <Image 
                                 src="/images/vinicius.jpeg"
-                                height={100}
-                                width={400}
+                                layout="fill"
                                 alt="Vinicius profile picture" 
                                 className="w-20 border-2 border-cyan-600 rounded-full"
                             />
