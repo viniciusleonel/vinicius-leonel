@@ -4,7 +4,8 @@ import Link from "next/link"
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectCardProps {
-    imgCardSrc: string,
+    imgCardSrc?: string,
+    imgAlt: string,
     title: string,
     description: string,
     techIcons: JSX.Element[],
@@ -12,22 +13,24 @@ interface ProjectCardProps {
     linkGitHub: string
 }
 
-export default function ProjectCard ( {imgCardSrc, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
+export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="w-[20rem] border-2 rounded-3xl border-cyan-300">
-            <div className="">
+        <div className="min-w-[10rem] max-w-[10rem] sm:min-w-[14rem] sm:max-w-[14rem] md:min-w-[16rem] md:max-w-[16rem] lg:min-w-[20rem] lg:max-w-[20rem]   border-2 rounded-3xl border-cyan-300">
+            <div className="relative h-36 md:h-52 ">
                 <Image
-                className="w-full rounded-t-3xl border-b-2 border-cyan-300"
-                src={imgCardSrc}
-                alt=""
-                height={50}
-                width={50}
+                className="min-h-36 max-h-36 md:min-h-52 md:max-h-52 rounded-t-3xl border-b-2 border-cyan-300"
+                src={imgCardSrc || "/images/default.jpg"}
+                alt={imgAlt}
+                layout="fill"
+                objectFit="cover"
                 />
             </div>
-            <div className="text-center p-4">
+            <div className=" text-center p-4">
                 <h4 className="text-2xl pb-2">{title}</h4>
-                <p>{description}</p>
-                <div className="flex w-full gap-2 pt-4 justify-between items-center">
+                <div className="overflow-y-auto max-h-44">
+                    <p className="text-sm md:text-base text-zinc-800 dark:text-zinc-400">{description}</p>
+                </div>
+                <div className=" flex w-full gap-2 pt-4 justify-between items-center">
                 <div className="flex">
                     {techIcons?.map((icon, index) => (
                         <div key={index} className="w-8">

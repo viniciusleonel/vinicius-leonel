@@ -12,9 +12,16 @@ export default function Home () {
 
             <Nav
                 title='Full Stack Developer'
-            />      
-            <About />    
-            <ProjectList />
+            />    
+            
+            <section className="min-h-screen flex items-center ">
+                <About />    
+            </section> 
+
+            <section className="min-h-screen">
+                <ProjectList />
+            </section>  
+            
             <Skills />   
         </div>
     )

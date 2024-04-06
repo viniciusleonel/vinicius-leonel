@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function About () {
     return (
-        <div className="mt-20 pt-8 px-6 sm:px-10 md:px-16 lg:px-60">
+        <div className=" pt-8 px-6 sm:px-10 md:px-16 lg:px-60">
             <div className="px-6 bg-zinc-200 dark:bg-zinc-900 flex flex-col sm:flex-row items-center justify-center p-4 w-full border border-cyan-700 rounded-3xl">
                 <div>
                     <div className="mt-6 ms-2 text-2xl md:text-3xl">
