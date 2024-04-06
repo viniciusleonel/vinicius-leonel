@@ -15,7 +15,7 @@ export function ProjectList () {
                         linkSite="https://github.com/viniciusleonel"
                         linkGitHub="https://github.com/viniciusleonel"
                     />
-                    <ProjectCard
+                    {/* <ProjectCard
                         imgCardSrc=""
                         imgAlt="teste" 
                         title="Title"
@@ -26,7 +26,7 @@ export function ProjectList () {
                         techIcons={[<NodeIcon key="node"/>, <SpringIcon key="spring"/>] }
                         linkSite="https://github.com/viniciusleonel"
                         linkGitHub="https://github.com/viniciusleonel"
-                    />
+                    /> */}
                     
                 </div>
             </div>
