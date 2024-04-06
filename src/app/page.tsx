@@ -1,6 +1,6 @@
 'use client'
 
-import Nav from "./components/Nav/nav"
+import Nav from "./components/Nav/Nav"
 import Skills from "./components/Skills/skills"
 import About from "./components/About/about"
 import { ProjectList } from "./components/Projects/projectList"
