@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-bt" suppressHydrationWarning>
-      <body className={`${lusitana.className} bg-zinc-200 dark:bg-bg-default`}>
+      <body className={`${lusitana.className}  dark:bg-bg-default`}>
         <Providers>{children}</Providers>
       </body>
     </html>
