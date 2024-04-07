@@ -3,7 +3,7 @@ import { JavaIcon, NodeIcon, SpringIcon } from "../../components/Skills/techIcon
 
 export function ProjectList () {
     return (
-        <div className="mt-8 h-svh  flex flex-col justify-center items-center">
+        <div className=" h-svh  flex flex-col justify-center items-center">
                 <h2 className="pb-8 text-3xl">Projects</h2>
                 <div className="flex overflow-hidden w-2/3 gap-6 justify-center">
                     <ProjectCard
