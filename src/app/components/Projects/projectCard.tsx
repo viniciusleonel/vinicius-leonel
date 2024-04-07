@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { JavaIcon, SpringIcon } from "../Skills/techIcons"
+import { lusitana } from '@/app/ui/fonts';
 import Link from "next/link"
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -28,7 +28,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
             <div className=" text-center pt-4 pe-1">
                 <h4 className="text-2xl pb-2">{title}</h4>
                 <div className=" overflow-y-auto max-h-36">
-                    <p className="px-2 text-sm lg:text-base text-zinc-800 dark:text-zinc-400">{description}</p>
+                    <p className={`${lusitana.className} px-2 text-sm lg:text-base text-zinc-800 dark:text-zinc-400`}>{description}</p>
                 </div>
                 <div className="flex w-full gap-2 pt-4 justify-between items-center">
                     <div className="flex absolute bottom-4 left-4">

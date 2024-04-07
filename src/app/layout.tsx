@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { lusitana } from "@/app/ui/fonts";
 import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Vinicius Leonel",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-bt" suppressHydrationWarning>
-      <body className={`${inter.className} bg-zinc-200 dark:bg-bg-default`}>
+      <body className={`${lusitana.className} bg-zinc-200 dark:bg-bg-default`}>
         <Providers>{children}</Providers>
       </body>
     </html>
