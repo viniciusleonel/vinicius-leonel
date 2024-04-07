@@ -37,7 +37,7 @@ export function ProjectList() {
     return (
         <div className=" h-svh flex flex-col justify-center items-center">
             <h2 className="-mt-20 pb-14 text-3xl">Projects</h2>
-            <div className="flex overflow-hidden  w-full xs:w-2/3 gap-2 justify-center">
+            <div className="flex overflow-hidden w-full px-8 xs:mx-0 xs:w-2/3 gap-2 justify-center">
                 <button onClick={prevProject}><FaArrowLeft /></button>
                 {projects.map((project, index) => (
                     <ul key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
