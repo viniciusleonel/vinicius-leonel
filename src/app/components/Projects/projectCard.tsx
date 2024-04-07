@@ -47,7 +47,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                                 alt="github icon"
                                 height={50}
                                 width={40}
-                                className="w-4 sm:w-8"
+                                className="w-5 sm:w-8"
                             />
                         </Link>
                         <Link
@@ -58,7 +58,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                             alt="github icon"
                             height={50}
                             width={40}
-                            className="w-4 sm:w-8"
+                            className="w-5 sm:w-8"
                         />
                         </Link>
                     </div>
