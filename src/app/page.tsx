@@ -3,7 +3,7 @@
 import Nav from "./components/Nav/Nav"
 import Skills from "./components/Skills/skills"
 import About from "./components/About/about"
-import { ProjectList } from "./components/Projects/projectList"
+import  {ProjectCarousel}  from "./components/Projects/projectCarousel"
 
 
 export default function Home () {
@@ -19,7 +19,7 @@ export default function Home () {
             </section> 
 
             <section className="min-h-screen">
-                <ProjectList />
+                <ProjectCarousel />
             </section>  
             
             <Skills />   
