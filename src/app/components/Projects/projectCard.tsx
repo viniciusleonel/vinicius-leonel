@@ -33,7 +33,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                 <div className="flex w-full gap-2 pt-4 justify-between items-center">
                     <div className="flex absolute bottom-4 left-4">
                         {techIcons?.map((icon, index) => (
-                            <div key={index} className="w-8">
+                            <div key={index} className="w-4 sm:w-8">
                                 {icon}
                             </div>
                         ))}
@@ -41,10 +41,13 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                     <div className=" absolute bottom-4 right-4 flex gap-2 items-center">
                         <Link
                                 href={linkSite}
-                                className="flex items-center justify-center border-2 rounded-full text-cyan-500 w-6 h-6 border-cyan-500"
                             >
-                            <FaExternalLinkAlt
-                                className="text-xs"
+                            <Image 
+                                src='/images/icons/github.svg'
+                                alt="github icon"
+                                height={50}
+                                width={40}
+                                className="w-4 sm:w-8"
                             />
                         </Link>
                         <Link
@@ -55,7 +58,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                             alt="github icon"
                             height={50}
                             width={40}
-                            className="w-8"
+                            className="w-4 sm:w-8"
                         />
                         </Link>
                     </div>
