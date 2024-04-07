@@ -52,7 +52,7 @@ export default function Nav ({title} : NavProps) {
             <div className="ms-3 me-3 flex justify-between items-center">
                 <GiHamburgerMenu className="md:hidden text-cyan-300 text-2xl" />
                 <h2 className="text-xl md:ps-10 sm:text-3xl">{title}</h2>
-                <div ref={menuRef} className="text-lg flex gap-12 items-center sm:pr-10">
+                <div ref={menuRef} className="text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <a onClick={listProjBack} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Back-end</a>
                         {backList && (
