@@ -4,7 +4,7 @@ import { JavaIcon, NodeIcon, SpringIcon } from "../../components/Skills/techIcon
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export function ProjectList() {
-    const [startX, setStartX] = useState(null);
+    const [startX, setStartX] = useState<number | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const projects = [
         {
@@ -27,11 +27,11 @@ export function ProjectList() {
         }
     ];
 
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e : React.TouchEvent<HTMLDivElement>) => {
         setStartX(e.touches[0].clientX);
     };
 
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e : React.TouchEvent<HTMLDivElement>) => {
         if (!startX) return;
         const xDiff = e.touches[0].clientX - startX;
         if (Math.abs(xDiff) > 50) { // Adjust this threshold as needed
