@@ -58,7 +58,7 @@ export default function About () {
                                 height={100}
                                 width={400}
                                 alt="Vinicius profile picture" 
-                                className="w-20 border-2 border-cyan-500 rounded-full"
+                                className="w-20 border-2 border-cyan-700 dark:border-cyan-500 rounded-full"
                             />
                         </div>
                     </div>
@@ -72,7 +72,7 @@ export default function About () {
                         height={100}
                         width={400}
                         alt="Vinicius profile picture" 
-                        className=" border-2 border-cyan-500 rounded-full"
+                        className=" border-2 border-cyan-700 dark:border-cyan-500 rounded-full"
                     />
                 </div>
                 

@@ -15,7 +15,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="dark:bg-dark-secondary relative h-[28rem] lg:h-[30rem] w-full sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
+        <div className="dark:bg-dark-secondary relative h-[24rem] sm:h-[28rem] lg:h-[30rem] w-full sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
             <div className="relative h-36 sm:h-44 lg:h-52 ">
                 <Image
                 className=" rounded-t-3xl border-b-2 border-cyan-500"
@@ -33,7 +33,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                 <div className="flex w-full gap-2 pt-4 justify-between items-center">
                     <div className="flex absolute bottom-4 left-4">
                         {techIcons?.map((icon, index) => (
-                            <div key={index} className="w-4 sm:w-8">
+                            <div key={index} className="w-6 sm:w-8">
                                 {icon}
                             </div>
                         ))}
@@ -47,7 +47,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                                 alt="github icon"
                                 height={50}
                                 width={40}
-                                className="w-5 sm:w-8"
+                                className="w-6 sm:w-8"
                             />
                         </Link>
                         <Link
@@ -58,7 +58,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                             alt="github icon"
                             height={50}
                             width={40}
-                            className="w-5 sm:w-8"
+                            className="w-6 sm:w-8"
                         />
                         </Link>
                     </div>
