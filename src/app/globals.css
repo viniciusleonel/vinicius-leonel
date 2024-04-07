@@ -13,7 +13,7 @@
 
 /* Estilizando o polegar da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-    background-color: cyan; /* Cor de fundo do polegar */
+    background-color: #22d3ee; /* Cor de fundo do polegar */
     border-radius: 4px; /* Raio da borda do polegar */
 }
 

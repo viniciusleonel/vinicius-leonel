@@ -35,7 +35,8 @@ const config: Config = {
         lgScreenMove: 'lgScreenMove 30s linear infinite',
       },
       colors: {
-        'bg-default': '#121212'
+        'dark-primary': '#121212',
+        'dark-secondary': '#18181b'
       },
     },
   },

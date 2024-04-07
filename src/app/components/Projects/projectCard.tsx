@@ -15,10 +15,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="relative h-[28rem] lg:h-[30rem] w-full sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-300">
+        <div className="dark:bg-dark-secondary relative h-[28rem] lg:h-[30rem] w-full sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
             <div className="relative h-36 sm:h-44 lg:h-52 ">
                 <Image
-                className=" rounded-t-3xl border-b-2 border-cyan-300"
+                className=" rounded-t-3xl border-b-2 border-cyan-500"
                 src={imgCardSrc || "/images/default.jpg"}
                 alt={imgAlt}
                 layout="fill"
@@ -41,7 +41,7 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                     <div className=" absolute bottom-4 right-4 flex gap-2 items-center">
                         <Link
                                 href={linkSite}
-                                className="flex items-center justify-center border-2 rounded-full text-cyan-300 w-6 h-6 border-cyan-300"
+                                className="flex items-center justify-center border-2 rounded-full text-cyan-500 w-6 h-6 border-cyan-500"
                             >
                             <FaExternalLinkAlt
                                 className="text-xs"

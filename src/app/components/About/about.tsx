@@ -5,7 +5,7 @@ import { lusitana } from '@/app/ui/fonts';
 
 export default function About () {
     return (
-        <div className="mx-8 lg:mx-16 dark:bg-zinc-900 border border-cyan-700 rounded-3xl">
+        <div className="mx-8 lg:mx-16 dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
                 <div className="mt-10 ms-1 text-2xl md:text-3xl flex items-center justify-center w-full">
                     <span className="text-cyan-500 text-4xl">&#123;</span>
                     <h2 className="pt-1"> HELLO WORLD </h2>
@@ -58,7 +58,7 @@ export default function About () {
                                 height={100}
                                 width={400}
                                 alt="Vinicius profile picture" 
-                                className="w-20 border-2 border-cyan-600 rounded-full"
+                                className="w-20 border-2 border-cyan-500 rounded-full"
                             />
                         </div>
                     </div>
@@ -66,13 +66,13 @@ export default function About () {
                     
                 </div>
 
-                <div className="me-6 hidden sm:flex">
+                <div className="me-6 mb-10 hidden sm:flex">
                     <Image 
                         src="/images/vinicius.jpeg"
                         height={100}
                         width={400}
                         alt="Vinicius profile picture" 
-                        className=" border-2 border-cyan-600 rounded-full"
+                        className=" border-2 border-cyan-500 rounded-full"
                     />
                 </div>
                 

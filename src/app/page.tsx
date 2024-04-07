@@ -8,7 +8,7 @@ import { ProjectList } from "./components/Projects/projectList"
 
 export default function Home () {
     return (
-        <div className="flex flex-col dark:bg-bg-default">
+        <div className="flex flex-col dark:bg-dark-primary">
 
             <Nav
                 title='Full Stack Developer'
