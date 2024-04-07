@@ -49,11 +49,11 @@ export default function Nav ({title} : NavProps) {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-400 bg-white dark:bg-dark-primary">
-            <div className="flex justify-between items-center">
+            <div className="ms-3 me-3 flex justify-between items-center">
                 <GiHamburgerMenu className="md:hidden text-cyan-300 text-2xl" />
                 <h2 className="text-xl md:ps-10 sm:text-3xl">{title}</h2>
                 <div ref={menuRef} className="text-lg flex gap-12 items-center pt-2 sm:pr-10">
-                    <div>
+                    <div className="hidden md:flex" >
                         <a onClick={listProjBack} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Back-end</a>
                         {backList && (
                             <div className="flex flex-col dropdown-menu absolute ">
@@ -63,7 +63,7 @@ export default function Nav ({title} : NavProps) {
                             </div>
                         )}   
                     </div>
-                    <div>
+                    <div className="hidden md:flex">
                         <a onClick={listProjFront} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Front-end</a>
                         {frontList && (
                             <div className="flex flex-col dropdown-menu absolute ">
@@ -73,7 +73,7 @@ export default function Nav ({title} : NavProps) {
                             </div>
                         )}
                     </div>
-                    <div>
+                    <div className="hidden md:flex">
                         <a onClick={listProjMobile} className="hidden md:flex cursor-pointer dark:hover:text-cyan-300">Mobile</a>
                         {mobileList && (
                             <div className="flex flex-col dropdown-menu absolute ">
