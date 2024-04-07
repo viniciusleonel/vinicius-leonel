@@ -4,6 +4,7 @@ import { JavaIcon, NodeIcon, SpringIcon } from "../../components/Skills/techIcon
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export function ProjectList() {
+    const [startX, setStartX] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const projects = [
         {
@@ -26,6 +27,23 @@ export function ProjectList() {
         }
     ];
 
+    const handleTouchStart = (e) => {
+        setStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        if (!startX) return;
+        const xDiff = e.touches[0].clientX - startX;
+        if (Math.abs(xDiff) > 50) { // Adjust this threshold as needed
+            if (xDiff > 0) {
+                prevProject();
+            } else {
+                nextProject();
+            }
+            setStartX(null);
+        }
+    };
+
     const nextProject = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
     };
@@ -37,7 +55,11 @@ export function ProjectList() {
     return (
         <div className=" h-svh flex flex-col justify-center items-center">
             <h2 className="-mt-20 pb-14 text-3xl">Projects</h2>
-            <div className="flex overflow-hidden w-full px-8 xs:w-2/3 gap-2 justify-center">
+            <div
+                className="flex overflow-hidden w-full px-8 xs:w-2/3 gap-2 justify-center"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+            >
                 <button onClick={prevProject}><FaArrowLeft className='hover:text-cyan-500' /></button>
                 {projects.map((project, index) => (
                     <ul key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
