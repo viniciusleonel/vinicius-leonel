@@ -36,10 +36,10 @@ export default function ToggleButton() {
     }
 
     return (
-        <div>
+        <div className='pt-2'>
             {resolvedTheme === 'dark' ? (
                 <button onClick={() => { setTheme('light'); playClickSound(clickOn);}} 
-                className='sm:pt-0 pt-2  '>
+                className='transition duration-500  '>
                     <IoBulbOutline className='dark:hover:text-yellow-400' />
                 </button>
             ) : (

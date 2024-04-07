@@ -5,13 +5,13 @@ import { lusitana } from '@/app/ui/fonts';
 
 export default function About () {
     return (
-        <div className="mx-8 lg:mx-16 dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
+        <div className="mx-8 lg:mx-20 dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
                 <div className="mt-10 text-2xl md:text-3xl flex items-center justify-center w-full">
                     <span className="text-cyan-500 text-4xl">&#123;</span>
                     <h2 className="pt-1"> HELLO WORLD </h2>
                     <span className="text-cyan-500 text-4xl">&#125;</span>
                 </div>
-            <div className="p-4  flex flex-col sm:flex-row items-center justify-center  w-full ">
+            <div className="p-4 sm:px-8 md:px-10 lg:px-14 flex flex-col sm:flex-row items-center justify-center  w-full">
                 <div>
                     <div className=" w-full">
                         <div className=" flex flex-col md:flex-row items-baseline">
@@ -28,7 +28,7 @@ export default function About () {
                         Living in São Paulo and looking for an opportunity to further develop my skills.
                     </p>
                     <div className="flex justify-between mt-4 ">
-                        <div className="flex items-center">
+                        <div className="flex items-center -m-2 pt-6">
                             <Link
                                 href="https://www.linkedin.com/in/viniciuslps/"
                             >
