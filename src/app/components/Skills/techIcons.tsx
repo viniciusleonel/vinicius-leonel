@@ -94,6 +94,60 @@ export function SpringIcon ({classStyle} : TechIconsProps) {
     className={classStyle}
 />
 }
+export function Kotlin ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/kotlin.svg'
+    alt="kotlin icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
+export function Python ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/python.svg'
+    alt="python icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
+export function Postgres ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/postgres.svg'
+    alt="postgres icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
+export function MySql ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/mysql.svg'
+    alt="mysql icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
+export function Docker ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/docker.svg'
+    alt="docker icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
+export function Git ({classStyle} : TechIconsProps) {
+    return <Image
+    src='/images/icons/git.svg'
+    alt="git icon"
+    height={50}
+    width={50}
+    className={classStyle}
+/>
+}
 export function TechIcons ({classStyle} : TechIconsProps) {
     return (
         <>
@@ -107,6 +161,12 @@ export function TechIcons ({classStyle} : TechIconsProps) {
             <ReactIcon />
             <JavaIcon />
             <SpringIcon />
+            <Kotlin />
+            <Python />
+            <Postgres />
+            <MySql />
+            <Docker />
+            <Git />
         </>
     )
 }    

@@ -10,32 +10,34 @@ const config: Config = {
     screens: {
       'xxs': '340px',
       'xs': '449px',
-
       'sm': '576px',
-      // => @media (min-width: 576px) { ... }
-
       'md': '800px',
-      // => @media (min-width: 800px) { ... }
-
       'lg': '1440px',
-      // => @media (min-width: 1440px) { ... }
     },
     extend: {
       keyframes: {
         'lgScreenMove': {
-          to: { transform: 'translateX(calc(-100% + 2.2rem))' },
+          to: { transform: 'translateX(calc(-150% - 4.7rem))' },
         },
         'mdScreenMove': {
-          to: { transform: 'translateX(calc(-100% - 7rem))' },
+          to: { transform: 'translateX(calc(-150% - 6.7rem ))' },
         },
         'smScreenMove': {
-          to: { transform: 'translateX(calc(-100% - 4.2rem))' },
+          to: { transform: 'translateX(calc(-150% - 27.5rem))' },
+        },
+        'xsScreenMove': {
+          to: { transform: 'translateX(calc(-100% + 10rem))' },
+        },
+        'xxsScreenMove': {
+          to: { transform: 'translateX(calc(-100%))' },
         },
       },
       animation: {
-        smScreenMove: 'smScreenMove 30s linear infinite',
-        mdScreenMove: 'mdScreenMove 30s linear infinite',
-        lgScreenMove: 'lgScreenMove 30s linear infinite',
+        xxsScreenMove: 'xxsScreenMove 10s linear infinite',
+        xsScreenMove: 'xsScreenMove 10s linear infinite',
+        smScreenMove: 'smScreenMove 40s linear infinite',
+        mdScreenMove: 'mdScreenMove 40s linear infinite',
+        lgScreenMove: 'lgScreenMove 40s linear infinite',
       },
       colors: {
         'dark-primary': '#121212',
