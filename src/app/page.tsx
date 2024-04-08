@@ -10,9 +10,7 @@ export default function Home () {
     return (
         <>
         <nav>
-            <Nav
-                title='Full Stack Developer'
-            />
+            <Nav />
         </nav>
                 
         <main>
@@ -20,7 +18,7 @@ export default function Home () {
                 <About />    
             </section> 
 
-            <section className="min-h-screen">
+            <section id="Projects" className="min-h-screen pt-16">
                 <ProjectCarousel />
             </section>  
             

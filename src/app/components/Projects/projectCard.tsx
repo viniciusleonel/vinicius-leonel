@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { lusitana } from '@/app/ui/fonts';
+import { lusitana } from '@/app/ui/fonts'
 import Link from "next/link"
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { MdScreenShare } from "react-icons/md";
 
 interface ProjectCardProps {
     imgCardSrc?: string,
@@ -42,13 +42,9 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                         <Link
                                 href={linkSite}
                             >
-                            <Image 
-                                src='/images/icons/github.svg'
-                                alt="github icon"
-                                height={50}
-                                width={40}
-                                className="w-6 sm:w-8"
-                            />
+                            <MdScreenShare 
+                                className="size-6 sm:size-8 "
+                                />
                         </Link>
                         <Link
                             href={linkGitHub}
