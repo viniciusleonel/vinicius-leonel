@@ -8,12 +8,14 @@ import  {ProjectCarousel}  from "./components/Projects/projectCarousel"
 
 export default function Home () {
     return (
-        <div className="flex flex-col dark:bg-dark-primary">
-
+        <>
+        <nav>
             <Nav
                 title='Full Stack Developer'
-            />    
-            
+            />
+        </nav>
+                
+        <main>
             <section className="min-h-screen flex items-center ">
                 <About />    
             </section> 
@@ -22,7 +24,9 @@ export default function Home () {
                 <ProjectCarousel />
             </section>  
             
-            <Skills />   
-        </div>
+            <Skills />    
+        </main>    
+        
+        </>
     )
 }

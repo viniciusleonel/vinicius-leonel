@@ -23,13 +23,13 @@ const config: Config = {
     extend: {
       keyframes: {
         'lgScreenMove': {
-          to: { transform: 'translateX(calc(-100% + 2.7rem))' },
+          to: { transform: 'translateX(calc(-100% + 2.2rem))' },
         },
         'mdScreenMove': {
-          to: { transform: 'translateX(calc(-100% - .8rem))' },
+          to: { transform: 'translateX(calc(-100% - 7rem))' },
         },
         'smScreenMove': {
-          to: { transform: 'translateX(calc(-100% - 5.5rem))' },
+          to: { transform: 'translateX(calc(-100% - 4.2rem))' },
         },
       },
       animation: {
