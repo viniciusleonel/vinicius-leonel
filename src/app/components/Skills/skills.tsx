@@ -73,7 +73,7 @@ export default function Skills() {
     };
 
     return (
-        <div className={` mb-1 -mt-20 overflow-hidden dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 ${styles.skillsAnimationContainer}`}
+        <div className={`my-1 overflow-hidden dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 ${styles.skillsAnimationContainer}`}
             ref={containerRef}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
