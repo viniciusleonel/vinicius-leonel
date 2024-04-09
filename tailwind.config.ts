@@ -23,19 +23,15 @@ const config: Config = {
           to: { transform: 'translateX(calc(-150% - 6.7rem ))' },
         },
         'smScreenMove': {
-          to: { transform: 'translateX(calc(-150% - 27.5rem))' },
+          to: { transform: 'translateX(calc(-150% - 22rem))' },
         },
         'xsScreenMove': {
-          to: { transform: 'translateX(calc(-100% + 10rem))' },
-        },
-        'xxsScreenMove': {
-          to: { transform: 'translateX(calc(-100%))' },
+          to: { transform: 'translateX(calc(-150% - 10rem))' },
         },
       },
       animation: {
-        xxsScreenMove: 'xxsScreenMove 10s linear infinite',
-        xsScreenMove: 'xsScreenMove 10s linear infinite',
-        smScreenMove: 'smScreenMove 40s linear infinite',
+        xsScreenMove: 'xsScreenMove 25s linear infinite',
+        smScreenMove: 'smScreenMove 35s linear infinite',
         mdScreenMove: 'mdScreenMove 40s linear infinite',
         lgScreenMove: 'lgScreenMove 40s linear infinite',
       },
