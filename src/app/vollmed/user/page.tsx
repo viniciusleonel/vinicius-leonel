@@ -148,7 +148,7 @@ export default function VollMed () {
 
                 <button 
                     type="submit"
-                    className="bg-emerald-500 font-medium rounded-md py-2 shadow-lg hover:bg-emerald-700">
+                    className="bg-cyan-500 font-medium rounded-md py-2 shadow-lg hover:bg-cyan-600">
                 Cadastrar
                 </button>
 
@@ -189,7 +189,7 @@ export default function VollMed () {
 
                 <button 
                     type="submit"
-                    className="bg-emerald-500 font-medium rounded-md py-2 shadow-lg hover:bg-emerald-700">
+                    className="bg-blue-500 font-medium rounded-md py-2 shadow-lg  hover:bg-blue-600">
                 Entrar
                 </button>
 

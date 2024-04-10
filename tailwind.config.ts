@@ -28,13 +28,18 @@ const config: Config = {
         'xsScreenMove': {
           to: { transform: 'translateX(calc(-150% - 10rem))' },
         },
-        'slideDown': {
+        'slideRight': {
           from: { transform: 'translatex(calc(-100% - 2.6rem))' },
           to: { transform: 'translatex(0%)' },
         },
+        'slideLeft': {
+          from: { transform: 'translatex(0%)' },
+          to: { transform: 'translatex(calc(-100% - 2.6rem))' },
+        },
       },
       animation: {
-        slideDown: 'slideDown 1s ease-in-out forwards',
+        slideRight: 'slideRight 1s ease-in-out forwards',
+        slideLeft: 'slideLeft 1s ease-in-out forwards',
         xsScreenMove: 'xsScreenMove 25s linear infinite',
         smScreenMove: 'smScreenMove 35s linear infinite',
         mdScreenMove: 'mdScreenMove 40s linear infinite',

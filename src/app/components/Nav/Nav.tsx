@@ -41,19 +41,19 @@ export default function Nav ({title} : NavProps) {
                         onClick={handleMenuBurguer}
                     />
                     {menuBurguer && (
-                        <div className="md:hidden animate-slideDown absolute top-[2.6rem] -left-6 flex flex-col border border-cyan-700 dark:border-cyan-500 ">
+                        <div className="md:hidden animate-slideRight absolute top-[2.6rem] -left-6 flex flex-col border border-cyan-700 dark:border-cyan-500 ">
                             <Link 
-                                className="p-4 bg-dark-primary hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
+                                className="p-4 hover:text-cyan-700 hover:bg-slate-100 dark:bg-dark-primary dark:hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
                                 href={"/#Projects"}
                             >Projects
                             </Link>
                             <Link 
-                                className="p-4 bg-dark-primary hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
+                                className="p-4 hover:text-cyan-700 hover:bg-slate-100 dark:bg-dark-primary dark:hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
                                 href={"/vollmed/user"}
                                 >Upcoming Feature        
                             </Link>
                             <Link 
-                                className="p-4 bg-dark-primary hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
+                                className="p-4 hover:text-cyan-700 hover:bg-slate-100 dark:bg-dark-primary dark:hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
                                 href={"/"}    
                                 >About
                             </Link>
