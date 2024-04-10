@@ -119,18 +119,20 @@ export default function VollMed () {
 
                 <div className="flex flex-col relative">
                     <label htmlFor="password" className="font-medium text-xl mb-1">Senha </label>
-                    <input 
-                        {...register('password')}
-                        type={showPassword ? 'text' : 'password'}
-                        className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
-                        placeholder="Crie sua senha" />
-                    <button
-                        type="button"
-                        className="absolute top-3/4 transform -translate-y-1/2 right-3 text-lg"
-                        onClick={togglePasswordVisibility}
-                        >
-                        {showPassword ? <FaEyeSlash /> : <FaEye />}
-                    </button>
+                    <div className="relative">
+                        <input 
+                            {...register('password')}
+                            type={showPassword ? 'text' : 'password'}
+                            className="ps-2 w-full rounded-md py-1 border shadow-lg border-zinc-400" 
+                            placeholder="Crie sua senha" />
+                        <button
+                            type="button"
+                            className="absolute right-4 top-2 text-lg"
+                            onClick={togglePasswordVisibility}
+                            >
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </button>
+                    </div>
                     {errors.password && <span className='text-red-500 pt-2'>{errors.password.message}</span>}
                 </div>
 
@@ -170,20 +172,22 @@ export default function VollMed () {
                     {errors.email && <span className='text-red-500 pt-2'>{errors.email.message}</span>}
                 </div>
 
-                <div className="flex flex-col mb-3 relative">
+                <div className="flex flex-col mb-3 ">
                     <label htmlFor="password" className="font-medium text-xl mb-1">Senha</label>
-                    <input 
-                        {...register('password')}
-                        type={showPassword ? 'text' : 'password'} 
-                        className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
-                        placeholder="Digite sua senha" />
-                    <button
-                        type="button"
-                        className="absolute top-3/4 transform -translate-y-1/2 right-3 text-lg"
-                        onClick={togglePasswordVisibility}
-                        >
-                        {showPassword ? <FaEyeSlash /> : <FaEye />}
-                    </button>
+                    <div className="relative">
+                        <input 
+                            {...register('password')}
+                            type={showPassword ? 'text' : 'password'} 
+                            className="ps-2 w-full rounded-md py-1 border shadow-lg border-zinc-400" 
+                            placeholder="Digite sua senha" />
+                        <button
+                            type="button"
+                            className="absolute right-4 top-2  text-lg"
+                            onClick={togglePasswordVisibility}
+                            >
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </button>
+                    </div>
                     {errors.password && <span className='text-red-500 pt-2'>{errors.password.message}</span>}
                 </div>
 

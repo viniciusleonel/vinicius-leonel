@@ -34,7 +34,7 @@ export default function Nav ({title} : NavProps) {
         <nav className="fixed top-0 left-0 w-full z-50 p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-400 bg-white dark:bg-dark-primary">
             <div className="ms-3 me-3 flex justify-between items-center">
                 <div ref={menuRef}
-                    className="relative"    
+                    className="md:hidden relative"    
                 >
                     <GiHamburgerMenu 
                         className="md:hidden  text-cyan-700 dark:text-cyan-400 text-2xl cursor-pointer" 

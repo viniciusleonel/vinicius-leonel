@@ -5,7 +5,7 @@ import { lusitana } from '@/app/ui/fonts';
 
 export default function About () {
     return (
-        <div className="mt-16 mx-8 lg:mx-20 dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
+        <div className="mt-0 xs:mt-16 mx-8 lg:mx-20 dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
                 <div className="mt-10 text-2xl md:text-3xl flex items-center justify-center w-full">
                     <span className="text-cyan-500 text-4xl">&#123;</span>
                     <h2 className="pt-1"> HELLO WORLD </h2>
