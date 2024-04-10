@@ -61,7 +61,7 @@ export default function Nav ({title} : NavProps) {
                     )}
                 </div>
                 <h2 className="text-xl md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</h2>
-                <div className="text-lg flex gap-12 items-baseline sm:pr-10">
+                <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <Link 
                             className="hidden md:flex cursor-pointer dark:hover:text-cyan-300"

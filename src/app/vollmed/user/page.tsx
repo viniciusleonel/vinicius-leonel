@@ -134,6 +134,7 @@ export default function VollMed () {
                         </button>
                     </div>
                     {errors.password && <span className='text-red-500 pt-2'>{errors.password.message}</span>}
+                    {errors.confirmPassword && <span className='text-red-500 pt-2'>{errors.confirmPassword.message}</span>}
                 </div>
 
                 <div className="flex flex-col ">
@@ -197,7 +198,7 @@ export default function VollMed () {
                 Entrar
                 </button>
 
-                <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64">{outPut}</span>
+                
             </form>
             )}
         </main>    
