@@ -176,7 +176,7 @@ export default function VollMed () {
                         {...register('password')}
                         type={showPassword ? 'text' : 'password'} 
                         className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
-                        placeholder="Crie sua senha" />
+                        placeholder="Digite sua senha" />
                     <button
                         type="button"
                         className="absolute top-3/4 transform -translate-y-1/2 right-3 text-lg"
