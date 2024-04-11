@@ -37,7 +37,7 @@ export default function Nav ({title} : NavProps) {
                     className="md:hidden relative"    
                 >
                     <GiHamburgerMenu 
-                        className="md:hidden size-10 sm:size-9  text-cyan-700 dark:text-cyan-400 text-2xl cursor-pointer" 
+                        className="md:hidden size-8  text-cyan-700 dark:text-cyan-400 text-2xl cursor-pointer" 
                         onClick={handleMenuBurguer}
                     />
                     {menuBurguer && (
@@ -60,7 +60,7 @@ export default function Nav ({title} : NavProps) {
                         </div>
                     )}
                 </div>
-                <h2 className="text-2xl md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</h2>
+                <h2 className="text-2xl mt-1 md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</h2>
                 <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <Link 
