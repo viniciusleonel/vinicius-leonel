@@ -31,13 +31,13 @@ export default function Nav ({title} : NavProps) {
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 p-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-400 bg-white dark:bg-dark-primary">
-            <div className="ms-3 me-3 flex justify-between items-center">
+        <nav className="fixed top-0 left-0 w-full z-50 px-3 py-1 md:py-3 border-b-4 border-cyan-700 dark:border-b-2 dark:border-cyan-400 bg-white dark:bg-dark-primary">
+            <div className="mx-3 flex justify-between items-center">
                 <div ref={menuRef}
                     className="md:hidden relative"    
                 >
                     <GiHamburgerMenu 
-                        className="md:hidden  text-cyan-700 dark:text-cyan-400 text-2xl cursor-pointer" 
+                        className="md:hidden size-10 sm:size-9  text-cyan-700 dark:text-cyan-400 text-2xl cursor-pointer" 
                         onClick={handleMenuBurguer}
                     />
                     {menuBurguer && (
@@ -60,7 +60,7 @@ export default function Nav ({title} : NavProps) {
                         </div>
                     )}
                 </div>
-                <h2 className="text-xl md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</h2>
+                <h2 className="text-2xl md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</h2>
                 <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <Link 
