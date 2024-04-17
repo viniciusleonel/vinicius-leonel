@@ -1,36 +1,12 @@
 'use client'
 
-import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from "react"
-import { CustomError, postUserToAPI } from '../../services/vollmedApi';
+import { CustomError, userRegister, userLogin } from '../../services/vollmedApi';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import {CreateUserFormData, LoginUserFormData, createUserSchema, loginSchema} from './schemas'
 import clsx from 'clsx';
-
-// Schema representa a estrutura do formulario
-const createUserFromSchema = z.object({
-    email: z.string()
-    .min(1, 'Email obrigatório!')
-    .email('Digite um email válido!')
-    .toLowerCase(),
-
-    password: z.string()
-        .min(6, 'A senha precisa de no minimo 6 caracteres'),
-
-    confirmPassword: z.string()
-        .min(6, 'A senha precisa de no minimo 6 caracteres'),
-    }).refine(
-        (values) => {
-            return values.password === values.confirmPassword;
-        },
-        {
-            message: "As senhas precisam ser iguais!",
-            path: ["confirmPassword"],
-        }
-    );
-
-type CreateUserFormData = z.infer<typeof createUserFromSchema>
 
 interface UserProps {
     login: string,
@@ -39,11 +15,25 @@ interface UserProps {
 
 export default function VollMed () {
 
-    const { register, handleSubmit, formState:{errors}, control, watch} = useForm<CreateUserFormData>({
-        resolver: zodResolver(createUserFromSchema)
-    })
+    const {
+        register: registerUser,
+        handleSubmit: handleSubmitCreateUser,
+        formState: { errors: errorsUser },
+        watch,
+    } = useForm<CreateUserFormData>({
+        resolver: zodResolver(createUserSchema)
+    });
 
-    const [outPut, setOutPut ] = useState('')
+    const {
+        register: registerLogin,
+        handleSubmit: handleSubmitLoginUser,
+        formState: { errors: errorsLogin },
+    } = useForm<LoginUserFormData>({
+        resolver: zodResolver(loginSchema)
+    });
+
+    const [outPutUser, setOutPutUser ] = useState('')
+    const [outPutLogin, setOutPutLogin ] = useState('')
     const [cadastro, setCadastro ] = useState(true)
     const [login, setLogin ] = useState(false)
     const [showPassword, setShowPassword] = useState(false);
@@ -64,7 +54,7 @@ export default function VollMed () {
     }
 
     function showFormResult(data: CreateUserFormData) {
-        setOutPut(JSON.stringify(data, null, 2))
+        setOutPutUser(JSON.stringify(data, null, 2))
     }
 
     async function createUser(data: CreateUserFormData) {
@@ -73,12 +63,39 @@ export default function VollMed () {
                 login: data.email,
                 senha: data.password
             };
-            const response = await postUserToAPI("/usuarios", userData);
-            setOutPut(JSON.stringify(response, null, 2));
+            const response = await userRegister("/usuarios", userData);
+            setOutPutUser(JSON.stringify(response, null, 2));
         } catch (error: any) {
             const typedError = error as CustomError
-            setOutPut(typedError.name);
+            setOutPutUser(typedError.name);
         }
+    }
+
+    async function logUser(data: { email: string; password: string }) {
+        try {
+            // Monta os dados do usuário a serem enviados na requisição de login
+            const userData = {
+                login: data.email,
+                senha: data.password
+            };
+            // Faz login do usuário e obtém o token
+            const token = await userLogin(userData);
+            console.log("Token recebido:", token);
+            console.log("Login efetuado com sucesso!");
+            setOutPutLogin(JSON.stringify(token, null, 2));
+            // Manipula o token conforme necessário
+        } catch (error: any) {
+            // Se ocorrer um erro durante o login
+            console.error("Erro durante o login:", error.message);
+            const typedError = error as CustomError
+            setOutPutLogin(typedError.message);
+            // Manipula o erro conforme necessário
+        }
+    }  
+    
+    const tempLogin = () => {
+        const outPut = ("Logado com sucesso...ou será que não...")
+        setOutPutLogin(JSON.stringify(outPut, null, 2));
     }
 
     return (
@@ -105,24 +122,26 @@ export default function VollMed () {
             </div>
             { cadastro && (
                 <form 
-                onSubmit={handleSubmit(showFormResult)}
+                onSubmit={handleSubmitCreateUser(createUser)}
                 className="flex flex-col w-full sm:max-w-xs max-w-64 gap-4 ">
                 <div className="flex flex-col ">
-                    <label htmlFor="email" className="font-medium text-xl mb-1">Cadastre-se</label>
+                    <label htmlFor="cadastro-email" className="font-medium text-xl mb-1">Cadastre-se</label>
                     <input 
-                        {...register('email')}
+                        {...registerUser('email')}
                         type="email" 
+                        id="cadastro-email"
                         className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
                         placeholder="Digite um email válido" />
-                    {errors.email && <span className='text-red-500 pt-2'>{errors.email.message}</span>}
+                    {errorsUser.email && <span className='text-red-500 pt-2'>{errorsUser.email.message}</span>}
                 </div>
 
                 <div className="flex flex-col relative">
-                    <label htmlFor="password" className="font-medium text-xl mb-1">Senha </label>
+                    <label htmlFor="cadastro-password" className="font-medium text-xl mb-1">Senha </label>
                     <div className="relative">
                         <input 
-                            {...register('password')}
+                            {...registerUser('password')}
                             type={showPassword ? 'text' : 'password'}
+                            id="cadastro-password"
                             className="ps-2 w-full rounded-md py-1 border shadow-lg border-zinc-400" 
                             placeholder="Crie sua senha" />
                         <button
@@ -133,20 +152,19 @@ export default function VollMed () {
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                     </div>
-                    {errors.password && <span className='text-red-500 pt-2'>{errors.password.message}</span>}
-                    {errors.confirmPassword && <span className='text-red-500 pt-2'>{errors.confirmPassword.message}</span>}
+                    {errorsUser.confirmPassword && <span className='text-red-500 pt-2'>{errorsUser.confirmPassword.message}</span>}
                 </div>
 
                 <div className="flex flex-col ">
                     <label htmlFor="confirmPassword" className="font-medium text-xl mb-1">Confirmar Senha</label>
                     <input 
-                        {...register('confirmPassword', {
+                        {...registerUser('confirmPassword', {
                                 validate: (value) => value === watch('password') || "As senhas precisam ser iguais"
                             })}
                         type={showPassword ? 'text' : 'password'}
                         className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
                         placeholder="Crie sua senha" />
-                    {errors.confirmPassword && <span className='text-red-500 pt-2'>{errors.confirmPassword.message}</span>}
+                    {errorsUser.confirmPassword && <span className='text-red-500 pt-2'>{errorsUser.confirmPassword.message}</span>}
                 </div>
 
                 <button 
@@ -155,30 +173,31 @@ export default function VollMed () {
                 Cadastrar
                 </button>
 
-                <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPut}</span>
+                <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPutUser}</span>
             </form>
             )}
             { login && (
                 <form 
-                onSubmit={handleSubmit(createUser)}
+                onSubmit={handleSubmitLoginUser(tempLogin)}
                 className="flex flex-col w-full sm:max-w-xs max-w-64 gap-4 ">
-                {/* <h3 className="flex justify-center text-3xl mb-3">Cadastre-se</h3> */}
                 <div className="flex flex-col mb-3">
-                    <label htmlFor="email" className="font-medium text-xl mb-1">Login</label>
+                    <label htmlFor="login-email" className="font-medium text-xl mb-1">Login</label>
                     <input 
-                        {...register('email')}
+                        {...registerLogin('email')}
                         type="email" 
+                        id="login-email"
                         className="ps-2 rounded-md py-1 border shadow-lg border-zinc-400" 
                         placeholder="Digite um email válido" />
-                    {errors.email && <span className='text-red-500 pt-2'>{errors.email.message}</span>}
+                    {errorsLogin.email && <span className='text-red-500 pt-2'>{errorsLogin.email.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-3 ">
-                    <label htmlFor="password" className="font-medium text-xl mb-1">Senha</label>
+                    <label htmlFor="login-password" className="font-medium text-xl mb-1">Senha</label>
                     <div className="relative">
                         <input 
-                            {...register('password')}
+                            {...registerLogin('password')}
                             type={showPassword ? 'text' : 'password'} 
+                            id="login-password"
                             className="ps-2 w-full rounded-md py-1 border shadow-lg border-zinc-400" 
                             placeholder="Digite sua senha" />
                         <button
@@ -189,7 +208,7 @@ export default function VollMed () {
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                     </div>
-                    {errors.password && <span className='text-red-500 pt-2'>{errors.password.message}</span>}
+                    {errorsLogin.password && <span className='text-red-500 pt-2'>{errorsLogin.password.message}</span>}
                 </div>
 
                 <button 
@@ -198,7 +217,8 @@ export default function VollMed () {
                 Entrar
                 </button>
 
-                
+                <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPutLogin}</span>
+
             </form>
             )}
         </main>    

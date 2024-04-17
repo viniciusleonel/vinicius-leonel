@@ -22,7 +22,7 @@ const projectsList = [
         linkGitHub: "https://github.com/viniciusleonel"
     },
     {
-        imgCardSrc: "/images/icons/java.svg",
+        imgCardSrc: "/images/coming-soon.png",
         imgAlt: "teste",
         title: "Title",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
@@ -31,16 +31,7 @@ const projectsList = [
         linkGitHub: "https://github.com/viniciusleonel"
     },
     {
-        imgCardSrc: "/images/icons/spring.svg",
-        imgAlt: "teste",
-        title: "Title",
-        description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
-        techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
-        linkSite: "https://github.com/viniciusleonel",
-        linkGitHub: "https://github.com/viniciusleonel"
-    },
-    {
-        imgCardSrc: "/images/icons/html.svg",
+        imgCardSrc: "/images/coming-soon.png",
         imgAlt: "teste",
         title: "Title",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
@@ -48,6 +39,15 @@ const projectsList = [
         linkSite: "https://github.com/viniciusleonel",
         linkGitHub: "https://github.com/viniciusleonel"
     }
+    // {
+    //     imgCardSrc: "/images/icons/html.svg",
+    //     imgAlt: "teste",
+    //     title: "Title",
+    //     description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
+    //     techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
+    //     linkSite: "https://github.com/viniciusleonel",
+    //     linkGitHub: "https://github.com/viniciusleonel"
+    // }
 ];
 
 export default projectsList;
