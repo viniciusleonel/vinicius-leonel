@@ -42,7 +42,6 @@ export default function About () {
                                 width={50}
                             />
                             </Link>
-
                             <Link
                                 href="https://github.com/viniciusleonel"
                             >
@@ -53,7 +52,6 @@ export default function About () {
                                 width={50}
                             />
                             </Link>
-
                             <Link
                                 href=" https://w.app/ViniciusLeonel"
                             >
@@ -65,7 +63,6 @@ export default function About () {
                             />
                             </Link>
                         </div>
-
                         <div className="me-6 md:hidden">
                             <Image 
                                 src="/images/vinicius.jpeg"
@@ -76,10 +73,7 @@ export default function About () {
                             />
                         </div>
                     </div>
-
-                    
                 </div>
-
                 <div className="me-6 mb-10 hidden md:flex ">
                     <Image 
                         src="/images/vinicius.jpeg"
@@ -89,8 +83,6 @@ export default function About () {
                         className=" border-2 border-cyan-700 dark:border-cyan-500 rounded-full"
                     />
                 </div>
-                
-                
             </div>
         </div>
     )

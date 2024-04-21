@@ -2,11 +2,12 @@
 
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from "react"
-import { CustomError, userRegister, userLogin } from '../../services/vollmedApi';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useContext, useState } from "react"
+import { CustomError, userRegister, userLogin } from '../../services/vollmedApi'
+import { FaEye, FaEyeSlash } from "react-icons/fa"
+import { AuthContext } from "@/app/context/AuthContext"
 import {CreateUserFormData, LoginUserFormData, createUserSchema, loginSchema} from './schemas'
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 interface UserProps {
     login: string,
@@ -22,7 +23,7 @@ export default function VollMed () {
         watch,
     } = useForm<CreateUserFormData>({
         resolver: zodResolver(createUserSchema)
-    });
+    })
 
     const {
         register: registerLogin,
@@ -30,7 +31,7 @@ export default function VollMed () {
         formState: { errors: errorsLogin },
     } = useForm<LoginUserFormData>({
         resolver: zodResolver(loginSchema)
-    });
+    })
 
     const [outPutUser, setOutPutUser ] = useState('')
     const [outPutLogin, setOutPutLogin ] = useState('')
@@ -38,9 +39,10 @@ export default function VollMed () {
     const [login, setLogin ] = useState(false)
     const [showPassword, setShowPassword] = useState(false);
 
+    const {signIn} = useContext(AuthContext)
 
     function togglePasswordVisibility() {
-        setShowPassword(!showPassword);
+        setShowPassword(!showPassword)
     }
 
     function handleFormCadastro () {
@@ -53,8 +55,8 @@ export default function VollMed () {
         setLogin(true)
     }
 
-    function showFormResult(data: CreateUserFormData) {
-        setOutPutUser(JSON.stringify(data, null, 2))
+    function showFormResult(data: LoginUserFormData) {
+        setOutPutLogin(JSON.stringify(data, null, 2))
     }
 
     async function createUser(data: CreateUserFormData) {
@@ -67,7 +69,7 @@ export default function VollMed () {
             setOutPutUser(JSON.stringify(response, null, 2));
         } catch (error: any) {
             const typedError = error as CustomError
-            setOutPutUser(typedError.name);
+            setOutPutUser(typedError.name)
         }
     }
 
@@ -88,15 +90,14 @@ export default function VollMed () {
             // Se ocorrer um erro durante o login
             console.error("Erro durante o login:", error.message);
             const typedError = error as CustomError
-            setOutPutLogin(typedError.message);
+            setOutPutLogin(typedError.message)
             // Manipula o erro conforme necessário
         }
     }  
-    
-    const tempLogin = () => {
-        const outPut = ("Logado com sucesso...ou será que não...")
-        setOutPutLogin(JSON.stringify(outPut, null, 2));
-    }
+
+    async function handleSignIn(data : LoginUserFormData) {
+        await signIn(data)
+    } 
 
     return (
         <main className="h-screen pt-8 flex flex-col flex-1 items-center justify-center mx-2 ">
@@ -178,7 +179,7 @@ export default function VollMed () {
             )}
             { login && (
                 <form 
-                onSubmit={handleSubmitLoginUser(tempLogin)}
+                onSubmit={handleSubmitLoginUser(handleSignIn)}
                 className="flex flex-col w-full sm:max-w-xs max-w-64 gap-4 ">
                 <div className="flex flex-col mb-3">
                     <label htmlFor="login-email" className="font-medium text-xl mb-1">Login</label>

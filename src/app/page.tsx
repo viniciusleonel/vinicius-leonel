@@ -7,12 +7,7 @@ import  {ProjectCarousel}  from "./components/Projects/projectCarousel"
 
 
 export default function Home () {
-    return (
-        <>
-        <nav>
-            <Nav />
-        </nav>
-                
+    return (               
         <main>
             <section className="min-h-screen flex items-center ">
                 <About />    
@@ -24,7 +19,6 @@ export default function Home () {
             
             <Skills />    
         </main>    
-        
-        </>
+
     )
 }
