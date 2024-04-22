@@ -12,7 +12,7 @@ export async function signInRequest(data: SignInRequestData) {
     await delay()
 
     return{
-        token: "Algum token aleatorio",
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aW5pY2l1c2xwcy5jbXNAZ21haWwuY29tIiwiaXNzIjoiQVBJIFZvbGwubWVkIiwiZXhwIjoxNzEzNzEwOTY0fQ.bVTJfvcbhvWd7VR_bzZDBynRMgJ_sAW31oeUfiLMN9w",
         user: {
             email: "viniciuslps.cms@gmail.com",
             avatar_url: "https://github.com/viniciusleonel.png"
@@ -24,7 +24,7 @@ export async function recoverUserInfo() {
     await delay()
 
     return {
-        token: "Algum token aleatorio",
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aW5pY2l1c2xwcy5jbXNAZ21haWwuY29tIiwiaXNzIjoiQVBJIFZvbGwubWVkIiwiZXhwIjoxNzEzNzEwOTY0fQ.bVTJfvcbhvWd7VR_bzZDBynRMgJ_sAW31oeUfiLMN9w",
         user: {
             email: "viniciuslps.cms@gmail.com",
             avatar_url: "https://github.com/viniciusleonel.png"

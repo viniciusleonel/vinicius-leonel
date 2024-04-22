@@ -3,13 +3,15 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useContext, useState } from "react"
-import { CustomError, userRegister, userLogin } from '../../services/vollmedApi'
+import { CustomError, logUser, userRegister, vollmedApi } from '../../services/vollmedApi'
 import { FaEye, FaEyeSlash } from "react-icons/fa"
 import { AuthContext } from "@/app/context/AuthContext"
 import {CreateUserFormData, LoginUserFormData, createUserSchema, loginSchema} from './schemas'
 import clsx from 'clsx'
+import { setCookie } from "nookies"
+import { useRouter } from "next/navigation"
 
-interface UserProps {
+export interface UserProps {
     login: string,
     senha: string
 }
@@ -38,6 +40,7 @@ export default function VollMed () {
     const [cadastro, setCadastro ] = useState(true)
     const [login, setLogin ] = useState(false)
     const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter()
 
     const {signIn} = useContext(AuthContext)
 
@@ -73,30 +76,13 @@ export default function VollMed () {
         }
     }
 
-    async function logUser(data: { email: string; password: string }) {
-        try {
-            // Monta os dados do usuário a serem enviados na requisição de login
-            const userData = {
-                login: data.email,
-                senha: data.password
-            };
-            // Faz login do usuário e obtém o token
-            const token = await userLogin(userData);
-            console.log("Token recebido:", token);
-            console.log("Login efetuado com sucesso!");
-            setOutPutLogin(JSON.stringify(token, null, 2));
-            // Manipula o token conforme necessário
-        } catch (error: any) {
-            // Se ocorrer um erro durante o login
-            console.error("Erro durante o login:", error.message);
-            const typedError = error as CustomError
-            setOutPutLogin(typedError.message)
-            // Manipula o erro conforme necessário
-        }
-    }  
-
     async function handleSignIn(data : LoginUserFormData) {
-        await signIn(data)
+        try {
+            await signIn(data)
+        } catch (error: any) {
+            const deny = "Acesso negado!"
+            setOutPutLogin(deny)
+        }
     } 
 
     return (

@@ -1,8 +1,9 @@
 import { createContext, useEffect, useState } from "react";
-import { LoginUserFormData } from "../vollmed/user/schemas";
 import { signInRequest, recoverUserInfo } from "../services/auth";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation'
+import { vollmedApi, LoginResponse, logUser, userRegister } from "../services/vollmedApi";
+import { UserProps } from "../vollmed/user/page";
 
 type User = {
     email: string;
@@ -14,8 +15,14 @@ type SignInData = {
     password: string
 }
 
+type Token = {
+    sub: string,
+    iss: string,
+    exp: Date
+}
+
 type AuthContextType = {
-    user: User | null;
+    user: SignInData | null;
     isAuthenticated: boolean;
     signIn: (data: SignInData) => Promise<void>
 }
@@ -23,43 +30,39 @@ type AuthContextType = {
 export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState<SignInData | null>(null);
     const router = useRouter()
     const isAuthenticated = !!user
 
     useEffect(() => {
         const { 'nextauth.token': token } = parseCookies()
         
-        if (token) {
-            recoverUserInfo().then(response => 
-                setUser(response.user))
-        }
+        // if (token) {
+        //     recoverUserInfo().then(response => 
+        //         setUser(response.token))
+        // }
     
     }, [])
 
-    async function signIn({ email, password }: SignInData) {
+    async function signIn(data: SignInData) {
         try {
-            
-            if (!router) {
-                // Se o router não estiver pronto, aguarde até que ele esteja
-                await new Promise((resolve) => setTimeout(resolve, 100))
-            }
 
-            const { token, user } = await signInRequest({
-                email,
-                password,
-            })
+            const userData: UserProps = {
+                login: data.email,
+                senha: data.password
+            };
+
+            const {token} = await logUser("/login", userData)
 
             setCookie(undefined, "nextauth.token", token, {
                 maxAge: 60 * 60 * 2, // 2 hours
             })
 
+            vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
             setUser(user)
             router.push('/dashboard')
         } catch (error) {
-            // Lidar com erros de autenticação aqui
-            console.error("Erro ao fazer login:", error)
-            throw error; // Propaga o erro para que ele possa ser tratado pelo código que chama signIn
+            throw error; 
         }
     }
 
