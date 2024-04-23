@@ -5,9 +5,12 @@ import Skills from "./components/Skills/skills"
 import About from "./components/About/about"
 import  {ProjectCarousel}  from "./components/Projects/projectCarousel"
 
-
 export default function Home () {
-    return (               
+    return (      
+    <>
+        <nav>
+            <Nav />
+        </nav>
         <main>
             <section className="min-h-screen flex items-center ">
                 <About />    
@@ -19,6 +22,6 @@ export default function Home () {
             
             <Skills />    
         </main>    
-
+    </>
     )
 }

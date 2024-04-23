@@ -52,15 +52,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 senha: data.password
             };
 
+            setUser({ email: data.email, password: '' });
+            const userEmail = user?.email
             const {token} = await logUser("/login", userData)
 
             setCookie(undefined, "nextauth.token", token, {
                 maxAge: 60 * 60 * 2, // 2 hours
             })
+            setCookie(undefined, "nextauth.user", data.email, {
+                maxAge: 60 * 60 * 2, // 2 hours
+            })
 
             vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
-            setUser(user)
-            router.push('/dashboard')
+            setUser({ email: data.email, password: '' });
+            router.push('/vollmed/user/dashboard')
         } catch (error) {
             throw error; 
         }
