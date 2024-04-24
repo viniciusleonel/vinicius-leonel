@@ -1,24 +1,12 @@
 import { createContext, useEffect, useState } from "react";
-import { signInRequest, recoverUserInfo } from "../services/auth";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation'
-import { vollmedApi, LoginResponse, logUser, userRegister } from "../services/vollmedApi";
+import { vollmedApi, logUser } from "../services/vollmedApi";
 import { UserProps } from "../vollmed/user/forms/userRegister";
-
-type User = {
-    email: string;
-    avatar_url: string;
-}
 
 type SignInData = {
     email: string
     password: string
-}
-
-type Token = {
-    sub: string,
-    iss: string,
-    exp: Date
 }
 
 type AuthContextType = {
@@ -53,7 +41,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             };
 
             setUser({ email: data.email, password: '' });
-            const userEmail = user?.email
             const {token} = await logUser("/login", userData)
 
             setCookie(undefined, "nextauth.token", token, {

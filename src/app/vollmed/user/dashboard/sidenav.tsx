@@ -4,10 +4,18 @@ import ToggleButton from '../../../components/ToggleButton/toggleButton';
 import { TbLogout2 } from "react-icons/tb";
 import { AuthContext } from "../../../context/AuthContext"
 import { useContext } from "react"
+import { destroyCookie, parseCookies } from 'nookies';
+import { useRouter } from 'next/navigation';
 
 export default function SideNav() {
 
-    const { user } = useContext(AuthContext)
+    const router = useRouter()
+
+    function singOut () {
+        destroyCookie(null, 'nextauth.token')
+        destroyCookie(null, 'nextauth.user')
+        router.push('/')
+    }
     return (
         <div className="flex h-full flex-col px-3 py-4 md:px-2">
         {/* <Link
@@ -22,7 +30,7 @@ export default function SideNav() {
             <NavLinks />
             <div className="hidden h-auto w-full grow shadow-lg border-2 border-cyan-700  dark:border-none rounded-md dark:bg-slate-900 md:block"></div>
             <form>
-            <button className="flex h-[48px] w-full grow items-center justify-center gap-2 shadow-lg border-2 hover:bg-slate-100 border-cyan-700  dark:border-none rounded-md dark:bg-slate-900 dark:hover:bg-dark-secondary p-3 text-sm font-medium  hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
+            <button onClick={singOut} className="flex h-[48px] w-full grow items-center justify-center gap-2 shadow-lg border-2 hover:bg-slate-100 border-cyan-700  dark:border-none rounded-md dark:bg-slate-900 dark:hover:bg-dark-secondary p-3 text-sm font-medium  hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
                 <div className='w-full flex items-center justify-between'>
                     
                     <div className=' flex items-center justify-center gap-2'>

@@ -1,10 +1,11 @@
+import {CircularProgress} from "@nextui-org/react";
 
 
 export default function Loading() {
-    // You can add any UI inside Loading, including a Skeleton.
     return (
-        <>
-            Loading...
-        </>
+        <div className="flex gap-4">
+            <CircularProgress color="primary" size="lg" aria-label="Loading..."/>
+            <p>Loading...</p>
+        </div>
     )
 }

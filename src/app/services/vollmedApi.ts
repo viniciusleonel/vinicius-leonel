@@ -1,27 +1,21 @@
 import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios"
 import { parseCookies } from "nookies";
 
-const { 'nextauth.token': token } = parseCookies()
-
 export const vollmedApi: AxiosInstance = axios.create({
     baseURL: "http://localhost:8080/"
 })
 
-// if (token) {
-//     vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
-// }
+const { 'nextauth.token': token } = parseCookies()
 
+if (token) {
+    vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
+}
 
 type UserProps = {
     login: string
     senha: string
 }
 
-export type LoginResponse = {
-    token: string;
-}
-
-// Definindo a interface para o erro específico que você espera
 export interface CustomError extends Error {
     response?: {
         status?: number
@@ -29,7 +23,7 @@ export interface CustomError extends Error {
     };
 }
 
-export async function logUser<LoginResponse>(path: string, userData: UserProps) {
+export async function logUser(path: string, userData: UserProps) {
     try {
         const token = await vollmedApi.post(path, userData)
         return token.data;

@@ -4,6 +4,7 @@ import { FaEyeSlash, FaEye } from "react-icons/fa"
 import { LoginUserFormData, loginSchema } from "../schemas"
 import { useContext, useState } from "react"
 import { AuthContext } from "@/app/context/AuthContext"
+import { parseCookies } from "nookies"
 
 interface UserLoginProps {
     passwordState: () => void
@@ -14,6 +15,8 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
 
     const [outPutLogin, setOutPutLogin ] = useState('')
     const {signIn} = useContext(AuthContext)
+    const cookies = parseCookies()
+    const token = cookies['nextauth.token']
 
     const {
         register: registerLogin,

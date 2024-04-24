@@ -16,11 +16,14 @@ export default function Dashboard () {
         
         const cookies = parseCookies()
         const token = cookies['nextauth.token']
-        const userLog = cookies['nextauth.user']
+        
         if (!token ) {
             router.push('/')
-        } 
-        setUserLog(userLog || '') 
+        } else {
+            const userLog = cookies['nextauth.user']
+            setUserLog(userLog || '')
+        }
+
     }, [])
 
     return (

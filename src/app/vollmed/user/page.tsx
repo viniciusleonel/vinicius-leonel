@@ -4,13 +4,27 @@ import clsx from 'clsx'
 import Nav from "@/app/components/Nav/Nav"
 import UserRegister from "./forms/userRegister"
 import UserLogin from "./forms/userLogin"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { parseCookies } from 'nookies'
+import { useRouter } from 'next/navigation'
 
 export default function VollMed () {
 
     const [login, setLogin ] = useState(false)
     const [cadastro, setCadastro ] = useState(true)
     const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter()
+
+    useEffect(() => {
+        
+        const cookies = parseCookies()
+        const token = cookies['nextauth.token']
+        
+        if (token ) {
+            router.push("/vollmed/user/dashboard")
+        } 
+
+    }, [])
 
     function togglePasswordVisibility() {
         setShowPassword(!showPassword)
