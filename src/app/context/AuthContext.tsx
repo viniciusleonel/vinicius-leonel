@@ -3,7 +3,7 @@ import { signInRequest, recoverUserInfo } from "../services/auth";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation'
 import { vollmedApi, LoginResponse, logUser, userRegister } from "../services/vollmedApi";
-import { UserProps } from "../vollmed/user/page";
+import { UserProps } from "../vollmed/user/forms/userRegister";
 
 type User = {
     email: string;
