@@ -19,17 +19,13 @@ export default function Dashboard () {
         
         if (!token ) {
             router.push('/')
-        } else {
-            const userLog = cookies['nextauth.user']
-            setUserLog(userLog || '')
-        }
+        } 
 
     }, [])
 
     return (
         <div className=" flex flex-col justify-center items-center">
             <h1>Dashboard</h1>
-            <h2 className="">{userLog}</h2>
         </div>
     )
 }

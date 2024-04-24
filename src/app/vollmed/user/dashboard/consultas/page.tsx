@@ -15,17 +15,16 @@ export default function Consultas () {
         
         const cookies = parseCookies()
         const token = cookies['nextauth.token']
-        const userLog = cookies['nextauth.user']
+        
         if (!token ) {
             router.push('/')
         } 
-        setUserLog(userLog || '') 
+
     }, [])
 
     return (
         <div className=" flex flex-col justify-center items-center">
             <h1>Consultas</h1>
-            <h2 className="">{userLog}</h2>
         </div>
     )
 }

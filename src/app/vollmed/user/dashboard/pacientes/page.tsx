@@ -15,11 +15,9 @@ export default function Pacientes () {
         
         const cookies = parseCookies()
         const token = cookies['nextauth.token']
-        const userLog = cookies['nextauth.user']
         if (!token ) {
             router.push('/')
         } 
-        setUserLog(userLog || '') 
     }, [])
 
     return (
