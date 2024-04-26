@@ -42,29 +42,74 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center">
-            <input 
-                type="text" 
-                value={idPaciente} 
-                onChange={handleChange} 
-                onKeyDown={handleKeyPress}
-                placeholder="Insira o ID do Paciente"
-            />
-            <button onClick={buscarPaciente}>Buscar Paciente</button>
+        <div className="flex flex-col justify-center items-center ">
+            <div className="m-2 p-2 gap-2 flex border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
+            <button className="font-bold " onClick={buscarPaciente}>Buscar Paciente:</button>
+                <input 
+                className="  bg-transparent focus:outline-none focus:none"
+                    type="text" 
+                    value={idPaciente} 
+                    onChange={handleChange} 
+                    onKeyDown={handleKeyPress}
+                    placeholder="Insira o ID do Paciente"
+                />
+            </div>
             {paciente ? (
-                <div>
-                    <p>Nome: {paciente.nome}</p>
-                    <p>Email: {paciente.email}</p>
-                    <p>Telefone: {paciente.telefone}</p>
-                    <p>CPF: {paciente.cpf}</p>
-                    <p>Endereço:</p>
-                    <p>Logradouro: {paciente.endereco.logradouro}</p>
-                    <p>Bairro: {paciente.endereco.bairro}</p>
-                    <p>CEP: {paciente.endereco.cep}</p>
-                    <p>Número: {paciente.endereco.numero}</p>
-                    <p>Complemento: {paciente.endereco.complemento}</p>
-                    <p>Cidade: {paciente.endereco.cidade}</p>
-                    <p>UF: {paciente.endereco.uf}</p>
+                <div className="w-full p-4 flex flex-col justify-center items-center border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
+                    <caption className="font-bold">Dados do Paciente</caption>
+                    <table className="w-full flex flex-col">
+                        <tbody className="flex gap-4 items-center justify-evenly">
+                            <tr className="flex flex-col items-start ">
+                                <th>Nome:</th>
+                                <td>{paciente.nome}</td>
+                            </tr>
+                            <tr className="flex flex-col items-start">
+                                <th>Email:</th>
+                                <td>{paciente.email}</td>
+                            </tr>
+                            <tr className="flex flex-col items-start">
+                                <th>Telefone:</th>
+                                <td>{paciente.telefone}</td>
+                            </tr>
+                            <tr className="flex flex-col items-start">
+                                <th>CPF:</th>
+                                <td>{paciente.cpf}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <caption className="font-bold p-2">Endereço</caption>
+                    <table className="w-full flex flex-col">
+                    <tbody className="flex gap-4 items-center justify-evenly">
+                        <tr className="flex flex-col items-start">
+                            <th>Logradouro</th>
+                            <td>{paciente.endereco.logradouro}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>Bairro</th>
+                            <td>{paciente.endereco.bairro}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>CEP</th>
+                            <td>{paciente.endereco.cep}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>Número</th>
+                            <td>{paciente.endereco.numero}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>Complemento</th>
+                            <td>{paciente.endereco.complemento}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>Cidade</th>
+                            <td>{paciente.endereco.cidade}</td>
+                        </tr>
+                        <tr className="flex flex-col items-start ">
+                            <th>UF</th>
+                        <td>{paciente.endereco.uf}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
             ) : null }
         </div>
