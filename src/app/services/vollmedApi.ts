@@ -57,4 +57,23 @@ export async function userRegister(path: string, userData: UserProps) {
     }
 }
 
-
+export async function getPacient(path: string, token: string) {
+    try {
+        const response = await vollmedApi.get(path, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+        return response.data
+    } catch (error: any) {
+        const typedError = error as CustomError;
+        if (axios.isAxiosError(typedError) && typedError.response) {
+            if (typedError.response.data) {
+                return typedError.response.data
+            } else if (typedError.response.status === 403) {
+                throw new Error(typedError.response.statusText)
+            }
+        }
+        throw typedError.message
+    }
+}
