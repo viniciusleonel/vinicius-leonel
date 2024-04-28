@@ -43,7 +43,7 @@ export default function Nav ({title} : NavProps) {
                     {menuBurguer && (
                         <div className="md:hidden animate-slideRight absolute top-[2.7rem] -left-6 flex flex-col border border-cyan-700 dark:border-cyan-500 ">
                             <Link 
-                                className="p-4 hover:text-cyan-700 hover:bg-slate-100 bg-white dark:bg-dark-primary dark:hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer dark:hover:text-cyan-300"
+                                className="p-4 hover:text-cyan-700 dark:hover:text-cyan-300 hover:bg-slate-100 bg-white dark:bg-dark-primary dark:hover:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 w-full md:flex cursor-pointer "
                                 href={"/#Projects"}
                             >Projects
                             </Link>
@@ -60,7 +60,7 @@ export default function Nav ({title} : NavProps) {
                         </div>
                     )}
                 </div>
-                <Link href={"/"} className="text-2xl mt-1 md:ps-10 sm:text-3xl">{title || "Full Stack Developer"}</Link>
+                <Link href={"/"} className="text-2xl mt-1 md:ps-10 sm:text-3xl hover:text-cyan-700 dark:hover:text-cyan-300">{title || "Full Stack Developer"}</Link>
                 <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <Link 

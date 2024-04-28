@@ -11,7 +11,7 @@ export default function Home () {
         <nav>
             <Nav />
         </nav>
-        <main>
+        <main className="bg-[#f5f9fb] dark:bg-dark-secondary">
             <section className="min-h-screen flex items-center ">
                 <About />    
             </section> 
