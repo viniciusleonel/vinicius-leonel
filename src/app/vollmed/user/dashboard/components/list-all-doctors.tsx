@@ -2,7 +2,7 @@
 export default function ListAllDoctors() {
     return (
         <div className="container mx-auto my-8 px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="">
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
                 <div className="flex items-center justify-between mb-4">
                 <h2 className="text-2xl font-bold">Registered Patients</h2>

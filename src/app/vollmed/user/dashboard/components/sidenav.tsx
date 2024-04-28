@@ -3,13 +3,10 @@ import { SheetTrigger, SheetContent, Sheet } from "@/app/vollmed/user/dashboard/
 import Link from "next/link"
 import { Button } from "@/app/vollmed/user/dashboard/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/app/vollmed/user/dashboard/ui/dropdown-menu"
-import ToggleButton from "@/app/components/ToggleButton/toggleButton"
 import Image from "next/image";
 import { destroyCookie, parseCookies } from "nookies"
 import { useRouter } from "next/navigation"
 import NavLinks from "@/app/vollmed/user/dashboard/components/navLinks"
-import SearchApi from "../ui/search-api"
-import VollMedNav from "./voll-med-nav"
 
 export default function SideNav() {
 
@@ -26,41 +23,40 @@ export default function SideNav() {
     return (
         <>
         
-        <aside className="fixed hidden inset-y-0 left-0 z-10 w-14 flex-col border-r border-cyan-700  dark:border-cyan-400 sm:flex ">
-        <div className="flex items-center justify-center mt-4 my-2"><ToggleButton /></div>
+        <aside className="fixed hidden inset-y-0 left-0 z-10 w-14 flex-col dark:bg-dark-primary border-r border-cyan-700  dark:border-cyan-400 sm:flex ">
             
             {/* Arrow Menu */}
-            <div className="relative flex h-10 w-full dark:bg-dark-secondary items-center justify-center bg-[#f5f9fb] transition-all hover:bg-gray-100 dark:hover:bg-gray-800 ">
+            <div className="relative mt-20 flex h-10 w-full dark:dark:bg-dark-primary items-center justify-center bg-[#f5f9fb]  ">
             
             <Sheet>
                 <SheetTrigger asChild className="">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg  transition-colors hover:text-dark-secondary md:h-8 md:w-8 dark:text-gray-400 dark:hover:text-gray-50">
-                    <ArrowLeftRightIcon className="h-5 w-5 text-gray-500 transition-transform duration-300 hover:rotate-180 dark:text-gray-400" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg  md:h-8 md:w-8">
+                    <ArrowLeftRightIcon className="h-5 w-5  transition-transform duration-300 hover:rotate-180 " />
                     <span className="sr-only">Toggle Menu</span>
                 </div>
                 </SheetTrigger>
                 <SheetContent className="sm:max-w-xs" side="left">
                 <nav className="grid gap-6 text-lg font-medium">
                     <Link
-                    className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-gray-900 text-lg font-semibold text-gray-50 md:text-base dark:bg-gray-50 dark:text-gray-900"
+                    className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-gray-200 text-lg font-semibold  md:text-base dark:bg-gray-50 dark:text-gray-900"
                     href="#"
                     >
                     <Package2Icon className="h-5 w-5 transition-all group-hover:scale-110" />
                     <span className="sr-only">VollMed</span>
                     </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard">
+                    <Link className="flex items-center gap-4 px-2.5  " href="/vollmed/user/dashboard">
                     <HomeIcon className="h-5 w-5" />
                     Dashboard
                     </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-950 dark:text-gray-50" href="/vollmed/user/dashboard/medicos">
+                    <Link className="flex items-center gap-4 px-2.5 " href="/vollmed/user/dashboard/medicos">
                     <UserIcon className="h-5 w-5" />
                     Doctors
                     </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard/pacientes">
+                    <Link className="flex items-center gap-4 px-2.5  " href="/vollmed/user/dashboard/pacientes">
                     <UserIcon className="h-5 w-5" />
                     Patients
                     </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard/consultas">
+                    <Link className="flex items-center gap-4 px-2.5 " href="/vollmed/user/dashboard/consultas">
                     <CalendarCheckIcon className="h-5 w-5" />
                     Appointments
                     </Link>
@@ -79,9 +75,9 @@ export default function SideNav() {
             <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                <Button className="overflow-hidden rounded-full" size="icon" variant="outline">
+                <Button className="overflow-hidden  rounded-full" size="icon" variant="default">
                     <Image 
-                        className='overflow-hidden rounded-full'
+                        className='overflow-hidden rounded-full '
                         alt="Avatar"
                         height={36}
                         width={36}
@@ -102,51 +98,7 @@ export default function SideNav() {
             </nav>
 
         </aside>
-
-        {/* Mobile Menu */}
-        <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14 ">
-            <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-[#f5f9fb] px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6 dark:bg-dark-secondary">
-            <Sheet>
-                <SheetTrigger asChild>
-                <Button className="sm:hidden" size="icon" variant="outline">
-                    <PanelLeftIcon className="h-5 w-5" />
-                    <span className="sr-only">Toggle Menu</span>
-                </Button>
-                </SheetTrigger>
-                <SheetContent className="sm:max-w-xs" side="left">
-                <nav className="grid gap-6 text-lg font-medium">
-                    <Link
-                    className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-gray-900 text-lg font-semibold text-gray-50 md:text-base dark:bg-gray-50 dark:text-gray-900"
-                    href="#"
-                    >
-                    <Package2Icon className="h-5 w-5 transition-all group-hover:scale-110" />
-                    <span className="sr-only">VollMed</span>
-                    </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard">
-                    <HomeIcon className="h-5 w-5" />
-                    Dashboard
-                    </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-950 dark:text-gray-50" href="/vollmed/user/dashboard/medicos">
-                    <UserIcon className="h-5 w-5" />
-                    Doctors
-                    </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard/pacientes">
-                    <UserIcon className="h-5 w-5" />
-                    Patients
-                    </Link>
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/vollmed/user/dashboard/consultas">
-                    <CalendarCheckIcon className="h-5 w-5" />
-                    Appointments
-                    </Link>
-                    <div className='flex'>
-                        {userLog && <h2>{userLog}</h2>}
-                    </div>
-                </nav>
-                </SheetContent>
-            </Sheet>
-            </header>
-            
-        </div>
+        
         </>
     )
 }

@@ -2,7 +2,7 @@
 export default function RegisterDoctor() {
     return (
         <div className="container mx-auto my-8 px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="">
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold mb-4">Registrar Médico</h2>
                 <form className="space-y-4">

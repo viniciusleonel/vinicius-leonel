@@ -6,6 +6,7 @@ import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
 import RegisterDoctor from "../components/register-doctor"
 import VollMedNav from "../components/voll-med-nav"
+import ListAllDoctors from "../components/list-all-doctors"
 
 export default function Medicos () {
     const { user } = useContext(AuthContext)
@@ -24,15 +25,11 @@ export default function Medicos () {
     }, [])
 
     return (
-        <>
-            <nav className="fixed top-0  right-0 left-[3.5rem]">
-                <VollMedNav 
-                    title='Medicos'/>
-            </nav>
-            <div className=" flex flex-col justify-center items-center">
-                <h2 className="">{userLog}</h2>
+        <div className="w-full">
+            <div className="">
                 <RegisterDoctor />
+                <ListAllDoctors />
             </div>
-        </>
+        </div>
     )
 }
