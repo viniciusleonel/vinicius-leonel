@@ -1,14 +1,14 @@
 'use client'
 
 import { SetStateAction, useContext, useEffect, useState } from "react"
-import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
 import RegisterDoctor from "../components/register-doctor"
 import VollMedNav from "../components/voll-med-nav"
-import ListAllDoctors from "../components/list-all-doctors"
 import { getPacient } from "@/app/services/vollmedApi"
-import ListMedico from "../components/list-medico"
+import MedicoListCabecalho from "./__components/medico-list-cabecalho"
+import MedicoListHeader from "./__components/medico-list-header"
+import MedicoListBody from "./__components/medico-list-body"
 
 export default function Medicos () {
     const [register, setRegister] = useState(false)
@@ -90,22 +90,33 @@ export default function Medicos () {
                 
                     />
                 )}
-                {list && (
-                    <ListAllDoctors 
-                    />
-                )}
+                
                 {medico ? (
-                <div className=" ">
-                    <ListMedico
-                        id={medico.id}
-                        nome={medico.nome}
-                        email={medico.email}
-                        telefone={medico.telefone}
-                        crm={medico.crm}
-                        especialidade={medico.especialidade}
-                        endereco={medico.endereco}
-                        ativo={medico.ativo}
-                    />
+                <div className="container mx-auto my-8 px-4 md:px-6">
+                    <div className="">
+                        <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
+                            <MedicoListCabecalho />
+                            <div className="overflow-x-auto">
+                                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead className="bg-gray-50 dark:bg-gray-800">
+                                        <MedicoListHeader />
+                                    </thead>
+                                    <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-950 dark:divide-gray-700">
+                                        <MedicoListBody 
+                                            id={medico.id}
+                                            nome={medico.nome}
+                                            email={medico.email}
+                                            telefone={medico.telefone}
+                                            crm={medico.crm}
+                                            especialidade={medico.especialidade}
+                                            endereco={medico.endereco}
+                                            ativo={medico.ativo}
+                                        />
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             ) : null }
             </div>

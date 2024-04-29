@@ -5,10 +5,12 @@ import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
 import { getPacient } from "@/app/services/vollmedApi"
-import ListPacient from "../components/list-pacient"
 import VollMedNav from "../components/voll-med-nav"
 import RegisterDoctor from "../components/register-doctor"
-import ListAllDoctors from "../components/list-all-doctors"
+import PacienteListCabecalho from "./__components/paciente-list-cabecalho"
+import PacienteListHeader from "./__components/paciente-list-header"
+import PacienteListBody from "./__components/paciente-list-body"
+
 
 
 export default function Pacientes () {
@@ -85,40 +87,40 @@ export default function Pacientes () {
                     />}
             />
 
-            {/* <div className="m-2 p-2 gap-2 flex border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
-            <button className="font-bold " onClick={buscarPaciente}>Buscar Paciente:</button>
-                <input 
-                className="  bg-transparent focus:outline-none focus:none"
-                    type="text" 
-                    value={idPaciente} 
-                    onChange={handleChange} 
-                    onKeyDown={handleKeyPress}
-                    placeholder="Insira o ID do Paciente"
-                />
-            </div> */}
-
             {register && (
                     <RegisterDoctor 
                 
                     />
                 )}
-                {list && (
-                    <ListAllDoctors 
-                    />
-                )}
 
             {paciente ? (
-                <div className=" ">
-                    <ListPacient 
-                        id={paciente.id}
-                        nome={paciente.nome}
-                        email={paciente.email}
-                        telefone={paciente.telefone}
-                        cpf={paciente.cpf}
-                        endereco={paciente.endereco}
-                        ativo={paciente.ativo}
-                    />
+
+            <div className="container mx-auto my-8 px-4 md:px-6">
+                <div className="">
+                    <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
+                            <PacienteListCabecalho />
+                        <div className="overflow-x-auto">
+                        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead className="bg-gray-50 dark:bg-gray-800">
+                                <PacienteListHeader />
+                            </thead>
+                            <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-950 dark:divide-gray-700">
+                                <PacienteListBody 
+                                    id={paciente.id}
+                                    nome={paciente.nome}
+                                    email={paciente.email}
+                                    telefone={paciente.telefone}
+                                    cpf={paciente.cpf}
+                                    endereco={paciente.endereco}
+                                    ativo={paciente.ativo}
+                                />
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
                 </div>
+            </div>
+                
             ) : null }
         </div>
     );

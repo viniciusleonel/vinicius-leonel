@@ -5,11 +5,11 @@ export const vollmedApi: AxiosInstance = axios.create({
     baseURL: "http://localhost:8080/"
 })
 
-const { 'nextauth.token': token } = parseCookies()
+// const { 'nextauth.token': token } = parseCookies()
 
-if (token) {
-    vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
-}
+// if (token) {
+//     vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
+// }
 
 type UserProps = {
     login: string
@@ -75,5 +75,19 @@ export async function getPacient(path: string, token: string) {
             }
         }
         throw typedError.message
+    }
+}
+
+export async function getMedicos(path: string, token: string) {
+    try {
+        const response = await vollmedApi.get<PageableData<Medico[]>>(path, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+        return response.data.content
+    } catch (error: any) {
+        // Trate erros aqui, por exemplo, lançando uma exceção
+        throw new Error('Erro ao buscar dados dos médicos: ' + error.message);
     }
 }
