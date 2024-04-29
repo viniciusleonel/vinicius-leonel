@@ -5,11 +5,36 @@ import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
 import { getPacient } from "@/app/services/vollmedApi"
+import ListPacient from "../components/list-pacient"
+import VollMedNav from "../components/voll-med-nav"
+import RegisterDoctor from "../components/register-doctor"
+import ListAllDoctors from "../components/list-all-doctors"
+
 
 export default function Pacientes () {
     const router = useRouter();
-    const [paciente, setPaciente] = useState<Paciente | null>(null); // Estado para armazenar os dados do paciente
-    const [idPaciente, setIdPaciente] = useState(''); // Estado para armazenar o ID do paciente digitado no input
+    const [paciente, setPaciente] = useState<Paciente | null>(null);
+    const [idPaciente, setIdPaciente] = useState(''); 
+
+    const [register, setRegister] = useState(false)
+    const [list, setList] = useState(false)
+
+    function setRegisterCard () {
+        setRegister(true)
+        setList(false)
+        setPaciente(null)
+    }
+
+    function setListCard () {
+        setRegister(false)
+        setList(true)
+        setPaciente(null)
+    }
+
+    function closeCards () {
+        setRegister(false)
+        setList(false)
+    }
 
     useEffect(() => {
         const cookies = parseCookies();
@@ -37,13 +62,30 @@ export default function Pacientes () {
 
     function handleKeyPress(event: { key: string; }) {
         if (event.key === 'Enter') {
-            buscarPaciente(); // Chama a função buscarPaciente ao pressionar a tecla "Enter"
+            buscarPaciente()
+            closeCards(); // Chama a função buscarPaciente ao pressionar a tecla "Enter"
         }
     }
 
     return (
         <div className="flex flex-col justify-center items-center ">
-            <div className="m-2 p-2 gap-2 flex border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
+            <VollMedNav 
+                title="Pacientes"
+                handleRegister={() => setRegisterCard()}
+                handleList={() => setListCard()}
+                handleCards={() => closeCards()}
+                input={
+                    <input 
+                        className="  bg-transparent focus:outline-none focus:none"
+                        type="text" 
+                        value={idPaciente} 
+                        onChange={handleChange} 
+                        onKeyDown={handleKeyPress}
+                        placeholder="Insira o ID do Paciente"
+                    />}
+            />
+
+            {/* <div className="m-2 p-2 gap-2 flex border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
             <button className="font-bold " onClick={buscarPaciente}>Buscar Paciente:</button>
                 <input 
                 className="  bg-transparent focus:outline-none focus:none"
@@ -53,63 +95,29 @@ export default function Pacientes () {
                     onKeyDown={handleKeyPress}
                     placeholder="Insira o ID do Paciente"
                 />
-            </div>
+            </div> */}
+
+            {register && (
+                    <RegisterDoctor 
+                
+                    />
+                )}
+                {list && (
+                    <ListAllDoctors 
+                    />
+                )}
+
             {paciente ? (
-                <div className="w-full p-4 flex flex-col justify-center items-center border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
-                    <caption className="font-bold">Dados do Paciente</caption>
-                    <table className="w-full flex flex-col">
-                        <tbody className="flex gap-4 items-center justify-evenly">
-                            <tr className="flex flex-col items-start ">
-                                <th>Nome:</th>
-                                <td>{paciente.nome}</td>
-                            </tr>
-                            <tr className="flex flex-col items-start">
-                                <th>Email:</th>
-                                <td>{paciente.email}</td>
-                            </tr>
-                            <tr className="flex flex-col items-start">
-                                <th>Telefone:</th>
-                                <td>{paciente.telefone}</td>
-                            </tr>
-                            <tr className="flex flex-col items-start">
-                                <th>CPF:</th>
-                                <td>{paciente.cpf}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <caption className="font-bold p-2">Endereço</caption>
-                    <table className="w-full flex flex-col">
-                    <tbody className="flex gap-4 items-center justify-evenly">
-                        <tr className="flex flex-col items-start">
-                            <th>Logradouro</th>
-                            <td>{paciente.endereco.logradouro}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>Bairro</th>
-                            <td>{paciente.endereco.bairro}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>CEP</th>
-                            <td>{paciente.endereco.cep}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>Número</th>
-                            <td>{paciente.endereco.numero}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>Complemento</th>
-                            <td>{paciente.endereco.complemento}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>Cidade</th>
-                            <td>{paciente.endereco.cidade}</td>
-                        </tr>
-                        <tr className="flex flex-col items-start ">
-                            <th>UF</th>
-                        <td>{paciente.endereco.uf}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className=" ">
+                    <ListPacient 
+                        id={paciente.id}
+                        nome={paciente.nome}
+                        email={paciente.email}
+                        telefone={paciente.telefone}
+                        cpf={paciente.cpf}
+                        endereco={paciente.endereco}
+                        ativo={paciente.ativo}
+                    />
                 </div>
             ) : null }
         </div>

@@ -9,6 +9,7 @@
 /* Estilizando a barra de rolagem */
 ::-webkit-scrollbar {
     width: 4px; /* Largura da barra de rolagem */
+    height: 6px;
 }
 
 /* Estilizando o polegar da barra de rolagem */

@@ -6,8 +6,7 @@ import VollMedNav from "./components/voll-med-nav";
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <div className="w-full flex h-screen bg-[#f5f9fb] dark:bg-dark-secondary flex-col md:flex-row md:overflow-hidden">
-            <VollMedNav 
-            title="teste"/>
+            <VollMedNav />
             <div className="w-full flex-none md:w-10">
                 <SideNav />
             </div>
