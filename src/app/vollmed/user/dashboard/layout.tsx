@@ -1,6 +1,6 @@
 'use client'
 
-import SideNav from "./components/sidenav";
+import SideNav from "./components/side-nav";
 import VollMedNav from "./components/voll-med-nav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

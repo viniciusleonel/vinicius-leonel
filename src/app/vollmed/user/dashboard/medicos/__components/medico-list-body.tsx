@@ -1,6 +1,7 @@
 export default function MedicoListBody ({
     id, nome, email, telefone, crm, endereco, especialidade, ativo
 }: Medico) {
+
     return (
         <tr>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
@@ -20,6 +21,9 @@ export default function MedicoListBody ({
             </td>
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
                 {` ${endereco.logradouro},  Nº${endereco.numero}, ${endereco.complemento}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.uf.toUpperCase()} `}
+            </td>
+            <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
+                {ativo}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm">
                 <div className="flex gap-2">

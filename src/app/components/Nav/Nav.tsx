@@ -64,21 +64,21 @@ export default function Nav ({title} : NavProps) {
                 <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                     <div className="hidden md:flex" >
                         <Link 
-                            className="hidden md:flex cursor-pointer dark:hover:text-cyan-300"
+                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#Projects"}
                         >Projects
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link 
-                            className="hidden md:flex cursor-pointer dark:hover:text-cyan-300"
+                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/vollmed/user"}
                             >Upcoming Feature        
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link 
-                            className="hidden md:flex cursor-pointer dark:hover:text-cyan-300"
+                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/"}    
                             >About
                         </Link>
