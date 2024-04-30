@@ -1,4 +1,4 @@
-export default function MedicoListCabecalho () {
+export default function MedicoListNav () {
     return (
         <div className="flex items-center justify-between mb-4">
             <h2 className="text-2xl font-bold">Médicos Cadastrados</h2>

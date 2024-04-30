@@ -57,7 +57,7 @@ export async function userRegister(path: string, userData: UserProps) {
     }
 }
 
-export async function getPacient(path: string, token: string) {
+export async function getDataById(path: string, token: string) {
     try {
         const response = await vollmedApi.get(path, {
             headers: {
@@ -78,16 +78,19 @@ export async function getPacient(path: string, token: string) {
     }
 }
 
-export async function getMedicos(path: string, token: string) {
+export async function getMedicos(path: string, token: string): Promise<Medico[]> {
     try {
         const response = await vollmedApi.get<PageableData<Medico[]>>(path, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
-        })
-        return response.data.content
+        });
+        const medicosResponse = response.data.content;
+        // Aqui você pode precisar manipular os dados se response.data.content não for diretamente a lista de médicos
+        return medicosResponse.flat(); // Transforma a matriz de matrizes em uma única matriz
     } catch (error: any) {
         // Trate erros aqui, por exemplo, lançando uma exceção
         throw new Error('Erro ao buscar dados dos médicos: ' + error.message);
     }
 }
+

@@ -4,7 +4,7 @@ import { SetStateAction, useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
-import { getPacient } from "@/app/services/vollmedApi"
+import { getDataById } from "@/app/services/vollmedApi"
 import VollMedNav from "../components/voll-med-nav"
 import RegisterDoctor from "../components/register-doctor"
 import PacienteListCabecalho from "./__components/paciente-list-cabecalho"
@@ -51,7 +51,7 @@ export default function Pacientes () {
         try {
             const cookies = parseCookies();
             const token = cookies['nextauth.token'];
-            const pacienteResponse = await getPacient(`/pacientes/${idPaciente}`, token);
+            const pacienteResponse = await getDataById(`/pacientes/${idPaciente}`, token);
             setPaciente(pacienteResponse); // Armazena os dados do paciente no estado local
         } catch (error) {
             console.error('Erro ao obter paciente:', error);
