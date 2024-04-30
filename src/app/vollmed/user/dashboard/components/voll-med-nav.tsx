@@ -9,11 +9,10 @@ interface VollMedNavProps {
   title?: string  
   handleRegister?: () => void
   handleList?: () => void
-  handleCards?: () => void
   input?: ReactElement<InputHTMLAttributes<HTMLInputElement>, any>
 }
 
-export default function VollMedNav({title, handleRegister, handleList, handleCards, input}: VollMedNavProps) {
+export default function VollMedNav({title, handleRegister, handleList, input}: VollMedNavProps) {
   
   return (
     <header className="fixed top-0 left-0 right-0 z-20 flex h-16 gap-2 items-center justify-between px-6 bg-white shadow dark:bg-gray-950 border-b border-cyan-700  dark:border-cyan-400">

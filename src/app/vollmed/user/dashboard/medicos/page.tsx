@@ -15,28 +15,15 @@ import MedicoHeader from "./__components/medico-header"
 
 export default function Medicos () {
     const [register, setRegister] = useState(false)
-    const [list, setList] = useState(false)
     const [medico, setMedico] = useState<Medico | null>(null);
-    const [medicos, setMedicos] = useState<Medico[]>([]); // Alterado para lista de médicos
+    const [medicos, setMedicos] = useState<Medico[]>([]); 
     const [idMedico, setIdMedico] = useState(''); 
     const router = useRouter()
 
     function setRegisterCard () {
         setRegister(true)
-        setList(false)
         setMedico(null)
         setMedicos([])
-    }
-
-    function setListCard () {
-        setRegister(false)
-        setList(true)
-        setMedico(null)
-    }
-
-    function closeCards () {
-        setRegister(false)
-        setList(false)
     }
 
     useEffect(() => {
@@ -49,7 +36,7 @@ export default function Medicos () {
 
     }, [])
 
-    async function buscarMedico() {
+    async function getMedicoById() {
         try {
             const cookies = parseCookies();
             const token = cookies['nextauth.token'];
@@ -61,21 +48,18 @@ export default function Medicos () {
         }
     }
 
-    
-
-    async function buscarMedicos() {
+    async function getAllMedicos() {
         try {
             const cookies = parseCookies();
             const token = cookies['nextauth.token'];
             const medicosResponse = await getMedicos(`/medicos`, token);
             setMedicos(medicosResponse);
             setMedico(null)
-            closeCards()
+            setRegister(false)
         } catch (error) {
             console.error('Erro ao obter pacientes:', error);
         }
     }
-
 
     function handleChange(event: { target: { value: SetStateAction<string>; }; }) {
         setIdMedico(event.target.value); 
@@ -83,8 +67,8 @@ export default function Medicos () {
 
     function handleKeyPress(event: { key: string; }) {
         if (event.key === 'Enter') {
-            buscarMedico()
-            closeCards(); 
+            getMedicoById()
+            setRegister(false); 
         }
     }
 
@@ -93,8 +77,7 @@ export default function Medicos () {
             <VollMedNav 
                 title="Médicos"
                 handleRegister={() => setRegisterCard()}
-                handleList={buscarMedicos}
-                handleCards={() => closeCards()}
+                handleList={getAllMedicos}
                 input={
                     <input 
                         className="  bg-transparent focus:outline-none focus:none"
@@ -109,7 +92,6 @@ export default function Medicos () {
             <div className="">
                 {register && (
                     <RegisterDoctor 
-                
                     />
                 )}
                 
@@ -137,19 +119,6 @@ export default function Medicos () {
                                                 ativo={medico.ativo}
                                             />
                                         ))}
-                                        {medico && (
-                                            <MedicoListBody 
-                                                key={medico.id}
-                                                id={medico.id}
-                                                nome={medico.nome}
-                                                email={medico.email}
-                                                telefone={medico.telefone}
-                                                crm={medico.crm}
-                                                especialidade={medico.especialidade}
-                                                endereco={medico.endereco}
-                                                ativo={medico.ativo}
-                                            />
-                                        )}
                                     </tbody>
                                 </table>
                             </div>
