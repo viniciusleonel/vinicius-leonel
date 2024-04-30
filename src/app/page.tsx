@@ -3,7 +3,7 @@
 import Nav from "./components/Nav/Nav"
 import Skills from "./components/Skills/skills"
 import About from "./components/About/about"
-import  {ProjectCarousel}  from "./components/Projects/projectCarousel"
+import  {ProjectCarousel}  from "./components/Projects/project-carousel"
 
 export default function Home () {
     return (      

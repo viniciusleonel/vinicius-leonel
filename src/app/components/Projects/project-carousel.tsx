@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCard from "../../components/Projects/projectCard";
+import ProjectCard from "./project-card";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import projectsList from './projectList'; 
+import projectsList from './project-list'; 
 
 export function ProjectCarousel() {
     const [startX, setStartX] = useState<number | null>(null);

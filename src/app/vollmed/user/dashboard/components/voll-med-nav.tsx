@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Input } from "@/app/vollmed/user/dashboard/ui/input"
 import { Button } from "@/app/vollmed/user/dashboard/ui/button"
-import ToggleButton from "@/app/components/ToggleButton/toggleButton"
+import ToggleButton from "@/app/components/ToggleThemeButton/toggle-theme-button"
 import MobileMenu from "./mobile-menu"
 import { InputHTMLAttributes, ReactElement, SetStateAction, useState } from "react"
 

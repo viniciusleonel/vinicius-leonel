@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectCard from "../../components/Projects/projectCard";
-import { JavaIcon, SpringIcon } from "../../components/Skills/techIcons";
+import ProjectCard from "./project-card";
+import { JavaIcon, SpringIcon } from "../Skills/tech-icons";
 
 const projectsList = [
     {

@@ -1,3 +1,5 @@
+import capitalizarFrase from "@/app/utils/capitalize";
+
 export default function MedicoListBody ({
     id, nome, email, telefone, crm, endereco, especialidade, ativo
 }: Medico) {
@@ -5,10 +7,10 @@ export default function MedicoListBody ({
     return (
         <tr>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
-                {nome}
+                {capitalizarFrase(nome)}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                {email}
+                {email.toLowerCase()}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                 {crm}
@@ -20,7 +22,7 @@ export default function MedicoListBody ({
                 {telefone}
             </td>
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
-                {` ${endereco.logradouro},  Nº${endereco.numero}, ${endereco.complemento}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.uf.toUpperCase()} `}
+                {` ${capitalizarFrase(endereco.logradouro)},  Nº${endereco.numero}, ${endereco.complemento}, ${capitalizarFrase(endereco.bairro)}, ${capitalizarFrase(endereco.cidade)}, ${endereco.uf.toUpperCase()} `}
             </td>
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
                 {ativo}

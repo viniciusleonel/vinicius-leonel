@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./skills.module.css"
-import { TechIcons } from "./techIcons"
+import { TechIcons } from "./tech-icons"
 import { useState } from "react";
 
 export default function Skills () {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import ToggleButton from "../ToggleButton/toggleButton";
+import ToggleButton from "../ToggleThemeButton/toggle-theme-button";
 import Link from "next/link"
 
 interface NavProps {

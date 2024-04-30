@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation'
 import { vollmedApi, logUser } from "../services/vollmedApi";
-import { UserProps } from "../vollmed/user/forms/userRegister";
+import { UserProps } from "../vollmed/user/forms/user-register";
 
 type SignInData = {
     email: string

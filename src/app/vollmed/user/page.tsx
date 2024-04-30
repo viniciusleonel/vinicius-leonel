@@ -2,8 +2,8 @@
 
 import clsx from 'clsx'
 import Nav from "@/app/components/Nav/Nav"
-import UserRegister from "./forms/userRegister"
-import UserLogin from "./forms/userLogin"
+import UserRegister from "./forms/user-register"
+import UserLogin from "./forms/user-login"
 import { useEffect, useState } from 'react'
 import { parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'
