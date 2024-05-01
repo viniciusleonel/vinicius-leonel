@@ -1,4 +1,4 @@
-interface Medico {
+export interface Medico {
     id: number;
     nome: string;
     email: string;

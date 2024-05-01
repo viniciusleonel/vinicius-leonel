@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation'
-import { vollmedApi, logUser } from "../services/vollmedApi";
-import { UserProps } from "../vollmed/user/forms/user-register";
+import { vollmedApi, logUser } from "../../services/vollmedApi";
+import Usuario from "@/app/model/Usuario";
 
 type SignInData = {
     email: string
@@ -35,7 +35,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     async function signIn(data: SignInData) {
         try {
 
-            const userData: UserProps = {
+            const userData: Usuario = {
                 login: data.email,
                 senha: data.password
             };

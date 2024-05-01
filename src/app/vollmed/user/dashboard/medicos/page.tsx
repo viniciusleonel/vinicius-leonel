@@ -3,7 +3,8 @@
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
-import { getDataById, getMedicos } from "@/app/services/vollmedApi"
+import { getDataById, getMedicos } from "@/services/vollmedApi"
+
 import RegisterDoctor from "../components/register-doctor"
 import VollMedNav from "../components/voll-med-nav"
 import MedicoListCabecalho from "./__components/medico-list-nav"
@@ -12,6 +13,8 @@ import MedicoListBody from "./__components/medico-list-body"
 import MedicoListNav from "./__components/medico-list-nav"
 import MedicoBody from "./__components/medico-body"
 import MedicoHeader from "./__components/medico-header"
+import { MedicoService } from "@/services/MedicoService"
+import {Medico} from "@/app/model/Medico"
 
 export default function Medicos () {
     const [register, setRegister] = useState(false)
@@ -20,11 +23,9 @@ export default function Medicos () {
     const [idMedico, setIdMedico] = useState(''); 
     const router = useRouter()
 
-    function setRegisterCard () {
-        setRegister(true)
-        setMedico(null)
-        setMedicos([])
-    }
+    const cookies = parseCookies();
+    const token = cookies['nextauth.token'];
+    const medicoService = new MedicoService();
 
     useEffect(() => {
         
@@ -36,28 +37,34 @@ export default function Medicos () {
 
     }, [])
 
-    async function getMedicoById() {
-        try {
-            const cookies = parseCookies();
-            const token = cookies['nextauth.token'];
-            const medicoResponse = await getDataById(`/medicos/${idMedico}`, token);
-            setMedico(medicoResponse); 
-            setMedicos([])
-        } catch (error) {
-            console.error('Erro ao obter paciente:', error);
-        }
+    function setRegisterCard () {
+        setRegister(true)
+        setMedico(null)
+        setMedicos([])
     }
 
     async function getAllMedicos() {
         try {
             const cookies = parseCookies();
             const token = cookies['nextauth.token'];
-            const medicosResponse = await getMedicos(`/medicos`, token);
+            const medicosResponse = await medicoService.listarTodos(token);
             setMedicos(medicosResponse);
-            setMedico(null)
-            setRegister(false)
+            setMedico(null);
+            setRegister(false);
         } catch (error) {
             console.error('Erro ao obter pacientes:', error);
+        }
+    }
+    
+    async function getMedicoById() {
+        try {
+            const cookies = parseCookies();
+            const token = cookies['nextauth.token'];
+            const medicoResponse = await medicoService.buscarPorId(token, idMedico);
+            setMedico(medicoResponse);
+            setMedicos([]);
+        } catch (error) {
+            console.error('Erro ao obter paciente:', error);
         }
     }
 

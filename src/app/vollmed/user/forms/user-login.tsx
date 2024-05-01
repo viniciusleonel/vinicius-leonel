@@ -5,6 +5,7 @@ import { LoginUserFormData, loginSchema } from "../schemas"
 import { useContext, useState } from "react"
 import { AuthContext } from "@/app/context/AuthContext"
 import { parseCookies } from "nookies"
+import { ToastFailLogin } from "@/app/components/Toast/toast-fail-login"
 
 interface UserLoginProps {
     passwordState: () => void
@@ -17,6 +18,7 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
     const {signIn} = useContext(AuthContext)
     const cookies = parseCookies()
     const token = cookies['nextauth.token']
+    const [loginToastFail, setLoginToastFail] = useState(false)
 
     const {
         register: registerLogin,
@@ -26,12 +28,16 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
         resolver: zodResolver(loginSchema)
     })
 
+    function closeToaster () {
+        setLoginToastFail(false)
+    }
+
     async function handleSignIn(data : LoginUserFormData) {
         try {
             await signIn(data)
         } catch (error: any) {
             const deny = "Acesso negado!"
-            setOutPutLogin(deny)
+            setLoginToastFail(true)
         }
     } 
 
@@ -76,8 +82,11 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
                     Entrar
                     </button>
 
-                    <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPutLogin}</span>
-
+                    {loginToastFail && (
+                        <ToastFailLogin
+                            closeToaster={closeToaster}
+                        />
+                    )}
                 </form>
     )
 }

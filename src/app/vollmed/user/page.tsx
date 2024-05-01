@@ -7,6 +7,8 @@ import UserLogin from "./forms/user-login"
 import { useEffect, useState } from 'react'
 import { parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'
+import { DialogDemo } from '@/app/components/Dialog/dialog'
+import { ToastRegisterUser } from '@/app/components/Toast/toast-fail-register-user'
 
 export default function VollMed () {
 
@@ -43,6 +45,7 @@ export default function VollMed () {
     return (
         <>
             <nav><Nav /></nav>
+            
             <main className=" h-screen pt-8 flex flex-col flex-1 items-center justify-center mx-2 ">
                 <div className="">
                     <h2 className="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">VollMedApi</h2>

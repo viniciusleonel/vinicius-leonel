@@ -1,3 +1,5 @@
+import { Medico } from "@/app/model/Medico";
+import Usuario from "@/app/model/Usuario";
 import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios"
 import { parseCookies } from "nookies";
 
@@ -11,11 +13,6 @@ export const vollmedApi: AxiosInstance = axios.create({
 //     vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
 // }
 
-type UserProps = {
-    login: string
-    senha: string
-}
-
 export interface CustomError extends Error {
     response?: {
         status?: number
@@ -23,7 +20,9 @@ export interface CustomError extends Error {
     };
 }
 
-export async function logUser(path: string, userData: UserProps) {
+
+
+export async function logUser(path: string, userData: Usuario) {
     try {
         const token = await vollmedApi.post(path, userData)
         return token.data;
@@ -40,7 +39,7 @@ export async function logUser(path: string, userData: UserProps) {
     }
 }
 
-export async function userRegister(path: string, userData: UserProps) {
+export async function userRegister(path: string, userData: Usuario) {
     try {
         const response = await vollmedApi.post(path, userData)
         return response.data

@@ -4,7 +4,7 @@ import { SetStateAction, useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
-import { getDataById, getPacientes } from "@/app/services/vollmedApi"
+import { getDataById, getPacientes } from "@/services/vollmedApi"
 import VollMedNav from "../components/voll-med-nav"
 import RegisterDoctor from "../components/register-doctor"
 import PacienteListCabecalho from "./__components/paciente-list-nav"

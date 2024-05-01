@@ -2,13 +2,11 @@ import { useForm } from "react-hook-form"
 import { CreateUserFormData, createUserSchema } from "../schemas"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react"
-import { CustomError, userRegister } from "@/app/services/vollmedApi"
 import { FaEye, FaEyeSlash } from "react-icons/fa"
-
-export interface UserProps {
-    login: string,
-    senha: string
-}
+import { ToastRegisterUser } from "@/app/components/Toast/toast-register-user"
+import { ToastFailUserRegister } from "@/app/components/Toast/toast-fail-register-user"
+import { UsuarioService } from "@/services/UsuarioService"
+import Usuario from "@/app/model/Usuario"
 
 interface UserLoginProps {
     passwordState: () => void
@@ -17,7 +15,9 @@ interface UserLoginProps {
 
 export default function UserRegister({passwordState, showPassword} : UserLoginProps) {
 
-    const [outPutUser, setOutPutUser ] = useState('')
+    const [userToastSucess, setUserToastSucess] = useState<Usuario | null>(null)
+    const [userToastFail, setUserToastFail] = useState<Error | null>(null)
+    const userRegister = new UsuarioService();
 
     const {
         register: registerUser,
@@ -28,23 +28,26 @@ export default function UserRegister({passwordState, showPassword} : UserLoginPr
         resolver: zodResolver(createUserSchema)
     })
 
-    async function createUser(data: CreateUserFormData) {
-        try {
-            const userData: UserProps = {
-                login: data.email,
-                senha: data.password
-            };
-            const response = await userRegister("/usuarios", userData);
-            setOutPutUser(JSON.stringify(response, null, 2));
-        } catch (error: any) {
-            const typedError = error as CustomError
-            setOutPutUser(typedError.name)
-        }
+    function closeToaster () {
+        setUserToastSucess(null)
+        setUserToastFail(null)
+    }
+
+    function registrarUsuario (data: CreateUserFormData) {
+        const userData: Usuario = {
+            login: data.email,
+            senha: data.password
+        };
+        userRegister.registrarUser(userData)
+        .then((response) => {
+            const user = response.data as Usuario;
+            setUserToastSucess(user)})
+        .catch((error) => setUserToastFail(error))
     }
 
     return (
         <form 
-                    onSubmit={handleSubmitCreateUser(createUser)}
+                    onSubmit={handleSubmitCreateUser(registrarUsuario)}
                     className="flex flex-col w-full sm:max-w-xs max-w-64 gap-4 ">
                     <div className="flex flex-col ">
                         <label htmlFor="cadastro-email" className="font-medium text-xl mb-1">Cadastre-se</label>
@@ -95,7 +98,20 @@ export default function UserRegister({passwordState, showPassword} : UserLoginPr
                     Cadastrar
                     </button>
 
-                    <span className=" flex flex-wrap w-full sm:max-w-xs max-w-64 text-red-600">{outPutUser}</span>
+                    {userToastSucess && (
+                        <ToastRegisterUser 
+                            user={userToastSucess}
+                            closeToaster={closeToaster}
+                        />
+                    )}
+
+                    {userToastFail && (
+                        <ToastFailUserRegister 
+                            // error={userToastFail}
+                            closeToaster={closeToaster}
+                        />
+                    )}
+
                 </form>
     )
 } 
