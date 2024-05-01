@@ -4,6 +4,14 @@ import axios from "axios"
 
 export class MedicoService {
 
+    deletarMedico (token: string, id: any){
+        vollmedApi.delete(`/medicos/${id}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+    }
+
     async listarTodos(token: string): Promise<Medico[]> {
         try {
             const response = await vollmedApi.get<PageableData<Medico[]>>('/medicos', {
