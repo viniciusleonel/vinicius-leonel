@@ -4,7 +4,7 @@ import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
 import RegisterDoctor from "../components/register-doctor"
-import VollMedNav from "../components/voll-med-nav"
+import VollMedNav from "../../components/voll-med-nav"
 import MedicoListHeader from "./__components/medico-list-header"
 import MedicoListBody from "./__components/medico-list-body"
 import MedicoNav from "./__components/medico-nav"
@@ -14,15 +14,22 @@ import { MedicoService } from "@/services/MedicoService"
 import {Medico} from "@/app/model/Medico"
 import MedicoEmptyTable from "./__components/medico-empty-table"
 import MedicoEmptyTableList from "./__components/medico-empty-table-list"
+import { ToastContainer, ToastDeletedMedico } from "./__components/toast-deleted-medico"
 
 export default function Medicos () {
+    const router = useRouter()
+
     const [register, setRegister] = useState(false)
+
     const [medico, setMedico] = useState<Medico | null>(null);
-    const [medicoListaVazia, setMedicoListaVazia] = useState(true);
+    const [medicoListaVazia, setMedicoListaVazia] = useState(false);
     const [medicoVazia, setMedicoVazia] = useState(false);
     const [medicos, setMedicos] = useState<Medico[]>([]); 
     const [idMedico, setIdMedico] = useState(''); 
-    const router = useRouter()
+
+    const [toastMedicoDelete, setToastMedicoDelete] = useState(false)
+    const [toasts, setToasts] = useState<boolean[]>([]); // Lista de toasts
+
 
     const cookies = parseCookies();
     const token = cookies['nextauth.token'];
@@ -38,6 +45,10 @@ export default function Medicos () {
 
     }, [])
 
+    function closeSearchedToaster () {
+        setToastMedicoDelete(false)
+    }
+
     function setRegisterCard () {
         setRegister(true)
         setMedico(null)
@@ -46,11 +57,39 @@ export default function Medicos () {
         setMedicoVazia(false)
     }
 
-    function excluirMedico () {
-        medicoService.deletarMedico(token, idMedico)
-        setMedico(null);
-        setMedicoVazia(true)
+    async function excluirMedico() {
+        try {
+            medicoService.deletarMedico(token, idMedico);
+            setMedico(null);
+            setMedicoVazia(true);
+            
+            setToastMedicoDelete(true);
+        } catch (error) {
+            console.error('Erro ao excluir médico:', error);
+        }
     }
+
+    // function closeToaster(index: number) {
+    //     setToasts(prevToasts => {
+    //         const newToasts = [...prevToasts];
+    //         newToasts[index] = false; // Marcar o toast como fechado
+    //         return newToasts;
+    //     });
+    // }
+
+    async function excluirMedicoFromList(id: number) {
+        try {
+            medicoService.deletarMedico(token, id);
+            setMedicos(medicos.filter(medico => medico.id !== id)); // Remove o médico da lista
+            setMedico(null);
+            setMedicoVazia(medicos.length === 0); // Verifica se a lista está vazia            
+            setMedicoListaVazia(true)
+            setToasts(prevToasts => [...prevToasts, true]);
+        } catch (error) {
+            console.error('Erro ao excluir médico:', error);
+        }
+    }
+    
 
     async function getAllMedicos() {
         try {
@@ -77,6 +116,7 @@ export default function Medicos () {
         try {
             const medicoResponse = await medicoService.buscarPorId(token, idMedico);
             setMedico(medicoResponse);
+            console.log(medicoResponse.ativo)
             setMedicos([]);
             setMedicoListaVazia(false)
         } catch (error) {
@@ -140,7 +180,7 @@ export default function Medicos () {
                                                 especialidade={medico.especialidade}
                                                 endereco={medico.endereco}
                                                 ativo={medico.ativo}
-                                                excluirMedico={excluirMedico}
+                                                excluirMedico={() => excluirMedicoFromList(medico.id)}
                                             />
                                         ))}
                                     </tbody>
@@ -184,6 +224,17 @@ export default function Medicos () {
                 </div>
             ) : medicoVazia && (
                 <MedicoEmptyTable />
+            )}
+
+
+            <ToastContainer toasts={toasts} />
+            {toastMedicoDelete && (
+                <div className="fixed bottom-4 right-4 flex flex-col items-end z-50">
+                    <ToastDeletedMedico 
+                    closeToaster={closeSearchedToaster}
+                />
+                </div>
+                
             )}
             </div>
         </div>

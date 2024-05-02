@@ -1,4 +1,4 @@
-import capitalizarFrase from "@/app/utils/capitalize";
+import capitalizarFrase from "@/lib/utils/capitalize";
 import { Medico } from "@/app/model/Medico";
 
 interface MedicoListBodyProps extends Medico {

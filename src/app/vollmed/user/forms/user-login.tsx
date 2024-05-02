@@ -5,7 +5,8 @@ import { LoginUserFormData, loginSchema } from "../schemas"
 import { useContext, useState } from "react"
 import { AuthContext } from "@/app/context/AuthContext"
 import { parseCookies } from "nookies"
-import { ToastFailLogin } from "@/app/components/Toast/toast-fail-login"
+import { ToastFailLogin } from "@/app/vollmed/user/__components/Toast/toast-fail-login"
+import { ToastUserLogin } from "../__components/Toast/toast-user-login"
 
 interface UserLoginProps {
     passwordState: () => void
@@ -17,8 +18,9 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
     const [outPutLogin, setOutPutLogin ] = useState('')
     const {signIn} = useContext(AuthContext)
     const cookies = parseCookies()
-    const token = cookies['nextauth.token']
+    const user = cookies['nextauth.user']
     const [loginToastFail, setLoginToastFail] = useState(false)
+    const [toastUserLogin, setToastUserLogin] = useState(false)
 
     const {
         register: registerLogin,
@@ -35,6 +37,7 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
     async function handleSignIn(data : LoginUserFormData) {
         try {
             await signIn(data)
+            setToastUserLogin(true)
         } catch (error: any) {
             const deny = "Acesso negado!"
             setLoginToastFail(true)
@@ -84,6 +87,13 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
 
                     {loginToastFail && (
                         <ToastFailLogin
+                            closeToaster={closeToaster}
+                        />
+                    )}
+
+                    {toastUserLogin && (
+                        <ToastUserLogin 
+                            user={user}
                             closeToaster={closeToaster}
                         />
                     )}

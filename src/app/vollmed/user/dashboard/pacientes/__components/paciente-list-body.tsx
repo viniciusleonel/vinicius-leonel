@@ -1,4 +1,4 @@
-import capitalizarFrase from "@/app/utils/capitalize";
+import capitalizarFrase from "@/lib/utils/capitalize";
 
 export default function PacienteListBody ({
     id, nome, email, telefone, cpf, endereco, ativo

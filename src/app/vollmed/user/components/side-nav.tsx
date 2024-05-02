@@ -6,7 +6,7 @@ import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, Dropdown
 import Image from "next/image";
 import { destroyCookie, parseCookies } from "nookies"
 import { useRouter } from "next/navigation"
-import NavLinks from "@/app/vollmed/user/dashboard/components/nav-links"
+import NavLinks from "@/app/vollmed/user/components/nav-links"
 
 export default function SideNav() {
 
