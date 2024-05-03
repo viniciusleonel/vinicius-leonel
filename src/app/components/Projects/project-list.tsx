@@ -6,7 +6,7 @@ const projectsList = [
     {
         imgCardSrc: "/images/cleanSky.jpg",
         imgAlt: "teste",
-        title: "Title",
+        title: "Title1",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
         techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
         linkSite: "https://github.com/viniciusleonel",
@@ -15,7 +15,7 @@ const projectsList = [
     {
         imgCardSrc: "",
         imgAlt: "teste",
-        title: "Title",
+        title: "Title2",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
         techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
         linkSite: "https://github.com/viniciusleonel",
@@ -24,7 +24,7 @@ const projectsList = [
     {
         imgCardSrc: "/images/coming-soon.png",
         imgAlt: "teste",
-        title: "Title",
+        title: "Title3",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
         techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
         linkSite: "https://github.com/viniciusleonel",
@@ -33,7 +33,7 @@ const projectsList = [
     {
         imgCardSrc: "/images/coming-soon.png",
         imgAlt: "teste",
-        title: "Title",
+        title: "Title4",
         description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
         techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
         linkSite: "https://github.com/viniciusleonel",
