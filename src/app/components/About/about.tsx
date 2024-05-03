@@ -34,6 +34,8 @@ export default function About () {
                         <div className="flex items-center gap-2 w-32 lg:w-40 -m-2 pt-6">
                             <Link
                                 href="https://www.linkedin.com/in/viniciuslps/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                             <Image 
                                 src='/images/icons/linkedin.svg'
@@ -44,6 +46,8 @@ export default function About () {
                             </Link>
                             <Link
                                 href="https://github.com/viniciusleonel"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                             <Image 
                                 src='/images/icons/github.svg'
@@ -53,7 +57,9 @@ export default function About () {
                             />
                             </Link>
                             <Link
-                                href=" https://w.app/ViniciusLeonel"
+                                href="https://wa.me/+5511993310776"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                             <Image 
                                 src='/images/icons/whatsapp.svg'

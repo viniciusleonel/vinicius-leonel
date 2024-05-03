@@ -41,6 +41,8 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                     <div className=" absolute bottom-4 right-4 flex gap-2 items-center">
                         <Link
                                 href={linkSite}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                             <MdScreenShare 
                                 className="size-6 sm:size-8 "
@@ -48,6 +50,8 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                         </Link>
                         <Link
                             href={linkGitHub}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                         <Image 
                             src='/images/icons/github.svg'
