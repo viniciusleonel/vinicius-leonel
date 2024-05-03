@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Input } from "@/app/vollmed/user/dashboard/ui/input"
 import { Button } from "@/app/vollmed/user/dashboard/ui/button"
 import ToggleButton from "@/app/components/ToggleThemeButton/toggle-theme-button"
-import MobileMenu from "./mobile-menu"
+import MobileVollMedMenu from "./mobile-vollmed-menu"
 import { InputHTMLAttributes, ReactElement, SetStateAction, useState } from "react"
 
 interface VollMedNavProps {
@@ -17,7 +17,7 @@ export default function VollMedNav({title, handleRegister, handleList, input}: V
   return (
     <header className="fixed top-0 left-0 right-0 z-20 flex h-16 gap-2 items-center justify-between px-6 bg-white shadow dark:bg-gray-950 border-b border-cyan-700  dark:border-cyan-400">
       <div className="flex sm:hidden">
-        <MobileMenu />
+        <MobileVollMedMenu />
       </div>
       <Link className="text-lg font-semibold text-gray-900 dark:text-gray-50" href="#">
         {title || 'Dashboard'}

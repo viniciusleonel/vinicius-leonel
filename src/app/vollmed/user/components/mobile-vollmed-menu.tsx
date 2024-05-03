@@ -5,7 +5,7 @@ import { destroyCookie, parseCookies } from "nookies"
 import { useRouter } from "next/navigation"
 import { CalendarCheckIcon, HomeIcon, Package2Icon, PanelLeftIcon, UserIcon } from "lucide-react"
 
-export default function MobileMenu () {
+export default function MobileVollMedMenu () {
 
     const cookies = parseCookies()
     const userLog = cookies['nextauth.user']
