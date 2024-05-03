@@ -7,8 +7,6 @@ import UserLogin from "./forms/user-login"
 import { useEffect, useState } from 'react'
 import { parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'
-import { DialogDemo } from '@/app/components/Dialog/dialog'
-import { ToastRegisterUser } from '@/app/vollmed/user/__components/Toast/toast-fail-register-user'
 
 export default function VollMed () {
 
