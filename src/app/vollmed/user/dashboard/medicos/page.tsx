@@ -111,6 +111,7 @@ export default function Medicos () {
             const medicosResponse = await medicoService.listarTodos(token);
             if (medicosResponse && medicosResponse.length > 0) {
                 setMedicos(medicosResponse);
+                setSearch('')
                 setMedico(null);
                 setRegister(false);
                 setMedicoVazia(false)
