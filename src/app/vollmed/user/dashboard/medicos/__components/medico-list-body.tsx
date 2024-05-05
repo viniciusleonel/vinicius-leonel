@@ -1,12 +1,12 @@
 import capitalizarFrase from "@/lib/utils/capitalize";
-import { Medico } from "@/app/model/Medico";
+import { Medico, MedicoDetails } from "@/app/model/Medico";
 
-interface MedicoListBodyProps extends Medico {
+interface MedicoListBodyProps extends MedicoDetails {
     excluirMedico: () => void
 }
 
 export default function MedicoListBody ({
-    id, nome, email, telefone, crm, endereco, especialidade, ativo, excluirMedico
+    id, nome, email, crm, especialidade, excluirMedico
 }: MedicoListBodyProps) {
 
     return (

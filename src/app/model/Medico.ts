@@ -8,3 +8,5 @@ export interface Medico {
     endereco: Endereco;
     ativo: boolean;
 }
+
+export type MedicoDetails = Omit<Medico, 'telefone' | 'endereco' | 'ativo'>

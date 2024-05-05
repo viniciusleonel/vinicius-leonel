@@ -15,6 +15,7 @@ import {Medico} from "@/app/model/Medico"
 import MedicoEmptyTable from "./__components/medico-empty-table"
 import MedicoEmptyTableList from "./__components/medico-empty-table-list"
 import { ToastContainer, ToastDeletedMedico } from "./__components/toast-deleted-medico"
+import MedicoNotFound from "./__components/medico-not-found"
 
 export default function Medicos () {
     const router = useRouter()
@@ -24,12 +25,12 @@ export default function Medicos () {
     const [medico, setMedico] = useState<Medico | null>(null);
     const [medicoListaVazia, setMedicoListaVazia] = useState(false);
     const [medicoVazia, setMedicoVazia] = useState(false);
+    const [medicoNaoEncontado, setMedicoNaoEncontado] = useState(false)
     const [medicos, setMedicos] = useState<Medico[]>([]); 
     const [idMedico, setIdMedico] = useState(''); 
 
     const [toastMedicoDelete, setToastMedicoDelete] = useState(false)
     const [toasts, setToasts] = useState<boolean[]>([]); // Lista de toasts
-
 
     const cookies = parseCookies();
     const token = cookies['nextauth.token'];
@@ -50,11 +51,12 @@ export default function Medicos () {
     }
 
     function setRegisterCard () {
-        setRegister(true)
-        setMedico(null)
         setMedicos([])
-        setMedicoListaVazia(false)
+        setMedico(null)
+        setRegister(true)
         setMedicoVazia(false)
+        setMedicoListaVazia(false)
+        setMedicoNaoEncontado(false)
     }
 
     async function excluirMedico() {
@@ -99,13 +101,14 @@ export default function Medicos () {
                 setMedico(null);
                 setRegister(false);
                 setMedicoVazia(false)
+                setMedicoNaoEncontado(false)
             } else {
                 // Se a lista de médicos estiver vazia
                 setMedicos([]); // Limpar a lista de médicos
                 setMedico(null);
                 setRegister(false);
-                setMedicoListaVazia(true)
                 setMedicoVazia(false)
+                setMedicoListaVazia(true)
             }
         } catch (error) {
             console.error('Erro ao obter pacientes:', error);
@@ -119,8 +122,15 @@ export default function Medicos () {
             console.log(medicoResponse.ativo)
             setMedicos([]);
             setMedicoListaVazia(false)
+            setMedicoNaoEncontado(false)
         } catch (error) {
             console.error('Erro ao obter paciente:', error);
+            setMedicoNaoEncontado(true)
+            setMedicoListaVazia(false)
+            setMedicoVazia(false)
+            setRegister(false)
+            setMedico(null)
+            setMedicos([]);
         }
     }
 
@@ -175,11 +185,8 @@ export default function Medicos () {
                                                 id={medico.id}
                                                 nome={medico.nome}
                                                 email={medico.email}
-                                                telefone={medico.telefone}
                                                 crm={medico.crm}
                                                 especialidade={medico.especialidade}
-                                                endereco={medico.endereco}
-                                                ativo={medico.ativo}
                                                 excluirMedico={() => excluirMedicoFromList(medico.id)}
                                             />
                                         ))}
@@ -197,7 +204,7 @@ export default function Medicos () {
                 <div className="container mx-auto my-8 px-4 md:px-6">
                     <div className="">
                         <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
-                            <MedicoNav />
+                            <h2 className="text-2xl font-bold mb-4">Médico Encontrado</h2>
                             <div className="overflow-x-auto">
                                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                     <thead className="bg-gray-50 dark:bg-gray-800">
@@ -235,6 +242,10 @@ export default function Medicos () {
                 />
                 </div>
                 
+            )}
+
+            {medicoNaoEncontado && (
+                <MedicoNotFound />
             )}
             </div>
         </div>
