@@ -1,7 +1,7 @@
-enum Especialidade {
-    Ortopedia,
-    Cardiologia,
-    Ginecologia,
-    Dermatologia,
-    Odontologia
+export enum Especialidade {
+    Ortopedia = "Ortopedia",
+    Cardiologia = "Cardiologia",
+    Ginecologia = "Ginecologia",
+    Dermatologia = "Dermatologia",
+    Odontologia = "Odontologia"
 }

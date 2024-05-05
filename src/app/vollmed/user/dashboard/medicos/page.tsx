@@ -3,7 +3,7 @@
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
 import { useRouter } from 'next/navigation'
-import RegisterDoctor from "../components/register-doctor"
+import RegisterDoctor from "./__components/register-doctor"
 import VollMedNav from "../../components/voll-med-nav"
 import MedicoListHeader from "./__components/medico-list-header"
 import MedicoListBody from "./__components/medico-list-body"
@@ -40,6 +40,7 @@ export default function Medicos () {
         setMedicosFiltrados(medicos.filter((medico) => 
             medico.nome.toLowerCase().includes(lowerCaseSearch) ||
             medico.crm.toLowerCase().includes(lowerCaseSearch) ||
+            medico.id.toString().includes(lowerCaseSearch) ||
             medico.especialidade.toLowerCase().includes(lowerCaseSearch)
         ));
     }, [medicos, search]);
@@ -190,7 +191,7 @@ export default function Medicos () {
                             input={
                                 <input
                                     className="bg-transparent focus:outline-none focus:none w-full"
-                                    placeholder="Procurar Médicos (Nome, CRM ou ESP)"
+                                    placeholder="Procurar Médicos (ID, Nome, CRM ou ESP)"
                                     type="text"
                                     value={search}
                                     onChange={(e) => setSearch(e.target.value)}
