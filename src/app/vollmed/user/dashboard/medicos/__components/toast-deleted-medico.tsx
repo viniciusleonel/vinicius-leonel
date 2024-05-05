@@ -15,6 +15,7 @@ export function ToastDeletedMedico({
     useEffect(() => {
         const timer = setTimeout(() => {
             closeToaster();
+            setVisible(false);
         }, 3000);
 
         return () => clearTimeout(timer);
