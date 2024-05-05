@@ -22,15 +22,27 @@ export default function Medicos () {
 
     const [register, setRegister] = useState(false)
 
+    const [search, setSearch] = useState('')
+
     const [medico, setMedico] = useState<Medico | null>(null);
     const [medicoListaVazia, setMedicoListaVazia] = useState(false);
     const [medicoVazia, setMedicoVazia] = useState(false);
     const [medicoNaoEncontado, setMedicoNaoEncontado] = useState(false)
     const [medicos, setMedicos] = useState<Medico[]>([]); 
     const [idMedico, setIdMedico] = useState(''); 
+    const [medicosFiltrados, setMedicosFiltrados] = useState<Medico[]>([]);
 
     const [toastMedicoDelete, setToastMedicoDelete] = useState(false)
     const [toasts, setToasts] = useState<boolean[]>([]); // Lista de toasts
+
+    useEffect(() => {
+        const lowerCaseSearch = search.toLowerCase();
+        setMedicosFiltrados(medicos.filter((medico) => 
+            medico.nome.toLowerCase().includes(lowerCaseSearch) ||
+            medico.crm.toLowerCase().includes(lowerCaseSearch) ||
+            medico.especialidade.toLowerCase().includes(lowerCaseSearch)
+        ));
+    }, [medicos, search]);
 
     const cookies = parseCookies();
     const token = cookies['nextauth.token'];
@@ -62,9 +74,9 @@ export default function Medicos () {
     async function excluirMedico() {
         try {
             medicoService.deletarMedico(token, idMedico);
+            setSearch('')
             setMedico(null);
             setMedicoVazia(true);
-            
             setToastMedicoDelete(true);
         } catch (error) {
             console.error('Erro ao excluir médico:', error);
@@ -87,6 +99,7 @@ export default function Medicos () {
             setMedicoVazia(medicos.length === 0); // Verifica se a lista está vazia            
             setMedicoListaVazia(true)
             setToasts(prevToasts => [...prevToasts, true]);
+            setSearch('')
         } catch (error) {
             console.error('Erro ao excluir médico:', error);
         }
@@ -172,14 +185,24 @@ export default function Medicos () {
                 <div className="container mx-auto my-8 px-4 md:px-6">
                     <div className="">
                         <div className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-6">
-                            <MedicoNav />
+                            <MedicoNav 
+                            input={
+                                <input
+                                    className="bg-transparent focus:outline-none focus:none w-full"
+                                    placeholder="Procurar Médicos (Nome, CRM ou ESP)"
+                                    type="text"
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                            }/>
                             <div className="overflow-x-auto">
                                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                     <thead className="bg-gray-50 dark:bg-gray-800">
                                         <MedicoListHeader />
                                     </thead>
                                     <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-950 dark:divide-gray-700">
-                                        {medicos.map((medico) => (
+                                    {search === '' ? (
+                                        medicos.map((medico) => (
                                             <MedicoListBody 
                                                 key={medico.id}
                                                 id={medico.id}
@@ -189,7 +212,21 @@ export default function Medicos () {
                                                 especialidade={medico.especialidade}
                                                 excluirMedico={() => excluirMedicoFromList(medico.id)}
                                             />
-                                        ))}
+                                        ))
+                                    ) : (
+                                        medicosFiltrados.map((medico) => (
+                                            <MedicoListBody 
+                                                key={medico.id}
+                                                id={medico.id}
+                                                nome={medico.nome}
+                                                email={medico.email}
+                                                crm={medico.crm}
+                                                especialidade={medico.especialidade}
+                                                excluirMedico={() => excluirMedicoFromList(medico.id)}
+                                            />
+                                        ))
+                                    )}
+
                                     </tbody>
                                 </table>
                             </div>
