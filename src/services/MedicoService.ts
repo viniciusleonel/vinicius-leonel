@@ -1,8 +1,16 @@
-import { Medico } from '@/app/model/Medico';
+import { Medico, MedicoRegister } from '@/app/model/Medico';
 import {vollmedApi} from '@/services/vollmedApi'
 import axios from "axios"
 
 export class MedicoService {
+
+    registrarMedico(user: MedicoRegister, token: string) {
+        return vollmedApi.post('/medicos', user,{
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+    }
 
     deletarMedico (token: string, id: any){
         vollmedApi.delete(`/medicos/${id}`, {

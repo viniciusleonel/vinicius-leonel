@@ -3,7 +3,7 @@ interface Endereco {
     bairro: string;
     cep: string;
     numero: string;
-    complemento: string;
+    complemento: string | undefined;
     cidade: string;
     uf: string;
 }

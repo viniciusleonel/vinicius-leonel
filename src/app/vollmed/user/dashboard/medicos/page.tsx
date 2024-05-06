@@ -14,7 +14,7 @@ import { MedicoService } from "@/services/MedicoService"
 import {Medico} from "@/app/model/Medico"
 import MedicoEmptyTable from "./__components/medico-empty-table"
 import MedicoEmptyTableList from "./__components/medico-empty-table-list"
-import { ToastContainer, ToastDeletedMedico } from "./__components/toast-deleted-medico"
+import { ToastContainer, ToastDeletedMedico } from "./__components/toasters/toast-deleted-medico"
 import MedicoNotFound from "./__components/medico-not-found"
 
 export default function Medicos () {
@@ -180,6 +180,7 @@ export default function Medicos () {
             <div className="">
                 {register && (
                     <RegisterDoctor 
+                        token={token}
                     />
                 )}
                 
