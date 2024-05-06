@@ -1,4 +1,3 @@
-import capitalizarFrase from "@/lib/utils/capitalize";
 import { Medico, MedicoDetails } from "@/app/model/Medico";
 
 interface MedicoListBodyProps extends MedicoDetails {
@@ -15,10 +14,10 @@ export default function MedicoListBody ({
                 {id}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
-                {capitalizarFrase(nome)}
+                {nome}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                {email.toLowerCase()}
+                {email}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                 {crm}

@@ -19,7 +19,7 @@ export function ToastRegisterMedicoFail({closeToaster, error, campo, valor} :Toa
             <div className="flex items-start justify-between">
                 <div className="space-y-1">
                 <h3 className="text-lg font-medium text-white dark:text-white">Médico Não Cadastrado</h3>
-                <p className="text-sm text-white dark:text-white"><span className="text-zinc-800  ">{campo.toUpperCase()} - {valor}</span> já está sendo utilizado! </p>
+                <p className="text-sm text-white dark:text-white"><span className="text-zinc-800  ">{campo} - {valor}</span> já está sendo utilizado! </p>
                 </div>
                 <Button
                 className="text-white hover:text-black dark:text-white dark:hover:text-white"

@@ -1,4 +1,3 @@
-import capitalizarFrase from "@/lib/utils/capitalize";
 import { Medico } from "@/app/model/Medico";
 
 interface MedicoBodyProps extends Medico {
@@ -12,10 +11,13 @@ export default function MedicoBody ({
     return (
         <tr>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
-                {capitalizarFrase(nome)}
+                {id}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                {nome}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                {email.toLowerCase()}
+                {email}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                 {crm}
@@ -27,7 +29,7 @@ export default function MedicoBody ({
                 {telefone}
             </td>
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
-                {` ${capitalizarFrase(endereco.logradouro)},  Nº${endereco.numero}, ${endereco.complemento}, ${capitalizarFrase(endereco.bairro)}, ${capitalizarFrase(endereco.cidade)}, ${endereco.uf.toUpperCase()} `}
+                {` ${endereco.logradouro},  Nº${endereco.numero}, ${endereco.complemento}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.uf} `}
             </td>
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
                 {ativo ? 'Ativo' : 'Desativado'}

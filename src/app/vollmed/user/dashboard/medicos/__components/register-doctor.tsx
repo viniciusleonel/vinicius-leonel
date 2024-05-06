@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Especialidade } from '@/app/model/Especialidade';
 import { CreateMedicoFormData, createMedicoSchema } from '../../../schemas';
 import { useForm } from 'react-hook-form';
@@ -8,12 +8,15 @@ import { Medico, MedicoRegError, MedicoRegister } from '@/app/model/Medico';
 import { ToastRegisterMedico } from './toasters/toast-register-medico';
 import { ToastRegisterMedicoFail } from './toasters/toast-register-medico-fail';
 import { AxiosError } from 'axios';
+import { maskPhone } from '@/lib/utils/maskPhone';
+import capitalizarFrase  from '@/lib/utils/capitalize'
 
 interface RegisterDoctorProps {
-    token: string
+    token: string,
+    mostrarMedico: (id: number) => void
 }
 
-export default function RegisterDoctor({token}: RegisterDoctorProps) {
+export default function RegisterDoctor({token, mostrarMedico}: RegisterDoctorProps) {
 
     const medicoRegister = new MedicoService();
     const [toastRegisterMedicoSucess, setToastRegisterMedicoSucess] = useState<Medico | null>(null);
@@ -21,6 +24,16 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
     const [erroCampo, setErroCampo] = useState('');
     const [erroValor, setErroValor] = useState('');
     const [especialidadeSelecionada, setEspecialidadeSelecionada] = useState('');
+    const [numero, setNumero] = useState('');
+
+    useEffect(() => {
+        const formatarNumero = () => {
+            const numeroFormatado = maskPhone(numero);
+            setNumero(numeroFormatado);
+        };
+
+        formatarNumero();
+    }, [numero]);
 
     const {
         register: registerMedico,
@@ -36,6 +49,11 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
         setToastRegisterMedicoSucess(null)
     }
 
+    const handlePhoneChange = (event: { target: { value: any; }; }) => {
+        const valor = event.target.value;
+        const numeroFormatado = maskPhone(valor);
+        setNumero(numeroFormatado);
+    };
 
     const handleEspecialidadeChange = (event: { target: { value: any; }; }) => {
         const especialidade = event.target.value;
@@ -44,17 +62,17 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
 
     function registrarMedico (data: CreateMedicoFormData) {
         const enderecoData: Endereco = {
-            logradouro: data.endereco.logradouro,
-            bairro: data.endereco.bairro,
+            logradouro: capitalizarFrase(data.endereco.logradouro),
+            bairro: capitalizarFrase(data.endereco.bairro),
             cep: data.endereco.cep,
             numero: data.endereco.numero,
             complemento: data.endereco.complemento,
-            cidade: data.endereco.cidade,
-            uf: data.endereco.uf,
+            cidade: capitalizarFrase(data.endereco.cidade),
+            uf: data.endereco.uf.toUpperCase(),
         }
         const medicoData: MedicoRegister = {
-            nome: data.nome,
-            email: data.email,
+            nome: capitalizarFrase(data.nome),
+            email: data.email.toLowerCase(),
             telefone: data.telefone,
             crm: data.crm,
             especialidade: data.especialidade,
@@ -65,6 +83,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
         .then((response) => {
             const medico = response.data as Medico;
             setToastRegisterMedicoSucess(medico)
+            mostrarMedico(medico.id)
         })
         .catch((error) => {
             console.log(error)
@@ -72,8 +91,6 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
             setErroCampo(error.response.data.campo)
             setErroValor(error.response.data.valor)
             setToastRegisterMedicoFail(error);
-        
-            
         });
     }
 
@@ -89,7 +106,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Nome
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="name"
                                     placeholder="Enter patient's name"
                                     type="text"
@@ -102,7 +119,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Email
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="email"
                                     placeholder="Enter doctor's email"
                                     type="text"
@@ -117,11 +134,13 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Contato
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="contato"
                                     placeholder="Enter doctor's contact number"
                                     type="tel"
                                     {...registerMedico('telefone')}
+                                    value={numero} 
+                                    onChange={handlePhoneChange}
                                 />
                                 {errorsMedico.telefone && <span className='text-red-500 pt-2'>{errorsMedico.telefone.message}</span>}
                             </div>
@@ -130,7 +149,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     CRM
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="crm"
                                     placeholder="Enter doctor's crm"
                                     type="text"
@@ -145,7 +164,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Especialidade
                                 </label>
                                 <select
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="especialidade"
                                     value={especialidadeSelecionada}
                                     // onChange={handleEspecialidadeChange}
@@ -165,7 +184,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Logradouro
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="logradouro"
                                     placeholder="Logradouro"
                                     type="text"
@@ -180,7 +199,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Bairro
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="bairro"
                                     placeholder="Bairro"
                                     type="text"
@@ -194,11 +213,12 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Número
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="numero"
                                     placeholder="Número"
                                     type="text"
                                     {...registerMedico('endereco.numero')}
+                                    
                                 />
                                 {errorsMedico.endereco?.numero && <span className='text-red-500 pt-2'>{errorsMedico.endereco.numero.message}</span>}
                             </div>
@@ -207,7 +227,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     CEP
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="cep"
                                     placeholder="CEP"
                                     type="text"
@@ -222,7 +242,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Complemento
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="complemento"
                                     placeholder="Complemento"
                                     type="text"
@@ -235,7 +255,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Cidade
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="cidade"
                                     placeholder="Cidade"
                                     type="text"
@@ -248,7 +268,7 @@ export default function RegisterDoctor({token}: RegisterDoctorProps) {
                                     Estado
                                 </label>
                                 <input
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+                                    className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
                                     id="estado"
                                     placeholder="Estado"
                                     type="text"

@@ -130,14 +130,15 @@ export default function Medicos () {
         }
     }
     
-    async function getMedicoById() {
+    async function getMedicoById(id?: number) {
         try {
-            const medicoResponse = await medicoService.buscarPorId(token, idMedico);
+            const medicoResponse = await medicoService.buscarPorId(token, idMedico || id);
             setMedico(medicoResponse);
             console.log(medicoResponse.ativo)
             setMedicos([]);
             setMedicoListaVazia(false)
             setMedicoNaoEncontado(false)
+            setRegister(false)
         } catch (error) {
             console.error('Erro ao obter paciente:', error);
             setMedicoNaoEncontado(true)
@@ -157,6 +158,7 @@ export default function Medicos () {
         if (event.key === 'Enter') {
             getMedicoById()
             setRegister(false); 
+            setIdMedico('')
         }
     }
 
@@ -180,6 +182,7 @@ export default function Medicos () {
             <div className="">
                 {register && (
                     <RegisterDoctor 
+                        mostrarMedico={getMedicoById}
                         token={token}
                     />
                 )}

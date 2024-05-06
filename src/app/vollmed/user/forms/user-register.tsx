@@ -35,7 +35,7 @@ export default function UserRegister({passwordState, showPassword} : UserLoginPr
 
     function registrarUsuario (data: CreateUserFormData) {
         const userData: Usuario = {
-            login: data.email,
+            login: data.email.toLowerCase(),
             senha: data.password
         };
         userRegister.registrarUser(userData)
