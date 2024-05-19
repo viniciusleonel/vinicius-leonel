@@ -1,3 +1,27 @@
+<h1 align="center"> Portfólio - Vinicius Leonel 
+
+[viniciusleonel.dev.com.br](https://viniciusleonel.dev.br/)
+
+</h1>
+
+![Portfolio-About](portfolio-about.jpg)
+
+<h2 align="center"> EM DESENVOLVIMENTO</h2>
+
+---
+
+## Tecnologias utilizadas
+
+Para o desenvolvimento deste site utilizei as seguintes tecnologias:
+
+- HTML,
+- Tailwind 
+- TypeScript
+- Next.js
+- React.js
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
