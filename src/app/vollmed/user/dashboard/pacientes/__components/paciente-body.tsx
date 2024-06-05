@@ -22,7 +22,7 @@ export default function PacienteBody ({
             </td>
 
             <td className="px-6 py-4  text-sm text-gray-500 dark:text-gray-400">
-                {` ${capitalizarFrase(endereco.logradouro)},  Nº${endereco.numero}, ${capitalizarFrase(endereco.complemento)}, ${capitalizarFrase(endereco.bairro)}, ${capitalizarFrase(endereco.cidade)}, ${endereco.uf.toUpperCase()} `}
+            {` ${endereco.logradouro},  Nº${endereco.numero}, ${endereco.complemento}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.uf} `}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm">
                 <div className="flex gap-2">
