@@ -45,9 +45,13 @@ export default function VollMed () {
             <nav><Nav /></nav>
             
             <main className=" h-screen pt-8 flex flex-col flex-1 items-center justify-center mx-2 ">
+                <div className='bg-red-600 border rounded-md p-3 text-lg mb-2'>
+                    Deploy da API em Desenvolvimento
+                </div>
                 <div className="">
                     <h2 className="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">VollMedApi</h2>
                     <div className="text-2xl py-6 flex justify-around">
+                        
                         <button 
                             className={clsx("flex hover:text-cyan-400", {
                                 "text-cyan-400" : cadastro === true
@@ -64,6 +68,7 @@ export default function VollMed () {
                             >Login
                         </button>
                     </div>
+                    
                 </div>
                 { cadastro && (
                     <UserRegister 
@@ -75,6 +80,7 @@ export default function VollMed () {
                     showPassword={showPassword}    
                     passwordState={togglePasswordVisibility}/>
                 )}
+                
             </main>
         </>
     )
