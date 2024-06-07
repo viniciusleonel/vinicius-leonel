@@ -4,7 +4,7 @@ import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios"
 import { parseCookies } from "nookies";
 
 export const vollmedApi: AxiosInstance = axios.create({
-    baseURL: "http://localhost:8080/"
+    baseURL: "https://vollmed-api-postgres-neontech.onrender.com/"
 })
 
 // const { 'nextauth.token': token } = parseCookies()
