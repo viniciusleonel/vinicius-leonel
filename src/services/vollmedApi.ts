@@ -30,12 +30,14 @@ export async function logUser(path: string, userData: Usuario) {
         const typedError = error as CustomError;
         if (axios.isAxiosError(typedError) && typedError.response) {
             if (typedError.response.data) {
-                return typedError.response.data
+                throw new Error ('Access teste!')
             } else if (typedError.response.status === 403) {
-                throw new Error(typedError.response.statusText)
+                throw new Error('Access denied!')
+            } else if (typedError.response.status === 400) {
+                throw new Error('User not found! ')
             }
         }
-        throw typedError.message
+        throw new Error(typedError.message || 'An unexpected error occurred');
     }
 }
 

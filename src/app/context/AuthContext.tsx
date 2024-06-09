@@ -15,6 +15,14 @@ type AuthContextType = {
     signIn: (data: SignInData) => Promise<void>
 }
 
+interface CustomError extends Error {
+    response?: {
+        status: number;
+        statusText: string;
+        data?: any;
+    };
+}
+
 export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -41,18 +49,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             };
 
             setUser({ email: data.email, password: '' });
-            const {token} = await logUser("/login", userData)
+            const response = await logUser("/login", userData)
 
-            setCookie(undefined, "nextauth.token", token, {
-                maxAge: 60 * 60 * 2, // 2 hours
-            })
-            setCookie(undefined, "nextauth.user", data.email, {
-                maxAge: 60 * 60 * 2, // 2 hours
-            })
+            if (!response.token) {
+                setUser({ email: data.email, password: '' });
+                throw new Error('Invalid login credentials');
+            } else {
+                const { token } = response;
 
-            vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
-            setUser({ email: data.email, password: '' });
-            router.push('/vollmed/user/dashboard')
+                setCookie(undefined, "nextauth.token", token, {
+                    maxAge: 60 * 60 * 2, // 2 hours
+                })
+                setCookie(undefined, "nextauth.user", data.email, {
+                    maxAge: 60 * 60 * 2, // 2 hours
+                })
+
+                vollmedApi.defaults.headers['Authorization'] = `Bearer ${token}`
+                setUser({ email: data.email, password: '' });
+                router.push('/vollmed/user/dashboard')
+            }
+
+            
         } catch (error) {
             throw error; 
         }

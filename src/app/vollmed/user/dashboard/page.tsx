@@ -13,7 +13,7 @@ export default function Dashboard() {
         const cookies = parseCookies();
         const token = cookies['nextauth.token'];
 
-        if (!token) {
+        if (!token || token == undefined) {
             router.push('/');
         }
     }, []);

@@ -3,7 +3,7 @@
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../../../context/AuthContext"
 import { parseCookies } from "nookies"
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { getDataById, getPacientes } from "@/services/vollmedApi"
 import VollMedNav from "../../components/voll-med-nav"
 import RegisterDoctor from "../medicos/__components/register-doctor"
@@ -24,6 +24,8 @@ export default function Pacientes () {
     const [register, setRegister] = useState(false)
     const [list, setList] = useState(false)
 
+    const pathname = usePathname();
+
     function setRegisterCard () {
         setRegister(true)
         setPacientes([])
@@ -37,9 +39,13 @@ export default function Pacientes () {
         if (!token) {
             router.push('/');
         }
+
+        if (pathname == "/vollmed/user/dashboard/pacientes"){
+            getAllPacientes()
+        }
     }, []);
 
-    async function getAllMedicos() {
+    async function getAllPacientes() {
         try {
             const cookies = parseCookies();
             const token = cookies['nextauth.token'];
@@ -80,7 +86,7 @@ export default function Pacientes () {
             <VollMedNav 
                 title="Pacientes"
                 handleRegister={() => setRegisterCard()}
-                handleList={getAllMedicos}
+                handleList={getAllPacientes}
                 input={
                     <input 
                         className="  bg-transparent focus:outline-none focus:none"

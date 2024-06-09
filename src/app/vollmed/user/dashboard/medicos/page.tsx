@@ -2,7 +2,7 @@
 
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import RegisterDoctor from "./__components/register-doctor"
 import VollMedNav from "../../components/voll-med-nav"
 import MedicoListHeader from "./__components/medico-list-header"
@@ -16,6 +16,7 @@ import MedicoEmptyTable from "./__components/medico-empty-table"
 import MedicoEmptyTableList from "./__components/medico-empty-table-list"
 import { ToastContainer, ToastDeletedMedico } from "./__components/toasters/toast-deleted-medico"
 import MedicoNotFound from "./__components/medico-not-found"
+import links from "@/app/vollmed/user/components/nav-links"
 
 export default function Medicos () {
     const router = useRouter()
@@ -45,11 +46,16 @@ export default function Medicos () {
         ));
     }, [medicos, search]);
 
+    const pathname = usePathname();
     const cookies = parseCookies();
     const token = cookies['nextauth.token'];
     const medicoService = new MedicoService();
 
     useEffect(() => {
+
+        if (pathname == "/vollmed/user/dashboard/medicos"){
+            getAllMedicos()
+        }
         
         const cookies = parseCookies()
         const token = cookies['nextauth.token']
@@ -58,6 +64,7 @@ export default function Medicos () {
         } 
 
     }, [])
+
 
     function closeSearchedToaster () {
         setToastMedicoDelete(false)

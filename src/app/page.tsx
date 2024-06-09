@@ -8,7 +8,7 @@ import  {ProjectCarousel}  from "./components/Projects/project-carousel"
 export default function Home () {
     return (      
     <>
-        <nav>
+        <nav className="mb-5 sm:mb-0">
             <Nav />
         </nav>
         <main className="bg-[#f5f9fb] dark:bg-dark-secondary">

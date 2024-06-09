@@ -12,7 +12,7 @@ import VollMedNav from './voll-med-nav';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-const links = [
+export const links = [
     { name: 'Home', 
         href: '/vollmed/user/dashboard', 
         icon:  <GoHomeFill  className="h-5 w-5 text-black dark:text-white"/>,

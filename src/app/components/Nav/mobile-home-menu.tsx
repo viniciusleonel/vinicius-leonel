@@ -14,7 +14,7 @@ export default function MobileHomeMenu () {
             <header className=" ">
             <Sheet>
                 <SheetTrigger asChild>
-                <Button className="sm:hidden" size="icon" variant="outline">
+                <Button className="lg:hidden" size="icon" variant="outline">
                     <GiHamburgerMenu className="h-5 w-5 text-cyan-700 dark:text-cyan-400" />
                     <span className="sr-only">Toggle Menu</span>
                 </Button>

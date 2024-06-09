@@ -9,10 +9,11 @@ interface VollMedNavProps {
   title?: string  
   handleRegister?: () => void
   handleList?: () => void
+  user?: String
   input?: ReactElement<InputHTMLAttributes<HTMLInputElement>, any>
 }
 
-export default function VollMedNav({title, handleRegister, handleList, input}: VollMedNavProps) {
+export default function VollMedNav({title, handleRegister, handleList, user,  input}: VollMedNavProps) {
   
   return (
     <header className="fixed top-0 left-0 right-0 z-20 flex h-16 gap-2 items-center justify-between px-6 bg-white shadow dark:bg-gray-950 border-b border-cyan-700  dark:border-cyan-400">
@@ -35,8 +36,13 @@ export default function VollMedNav({title, handleRegister, handleList, input}: V
           >
             List
           </Button>
-          <div className="m-2 p-2 gap-2 border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
-            {input}
+          {input && (
+            <div className="m-2 p-2 gap-2 border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
+              {input}
+            </div>
+          )}
+          <div className="m-2 p-2 gap-2 ">
+            {user}
           </div>
           
         <ToggleButton />
