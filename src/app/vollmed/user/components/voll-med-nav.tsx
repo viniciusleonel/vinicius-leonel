@@ -41,7 +41,7 @@ export default function VollMedNav({title, handleRegister, handleList, user,  in
               {input}
             </div>
           )}
-          <div className="m-2 p-2 gap-2 ">
+          <div className="hidden sm:flex m-2 p-2 gap-2 ">
             {user}
           </div>
           
