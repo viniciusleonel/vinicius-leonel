@@ -22,7 +22,10 @@ export default function UserRegister({passwordState, showPassword} : UserLoginPr
     const {
         register: registerUser,
         handleSubmit: handleSubmitCreateUser,
-        formState: { errors: errorsUser },
+        formState: { 
+            errors: errorsUser, 
+            isSubmitting
+        },
         watch,
     } = useForm<CreateUserFormData>({
         resolver: zodResolver(createUserSchema)
@@ -94,8 +97,9 @@ export default function UserRegister({passwordState, showPassword} : UserLoginPr
 
                     <button 
                         type="submit"
+                        disabled={isSubmitting}
                         className="bg-cyan-500 font-medium rounded-md py-2 shadow-lg hover:bg-cyan-600">
-                    Cadastrar
+                    {isSubmitting ? 'Cadastrando...' : 'Cadastrar'}
                     </button>
 
                     {userToastSucess && (

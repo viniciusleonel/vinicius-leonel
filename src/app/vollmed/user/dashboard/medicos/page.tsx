@@ -177,12 +177,12 @@ export default function Medicos () {
                 handleList={getAllMedicos}
                 input={
                     <input 
-                        className="  bg-transparent focus:outline-none focus:none"
+                        className="w-14 sm:w-max bg-transparent focus:outline-none focus:none"
                         type="text" 
                         value={idMedico} 
                         onChange={handleChange} 
                         onKeyDown={handleKeyPress}
-                        placeholder="Insira o ID do Médico"
+                        placeholder="ID do Médico"
                     />}
             />
         

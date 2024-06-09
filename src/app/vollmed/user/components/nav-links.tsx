@@ -7,8 +7,7 @@ import { TooltipTrigger, TooltipContent, Tooltip, TooltipProvider } from "@/app/
 import { GoHomeFill  } from "react-icons/go";
 import { FaUserMd } from "react-icons/fa";
 import { FaUserInjured } from "react-icons/fa";
-import { FaNotesMedical } from "react-icons/fa6";
-import VollMedNav from './voll-med-nav';
+import { CalendarCheckIcon } from 'lucide-react';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
@@ -31,7 +30,7 @@ export const links = [
 
     { name: 'Consultas', 
         href: '/vollmed/user/dashboard/consultas', 
-        icon: <FaNotesMedical className="h-5 w-5 text-black dark:text-white"/>, 
+        icon: <CalendarCheckIcon className="h-5 w-5 text-black dark:text-white"/>, 
     },
 ];
 

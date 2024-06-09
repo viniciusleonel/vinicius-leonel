@@ -25,7 +25,10 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
     const {
         register: registerLogin,
         handleSubmit: handleSubmitLoginUser,
-        formState: { errors: errorsLogin },
+        formState: { 
+            errors: errorsLogin,
+            isSubmitting
+        },
     } = useForm<LoginUserFormData>({
         resolver: zodResolver(loginSchema)
     })
@@ -81,8 +84,9 @@ export default function UserLogin ({passwordState, showPassword} : UserLoginProp
 
                     <button 
                         type="submit"
+                        disabled={isSubmitting}
                         className="bg-blue-500 font-medium rounded-md py-2 shadow-lg  hover:bg-blue-600">
-                    Entrar
+                    {isSubmitting ? 'Entrando...' : 'Entrar'}
                     </button>
 
                     {loginToastFail && (

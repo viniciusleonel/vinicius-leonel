@@ -37,7 +37,7 @@ export default function VollMedNav({title, handleRegister, handleList, user,  in
             List
           </Button>
           {input && (
-            <div className="m-2 p-2 gap-2 border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
+            <div className=" m-2 p-2 gap-2 border-2 rounded-lg border-cyan-700  dark:border-cyan-400">
               {input}
             </div>
           )}

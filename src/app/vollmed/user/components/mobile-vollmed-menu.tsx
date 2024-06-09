@@ -15,6 +15,7 @@ import {
     UserIcon,
     LogOutIcon
 } from "lucide-react";
+import MenuNavLinks from "./menu-links";
 
 export default function MobileVollMedMenu() {
     const cookies = parseCookies();
@@ -25,6 +26,7 @@ export default function MobileVollMedMenu() {
         destroyCookie(null, "nextauth.token");
         destroyCookie(null, "nextauth.user");
         router.push("/");
+        router.refresh()
     }
 
     return (
@@ -53,34 +55,7 @@ export default function MobileVollMedMenu() {
                                 <Package2Icon className="h-5 w-5 transition-all group-hover:scale-110" />
                                 <span className="sr-only">VollMed</span>
                             </Link>
-                            <Link
-                                className="flex items-center gap-4 px-2.5 text-gray-950 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50"
-                                href="/vollmed/user/dashboard"
-                            >
-                                <HomeIcon className="h-5 w-5" />
-                                Dashboard
-                            </Link>
-                            <Link
-                                className="flex items-center gap-4 px-2.5 text-gray-950 dark:text-gray-50"
-                                href="/vollmed/user/dashboard/medicos"
-                            >
-                                <UserIcon className="h-5 w-5" />
-                                Médicos
-                            </Link>
-                            <Link
-                                className="flex items-center gap-4 px-2.5 text-gray-950 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50"
-                                href="/vollmed/user/dashboard/pacientes"
-                            >
-                                <UserIcon className="h-5 w-5" />
-                                Pacientes
-                            </Link>
-                            <Link
-                                className="flex items-center gap-4 px-2.5 text-gray-950 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50"
-                                href="/vollmed/user/dashboard/consultas"
-                            >
-                                <CalendarCheckIcon className="h-5 w-5" />
-                                Consultas
-                            </Link>
+                            <MenuNavLinks />
                             <div className="flex">
                                 {userLog && <h2>{userLog}</h2>}
                             </div>

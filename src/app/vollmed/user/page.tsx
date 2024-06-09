@@ -5,7 +5,7 @@ import Nav from "@/app/components/Nav/Nav"
 import UserRegister from "./forms/user-register"
 import UserLogin from "./forms/user-login"
 import { useEffect, useState } from 'react'
-import { parseCookies } from 'nookies'
+import { destroyCookie, parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'
 
 export default function VollMed () {
@@ -20,7 +20,12 @@ export default function VollMed () {
         const cookies = parseCookies()
         const token = cookies['nextauth.token']
         
-        if (token ) {
+        if (!token || token == undefined) {
+            destroyCookie(null, "nextauth.token");
+            destroyCookie(null, "nextauth.user");
+            router.push('/vollmed/user');
+            
+        } else {
             router.push("/vollmed/user/dashboard")
         } 
 

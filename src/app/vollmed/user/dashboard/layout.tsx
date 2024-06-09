@@ -4,18 +4,19 @@ import { parseCookies } from "nookies";
 import SideNav from "../components/side-nav";
 import VollMedNav from "../components/voll-med-nav";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-
-    const pathname = usePathname();
 
     const [user, setUser] = useState(''); 
 
     useEffect(() => {
         const cookies = parseCookies();
         const user = cookies['nextauth.user'];
-        setUser(user)
+
+        if (user) {
+            setUser(user)
+        }
+        
     }, []);
 
     

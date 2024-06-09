@@ -89,12 +89,12 @@ export default function Pacientes () {
                 handleList={getAllPacientes}
                 input={
                     <input 
-                        className="  bg-transparent focus:outline-none focus:none"
+                        className=" w-14 sm:w-max bg-transparent focus:outline-none focus:none"
                         type="text" 
                         value={idPaciente} 
                         onChange={handleChange} 
                         onKeyDown={handleKeyPress}
-                        placeholder="Insira o ID do Paciente"
+                        placeholder="ID do Paciente"
                     />}
             />
 

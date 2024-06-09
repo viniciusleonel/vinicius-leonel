@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-import { parseCookies } from "nookies";
+import { destroyCookie, parseCookies } from "nookies";
 import { useRouter } from 'next/navigation';
 
 export default function Dashboard() {
@@ -14,6 +14,8 @@ export default function Dashboard() {
         const token = cookies['nextauth.token'];
 
         if (!token || token == undefined) {
+            destroyCookie(null, "nextauth.token");
+            destroyCookie(null, "nextauth.user");
             router.push('/');
         }
     }, []);
