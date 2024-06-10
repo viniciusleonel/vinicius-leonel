@@ -17,7 +17,6 @@ import MedicoEmptyTable from "./__components/medico-empty-table"
 import MedicoEmptyTableList from "./__components/medico-empty-table-list"
 import { ToastContainer, ToastDeletedMedico } from "./__components/toasters/toast-deleted-medico"
 import MedicoNotFound from "./__components/medico-not-found"
-import links from "@/app/vollmed/user/components/nav-links"
 
 export default function Medicos () {
     const router = useRouter()
@@ -104,14 +103,6 @@ export default function Medicos () {
             console.error('Erro ao excluir médico:', error);
         }
     }
-
-    // function closeToaster(index: number) {
-    //     setToasts(prevToasts => {
-    //         const newToasts = [...prevToasts];
-    //         newToasts[index] = false; // Marcar o toast como fechado
-    //         return newToasts;
-    //     });
-    // }
 
     async function excluirMedicoFromList(id: number) {
         try {

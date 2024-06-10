@@ -12,6 +12,9 @@ export default function Dashboard() {
     const token = cookies['nextauth.token'];
 
     useEffect(() => {
+
+        const cookies = parseCookies();
+        const token = cookies['nextauth.token'];
         
         if (!token || token == undefined) {
             destroyCookie(null, "nextauth.token");
