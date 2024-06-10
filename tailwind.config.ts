@@ -36,14 +36,19 @@ const config: Config = {
           from: { transform: 'translatex(0%)' },
           to: { transform: 'translatex(calc(-100% - 2.6rem))' },
         },
+        'screenMove': {
+          '0%, 100%': { transform: 'translateX(0%)' },
+          '50%': { transform: 'translateX(-100%)' }
+        },
       },
       animation: {
         slideRight: 'slideRight 1s ease-in-out forwards',
         slideLeft: 'slideLeft 1s ease-in-out forwards',
-        xsScreenMove: 'xsScreenMove 25s linear infinite',
-        smScreenMove: 'smScreenMove 35s linear infinite',
+        xsScreenMove: 'xsScreenMove 40s linear infinite',
+        smScreenMove: 'smScreenMove 40s linear infinite',
         mdScreenMove: 'mdScreenMove 40s linear infinite',
         lgScreenMove: 'lgScreenMove 40s linear infinite',
+        screenMove: 'screenMove 30s linear infinite',
       },
       colors: {
         'dark-primary': '#121212',

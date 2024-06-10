@@ -13,6 +13,7 @@ import PacienteListBody from "./__components/paciente-list-body"
 import PacienteListNav from "./__components/paciente-list-nav"
 import PacienteHeader from "./__components/paciente-header"
 import PacienteBody from "./__components/paciente-body"
+import LoadingSkeleton from "../components/LoadingSkeleton"
 
 
 
@@ -44,6 +45,20 @@ export default function Pacientes () {
             getAllPacientes()
         }
     }, []);
+
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Simula o tempo de carregamento
+    }, []);
+
+    // Em seu componente ou página
+    if (isLoading) {
+        return <LoadingSkeleton />;
+    }
 
     async function getAllPacientes() {
         try {

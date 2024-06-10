@@ -1,5 +1,6 @@
 'use client'
 
+import LoadingSkeleton from '@/app/vollmed/user/dashboard/components/LoadingSkeleton';
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
 import { usePathname, useRouter } from 'next/navigation'
@@ -65,6 +66,19 @@ export default function Medicos () {
 
     }, [])
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Simula o tempo de carregamento
+    }, []);
+
+    // Em seu componente ou página
+    if (isLoading) {
+        return <LoadingSkeleton />;
+    }
 
     function closeSearchedToaster () {
         setToastMedicoDelete(false)
@@ -298,6 +312,7 @@ export default function Medicos () {
                 <MedicoNotFound />
             )}
             </div>
+            
         </div>
     )
 }
