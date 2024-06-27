@@ -15,22 +15,6 @@ export default function VollMed () {
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter()
 
-    useEffect(() => {
-        
-        const cookies = parseCookies()
-        const token = cookies['nextauth.token']
-        
-        if (!token || token == undefined) {
-            destroyCookie(null, "nextauth.token");
-            destroyCookie(null, "nextauth.user");
-            router.push('/vollmed/user');
-            
-        } else {
-            router.push("/vollmed/user/dashboard")
-        } 
-
-    }, [])
-
     function togglePasswordVisibility() {
         setShowPassword(!showPassword)
     }

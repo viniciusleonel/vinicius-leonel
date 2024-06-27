@@ -10,27 +10,6 @@ interface NavProps {
 
 export default function Nav ({title} : NavProps) {
 
-    // const [menuBurguer, setMenuBurguer] = useState(false)
-
-    // const handleMenuBurguer = () => {
-    //     setMenuBurguer(!menuBurguer)
-    // }
-    
-    // const menuRef = useRef<HTMLDivElement>(null);
-
-    // useEffect(() => {
-    //     const handleClickOutside = (event: MouseEvent) => {
-    //         if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-    //             setMenuBurguer(false)
-    //         }
-    //     };
-
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    // }, []);
-
     return (
         <nav className="fixed top-0 left-0 w-full z-50 px-3 py-3 border-b-2 dark:border-b-2 border-cyan-700  dark:border-cyan-400 bg-white dark:bg-dark-primary">
             <div className="mx-3 flex justify-between items-center">

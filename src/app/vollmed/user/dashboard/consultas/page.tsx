@@ -11,17 +11,6 @@ export default function Consultas () {
 
     const router = useRouter()
 
-    useEffect(() => {
-        
-        const cookies = parseCookies()
-        const token = cookies['nextauth.token']
-        
-        if (!token ) {
-            router.push('/')
-        } 
-
-    }, [])
-
     return (
         <div className=" flex flex-col justify-center items-center">
             <h1>Consultas</h1>

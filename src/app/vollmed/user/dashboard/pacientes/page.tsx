@@ -34,12 +34,6 @@ export default function Pacientes () {
     }
 
     useEffect(() => {
-        const cookies = parseCookies();
-        const token = cookies['nextauth.token'];
-
-        if (!token) {
-            router.push('/');
-        }
 
         if (pathname == "/vollmed/user/dashboard/pacientes"){
             getAllPacientes()

@@ -11,18 +11,6 @@ export default function Dashboard() {
     const cookies = parseCookies();
     const token = cookies['nextauth.token'];
 
-    useEffect(() => {
-
-        const cookies = parseCookies();
-        const token = cookies['nextauth.token'];
-        
-        if (!token || token == undefined) {
-            destroyCookie(null, "nextauth.token");
-            destroyCookie(null, "nextauth.user");
-            router.push('/');
-        }
-    }, [token]);
-
     return (
         
         <div className="container mx-auto my-8 px-4 sm:px-6">

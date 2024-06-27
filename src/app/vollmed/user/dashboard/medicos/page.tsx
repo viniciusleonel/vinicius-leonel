@@ -56,12 +56,6 @@ export default function Medicos () {
         if (pathname == "/vollmed/user/dashboard/medicos"){
             getAllMedicos()
         }
-        
-        const cookies = parseCookies()
-        const token = cookies['nextauth.token']
-        if (!token ) {
-            router.push('/')
-        } 
 
     }, [])
 
