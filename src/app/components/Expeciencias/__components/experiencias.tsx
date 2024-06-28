@@ -6,7 +6,7 @@ type ExperienciasProps<T = unknown> = {
 } & T;
 
 export function ExperienciasMain({ children, className }: ExperienciasProps) {
-    return <main className={cn(["mx-20 flex flex-col", className])}>{children}</main>;
+    return <main className={cn(["mx-8 sm:mx-10 md:mx-20 flex flex-col", className])}>{children}</main>;
 }
 
 export function ExperienciasTitle({ children, className }: ExperienciasProps) {
@@ -96,6 +96,6 @@ export function ExperienciasTechIcons({
     className,
 }: ExperienciasProps) {
     return (
-        <div className={cn(["flex gap-4", className])}>{children}</div>
+        <div className={cn(["flex gap-4 flex-wrap", className])}>{children}</div>
     );
 }
