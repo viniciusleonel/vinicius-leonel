@@ -6,6 +6,7 @@ import About from "./components/About/about"
 import  {ProjectCarousel}  from "./components/Projects/project-carousel"
 import { useContext, useEffect } from "react"
 import { AuthContext } from "./context/AuthContext"
+import ExpecienciasPage from "./components/Expeciencias/page"
 
 export default function Home () {
 
@@ -38,11 +39,15 @@ export default function Home () {
                 <About />    
             </section> 
 
+            <section className="min-h-screen flex items-center bg-[#f5f9fb] dark:bg-dark-secondary ">
+                <ExpecienciasPage />
+            </section>
+
             <section id="Projects" className="min-h-screen pt-16">
                 <ProjectCarousel />
             </section>  
             
-            <Skills />    
+            {/* <Skills />     */}
         </main>    
     </>
     )
