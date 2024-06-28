@@ -74,8 +74,6 @@ export function ProjectCarousel() {
                 {indexesVisiveis.map((index) => (
                     <ProjectCard
                         key={index}
-                        imgCardSrc={projectsList[index].imgCardSrc}
-                        imgAlt={projectsList[index].imgAlt}
                         title={projectsList[index].title}
                         description={projectsList[index].description}
                         techIcons={projectsList[index].techIcons}

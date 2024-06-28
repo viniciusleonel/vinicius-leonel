@@ -4,8 +4,6 @@ import Link from "next/link"
 import { MdScreenShare } from "react-icons/md";
 
 interface ProjectCardProps {
-    imgCardSrc?: string,
-    imgAlt: string,
     title: string,
     description: string,
     techIcons: JSX.Element[],
@@ -13,24 +11,18 @@ interface ProjectCardProps {
     linkGitHub: string
 }
 
-export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
+export default function ProjectCard ( { title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="bg-white dark:bg-dark-secondary relative h-[24rem]  sm:h-[28rem] lg:h-[30rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
-            <div className="relative h-36 sm:h-44 lg:h-52 ">
-                <Image
-                className=" rounded-t-3xl border-b-2 border-cyan-500"
-                src={imgCardSrc || "/images/default.jpg"}
-                alt={imgAlt}
-                layout="fill"
-                objectFit="cover"
-                />
-            </div>
-            <div className=" text-center pt-4 pe-1">
-                <h4 className="text-2xl pb-2">{title}</h4>
-                <div className=" overflow-y-auto max-h-36">
-                    <p className={`${lusitana.className} px-2 text-sm lg:text-base text-zinc-800 dark:text-zinc-400`}>{description}</p>
+        <div className="bg-white dark:bg-dark-secondary relative h-[16rem] sm:h-[18rem] lg:h-[20rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
+            <div className="text-center flex flex-col justify-between pt-4 md:pt-8 pe-1">
+
+                <div><h4 className="text-2xl pb-2">{title}</h4></div>
+
+                <div className="overflow-y-auto  max-h-36 lg:max-h-40">
+                    <p className={`${lusitana.className} px-4 text-sm lg:text-base text-zinc-800 dark:text-zinc-400`}>{description}</p>
                 </div>
-                <div className="flex w-full gap-2 pt-4 justify-between items-center">
+
+                <div className="flex w-full gap-2 justify-between items-center">
                     <div className="flex absolute bottom-4 left-4">
                         {techIcons?.map((icon, index) => (
                             <div key={index} className="w-6 sm:w-8">
@@ -38,28 +30,26 @@ export default function ProjectCard ( {imgCardSrc, imgAlt, title, description, t
                             </div>
                         ))}
                     </div> 
-                    <div className=" absolute bottom-4 right-4 flex gap-2 items-center">
+                    <div className="absolute bottom-4 right-4 flex gap-2 items-center">
                         <Link
-                                href={linkSite}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                            <MdScreenShare 
-                                className="size-6 sm:size-8 "
-                                />
+                            href={linkSite}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <MdScreenShare className="size-6 sm:size-8" />
                         </Link>
                         <Link
                             href={linkGitHub}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                        <Image 
-                            src='/images/icons/github.svg'
-                            alt="github icon"
-                            height={50}
-                            width={40}
-                            className="w-6 sm:w-8"
-                        />
+                            <Image 
+                                src='/images/icons/github.svg'
+                                alt="github icon"
+                                height={50}
+                                width={40}
+                                className="w-6 sm:w-8"
+                            />
                         </Link>
                     </div>
                 </div>         
