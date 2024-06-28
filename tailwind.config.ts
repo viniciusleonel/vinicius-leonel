@@ -12,7 +12,7 @@ const config: Config = {
       'xs': '449px',
       'sm': '576px',
       'md': '800px',
-      'lg': '1440px',
+      'lg': '1240px',
     },
     extend: {
       keyframes: {

@@ -31,7 +31,7 @@ export function ExperienciasContentItem({
     return (
         <div
             className={cn([
-                "flex flex-col bg-slate-200 dark:bg-dark-primary min-w-52 ",
+                "flex flex-col h-60 bg-slate-200 dark:bg-dark-primary min-w-52 ",
                 className,
             ])}
         >
@@ -71,7 +71,7 @@ export function ExperienciasTechContent({
     className,
 }: ExperienciasProps) {
     return (
-        <div className={cn(["flex flex-col justify-between gap-4 p-6", className])}>
+        <div className={cn(["flex flex-col h-72 md:h-60 lg:h-auto justify-between gap-4 p-6", className])}>
             {children}
         </div>
     );
@@ -88,7 +88,7 @@ export function ExperienciasTechDescription({
     children,
     className,
 }: ExperienciasProps) {
-    return <p className={cn(["text-sm md:text-base text-zinc-800 dark:text-zinc-400", className])}>{children}</p>;
+    return <p className={cn(["text-sm md:text-base overflow-y-auto text-zinc-800 dark:text-zinc-400", className])}>{children}</p>;
 }
 
 export function ExperienciasTechIcons({

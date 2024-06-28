@@ -78,19 +78,19 @@ export default function ExpecienciasPage() {
                         active={javaLink}
                         onClick={handleJavaClick}
                     >
-                        Java
+                        Backend
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={nextLink}
                         onClick={handleNextClick}
                     >
-                        Next.js
+                        Frontend
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={kotlinLink}
                         onClick={handleKotlinClick}
                     >
-                        Kotlin
+                        Mobile
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={databaseLink}
@@ -151,6 +151,7 @@ export default function ExpecienciasPage() {
                             <TailwindIcon />
                             <NextJsIcon />
                             <ReactIcon />
+                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
