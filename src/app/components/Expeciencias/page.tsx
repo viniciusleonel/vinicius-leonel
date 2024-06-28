@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+"use client";
+
 import { useState } from "react";
 import {
     ExperienciasMain,
@@ -129,13 +129,20 @@ export default function ExpecienciasPage() {
 
                 {nextLink && (
                     <ExperienciasTechContent>
-                        <ExperienciasTechTitle>Next</ExperienciasTechTitle>
+                        <ExperienciasTechTitle>Next.js</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Este projeto é uma aplicação web desenvolvida para
-                            exibir um portfólio de experiências e projetos. Ele
-                            utiliza tecnologias modernas como Next.js, React,
-                            TypeScript e Tailwind CSS para criar uma interface
-                            de usuário interativa e responsiva.
+                            Desenvolvimento de aplicações web modernas e
+                            responsivas utilizando Next.js e React. Com o
+                            Next.js, é possível obter uma performance otimizada,
+                            pré-renderização de páginas, roteamento simplificado
+                            e suporte a SSR (Server-Side Rendering). Já o React
+                            oferece uma forma eficiente de construir interfaces
+                            de usuário interativas e reutilizáveis, facilitando
+                            o desenvolvimento e manutenção do código. Além da
+                            utilização do TypeScript para tipagem estática,
+                            facilitando a detecção de erros durante a fase de
+                            desenvolvimento e melhorando a manutenibilidade do
+                            código.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <HtmlIcon />
