@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { cn } from "@/lib/utils/utils";
-import { lusitana } from "@/app/ui/fonts";
+import { cn } from "@/lib/utils";
 
 type ExperienciasProps<T = unknown> = {
     children: React.ReactNode;

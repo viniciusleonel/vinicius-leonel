@@ -12,7 +12,7 @@ import {
     ExperienciasTechContent,
     ExperienciasTechIcons,
 } from "./__components/experiencias";
-import { cn } from "@/lib/utils/utils";
+import { cn } from "@/lib/utils";
 import {
     AndroidIcon,
     CssIcon,
