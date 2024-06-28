@@ -6,11 +6,30 @@ type ExperienciasProps<T = unknown> = {
 } & T;
 
 export function ExperienciasMain({ children, className }: ExperienciasProps) {
-    return <main className={cn(["mx-8 sm:mx-10 md:mx-20 flex flex-col", className])}>{children}</main>;
+    return (
+        <main
+            className={cn(["mx-8 sm:mx-10 md:mx-20 flex flex-col", className])}
+        >
+            {children}
+        </main>
+    );
 }
 
 export function ExperienciasTitle({ children, className }: ExperienciasProps) {
-    return <h2 className={cn(["text-3xl mb-6 flex items-center justify-center md:justify-start", className])}>{children}</h2>;
+    return (
+        <div className="flex items-baseline m-2 ">
+            <span className="text-cyan-500 text-4xl">&#123;</span>
+            <h2
+                className={cn([
+                    "text-3xl mb-6 flex items-center justify-center md:justify-start",
+                    className,
+                ])}
+            >
+                {children}
+            </h2>
+            <span className="text-cyan-500 text-4xl">&#125;</span>
+        </div>
+    );
 }
 
 export function ExperienciasContent({
@@ -31,7 +50,7 @@ export function ExperienciasContentItem({
     return (
         <div
             className={cn([
-                "flex flex-col h-60 bg-slate-200 dark:bg-dark-primary min-w-52 ",
+                "flex flex-col h-60  dark:bg-dark-primary min-w-52 ",
                 className,
             ])}
         >
@@ -55,7 +74,7 @@ export function ExperienciasContentItemLink({
         <button
             onClick={onClick}
             className={cn([
-                "w-fit justify-start p-4 ps-10  text-xl",
+                "w-full text-left p-4 ps-10  text-xl",
                 active
                     ? "border-s-4 ps-8 text-cyan-700 dark:text-cyan-500 border-cyan-700 dark:border-cyan-500"
                     : "",
@@ -71,7 +90,12 @@ export function ExperienciasTechContent({
     className,
 }: ExperienciasProps) {
     return (
-        <div className={cn(["flex flex-col h-72 md:h-60 lg:h-auto justify-between gap-4 p-6", className])}>
+        <div
+            className={cn([
+                "flex flex-col h-72 md:h-60 lg:h-auto justify-between gap-4 p-6",
+                className,
+            ])}
+        >
             {children}
         </div>
     );
@@ -81,14 +105,32 @@ export function ExperienciasTechTitle({
     children,
     className,
 }: ExperienciasProps) {
-    return <h3 className={cn([" text-2xl text-cyan-700 dark:text-cyan-500", className])}>{children}</h3>;
+    return (
+        <h3
+            className={cn([
+                " text-2xl text-cyan-700 dark:text-cyan-500",
+                className,
+            ])}
+        >
+            {children}
+        </h3>
+    );
 }
 
 export function ExperienciasTechDescription({
     children,
     className,
 }: ExperienciasProps) {
-    return <p className={cn(["text-sm md:text-base overflow-y-auto text-zinc-800 dark:text-zinc-400", className])}>{children}</p>;
+    return (
+        <p
+            className={cn([
+                "text-sm md:text-base overflow-y-auto text-zinc-800 dark:text-zinc-400",
+                className,
+            ])}
+        >
+            {children}
+        </p>
+    );
 }
 
 export function ExperienciasTechIcons({
@@ -96,6 +138,8 @@ export function ExperienciasTechIcons({
     className,
 }: ExperienciasProps) {
     return (
-        <div className={cn(["flex gap-4 flex-wrap", className])}>{children}</div>
+        <div className={cn(["flex gap-4 flex-wrap", className])}>
+            {children}
+        </div>
     );
 }
