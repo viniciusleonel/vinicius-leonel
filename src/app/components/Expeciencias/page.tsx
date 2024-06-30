@@ -108,13 +108,13 @@ export default function ExpecienciasPage() {
                         <ExperienciasTechDescription>
                             Development of robust and scalable APIs using Spring
                             Boot, Docker, JWT, Swagger, Hibernate, and
-                            PostgreSQL. The project involved creating RESTful
-                            endpoints, configuring security with JWT,
-                            interactive documentation with Swagger, and
-                            containerization with Docker to ensure consistency
-                            across environments. Hibernate and JPA were used for
-                            object-relational mapping and Flyway for database
-                            schema version management.
+                            PostgreSQL. Creation of RESTful endpoints,
+                            configuration of security with JWT, interactive
+                            documentation with Swagger, and containerization with
+                            Docker to ensure consistency across environments.
+                            Hibernate and JPA were used for object-relational
+                            mapping and Flyway for database schema version
+                            management.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <JavaIcon />
@@ -160,9 +160,8 @@ export default function ExpecienciasPage() {
                             Development in Kotlin and Java for Android
                             applications, with a focus on Jetpack Compose to
                             create modern and dynamic user interfaces.
-                            Experience in implementing architectures such as
-                            MVVM and integrating RESTful APIs to retrieve
-                            backend data.
+                            Implementation of architectures such as MVVM and
+                            integration of RESTful APIs to retrieve backend data.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <AndroidIcon />
@@ -179,12 +178,11 @@ export default function ExpecienciasPage() {
                         <ExperienciasTechDescription>
                             Development and management of database systems using
                             Oracle, PostgreSQL, MySQL, Hibernate, and Prisma.
-                            Experience in designing and modeling database
-                            schemas, creating and optimizing SQL queries, and
-                            implementing object-relational mapping (ORM) with
-                            Hibernate, JPA, and Prisma. Migration tools such as
-                            Flyway were used to ensure consistent database
-                            schema versions.
+                            Designing and modeling database schemas, creating
+                            and optimizing SQL queries, and implementing
+                            object-relational mapping (ORM) with Hibernate, JPA,
+                            and Prisma. Migration tools such as Flyway were used
+                            to ensure consistent database schema versions.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Oracle />
