@@ -71,7 +71,7 @@ export function ProjectCarousel() {
         <div className="sm:h-svh flex flex-col justify-center items-center">
             <div className="flex items-center justify-center">
                 <span className="text-cyan-500 text-4xl">&#123;</span>
-                <h2 className="my-10 text-3xl">Projetos</h2>
+                <h2 className="my-10 text-3xl">Projects</h2>
                 <span className="text-cyan-500 text-4xl">&#125;</span>
             </div>
 

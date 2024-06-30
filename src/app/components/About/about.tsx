@@ -27,7 +27,7 @@ export default function About() {
                             <div className="flex flex-col md:flex-row items-baseline">
                                 <p className="dark:text-cyan-100">I'am a</p>
                                 <h2 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                                    Full Stack Developer
+                                    Software Developer
                                 </h2>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ export default function About() {
                             className={`${lusitana.className} mt-6 text-sm md:text-base text-zinc-800 dark:text-zinc-300`}
                         >
                             Currently in the last year course of System
-                            Development and Analysis at FIAP + Alura.
+                            Development and Analysis at FIAP.
                             <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
                                 Main skills: Java, Spring, NodeJs, NextJs,

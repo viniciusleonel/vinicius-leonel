@@ -35,13 +35,17 @@ export default function Home() {
                 <Nav />
             </nav>
             <main className=" bg-[#f5f9fb] dark:bg-dark-secondary">
-                <section className="pt-24 sm:pt-0">
+                <section
+                    id="About"
+                    className="pt-24 sm:pt-0"
+                >
                     <About />
                 </section>
 
-                <section 
-                    id="Experiencias"
-                    className=" bg-[#f5f9fb] dark:bg-dark-secondary ">
+                <section
+                    id="Knowledge"
+                    className=" bg-[#f5f9fb] dark:bg-dark-secondary "
+                >
                     <ExpecienciasPage />
                 </section>
 

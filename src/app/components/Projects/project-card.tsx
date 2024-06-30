@@ -23,7 +23,7 @@ export default function ProjectCard ( { title, description, techIcons, linkSite,
                 </div>
 
                 <div className="flex justify-between w-full px-2 ">
-                    <div className="flex ">
+                    <div className="flex gap-1">
                         {techIcons?.map((icon, index) => (
                             <div key={index} className="w-6 sm:w-8">
                                 {icon}

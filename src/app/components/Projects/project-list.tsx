@@ -19,7 +19,7 @@ const projectsList = [
     {
         title: "VollMedAPI",
         description:
-            "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica. Com recursos de autenticação JWT, a API permite o cadastro de médicos, pacientes e consultas, fornecendo endpoints públicos para login e cadastro de usuários.",
+            "The VollMed API is an application developed in Java with Spring Framework, aimed at managing a medical clinic. With JWT authentication resources, the API allows the registration of doctors, patients, and appointments, providing public endpoints for user login and registration.",
         techIcons: [<JavaIcon key="java" />, <SpringIcon key="spring" />],
         linkSite:
             "https://vollmed-api-postgres-neontech.onrender.com/swagger-ui/index.html",
@@ -28,7 +28,7 @@ const projectsList = [
     {
         title: "Covid19 Brazil API",
         description:
-            "Front-end consumindo Covid19 Brazil API, realizando requisições para buscar casos no Brasil ou no mundo, com adição de filtros e busca por data, utilizando Next.JS, React.JS e TailWindCSS",
+            "Front-end consuming Covid19 Brazil API, making requests to search for cases in Brazil or worldwide, with added filters and search by date, using Next.JS, React.JS, and TailWindCSS",
         techIcons: [
             <NextJsIcon key="nextjs" />,
             <ReactIcon key="react" />,
@@ -41,7 +41,7 @@ const projectsList = [
     {
         title: "WheaterApp",
         description:
-            "Desenvolvimento de um aplicativo que consome uma API de clima da HGBrasil e utiliza Retrofit para consultar a previsão do tempo em uma cidade específica, exibindo dados como temperatura mínima e máxima, chance de chuva, velocidade do vento, entre outros.",
+            "Development of an application that consumes a weather API from HGBrasil and uses Retrofit to query the weather forecast in a specific city, displaying data such as minimum and maximum temperature, chance of rain, wind speed, among others.",
         techIcons: [
         <Kotlin key="kotlin" />, 
         <JackPackCompose key="compose" />,
@@ -53,7 +53,7 @@ const projectsList = [
     {
         title: "Pokedex",
         description:
-            "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informaçes sobre os Pokémon, utilizando HTML, CSS e JavaScript",
+            "Development of a web application that consumes the PokeAPI to display information about Pokémon, using HTML, CSS, and JavaScript",
         techIcons: [
             <HtmlIcon key="html" />,
             <CssIcon key="css" />,
@@ -62,15 +62,6 @@ const projectsList = [
         linkSite: "https://pokedex-viniciusleonel.vercel.app/",
         linkGitHub: "https://github.com/viniciusleonel/pokedex/tree/main",
     },
-    // {
-    //     imgCardSrc: "/images/icons/html.svg",
-    //     imgAlt: "teste",
-    //     title: "Title",
-    //     description: "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
-    //     techIcons: [<JavaIcon key="java"/>, <SpringIcon key="spring"/>],
-    //     linkSite: "https://github.com/viniciusleonel",
-    //     linkGitHub: "https://github.com/viniciusleonel"
-    // }
 ];
 
 export default projectsList;

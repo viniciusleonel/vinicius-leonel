@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Vinicius Leonel",
-  description: "Desenvolvedor Full Stack",
+  description: "Software Developer",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-bt" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${lusitana.className} dark:bg-dark-primary`}>
         <Providers>{children}</Providers>
       </body>

@@ -40,7 +40,7 @@ export default function MobileHomeMenu() {
                             </Link>
                             <Link
                                 className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                                href="/"
+                                href="/#About"
                             >
                                 <UserIcon className="h-5 w-5" />
                                 About
@@ -57,7 +57,7 @@ export default function MobileHomeMenu() {
 
                             <Link
                                 className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                                href="/#Conhecimentos"
+                                href="/#Knowledge"
                             >
                                 <MdOutlineLibraryBooks className="h-5 w-5 " />
                                 Knowledge

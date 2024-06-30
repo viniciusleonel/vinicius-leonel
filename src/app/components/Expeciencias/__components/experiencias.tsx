@@ -124,7 +124,7 @@ export function ExperienciasTechDescription({
     return (
         <p
             className={cn([
-                "text-sm md:text-base overflow-y-auto text-zinc-800 dark:text-zinc-400",
+                "text-sm pe-1 md:text-base overflow-y-auto text-zinc-800 dark:text-zinc-400",
                 className,
             ])}
         >

@@ -71,7 +71,7 @@ export default function ExpecienciasPage() {
 
     return (
         <ExperienciasMain>
-            <ExperienciasTitle>Experiências</ExperienciasTitle>
+            <ExperienciasTitle>Knowledge</ExperienciasTitle>
             <ExperienciasContent>
                 <ExperienciasContentItem>
                     <ExperienciasContentItemLink
@@ -96,7 +96,7 @@ export default function ExpecienciasPage() {
                         active={databaseLink}
                         onClick={handleDatabaseClick}
                     >
-                        Banco de Dados
+                        Database
                     </ExperienciasContentItemLink>
                 </ExperienciasContentItem>
 
@@ -106,16 +106,15 @@ export default function ExpecienciasPage() {
                             Java + Spring
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento de API&apos;s robustas e escaláveis
-                            utilizando Spring Boot, Docker, JWT, Swagger,
-                            Hibernate e PostgreSQL. O projeto envolveu a criação
-                            de endpoints RESTful, configuração de segurança com
-                            JWT, documentação interativa com Swagger e
-                            containerização com Docker para garantir
-                            consistência entre os ambientes. Foi utilizado
-                            Hibernate e JPA para mapeamento objeto-relacional e
-                            Flyway para gerenciamento de versões do esquema de
-                            banco de dados.
+                            Development of robust and scalable APIs using Spring
+                            Boot, Docker, JWT, Swagger, Hibernate, and
+                            PostgreSQL. The project involved creating RESTful
+                            endpoints, configuring security with JWT,
+                            interactive documentation with Swagger, and
+                            containerization with Docker to ensure consistency
+                            across environments. Hibernate and JPA were used for
+                            object-relational mapping and Flyway for database
+                            schema version management.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <JavaIcon />
@@ -131,18 +130,16 @@ export default function ExpecienciasPage() {
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>Next.js</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento de aplicações web modernas e
-                            responsivas utilizando Next.js e React. Com o
-                            Next.js, é possível obter uma performance otimizada,
-                            pré-renderização de páginas, roteamento simplificado
-                            e suporte a SSR (Server-Side Rendering). Já o React
-                            oferece uma forma eficiente de construir interfaces
-                            de usuário interativas e reutilizáveis, facilitando
-                            o desenvolvimento e manutenção do código. Além da
-                            utilização do TypeScript para tipagem estática,
-                            facilitando a detecção de erros durante a fase de
-                            desenvolvimento e melhorando a manutenibilidade do
-                            código.
+                            Frontend - Next.js / TypeScript / React Development
+                            of modern and responsive web applications using
+                            Next.js and React. Next.js offers optimized
+                            performance, pre-rendering of pages, simplified
+                            routing, and SSR (Server-Side Rendering) support.
+                            React provides an efficient way to build interactive
+                            and reusable user interfaces, facilitating code
+                            development and maintenance. TypeScript was used for
+                            static typing, aiding in error detection during
+                            development and improving code maintainability.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <HtmlIcon />
@@ -160,12 +157,12 @@ export default function ExpecienciasPage() {
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>Kotlin</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento em Kotlin e Java para aplicativos
-                            Android, com foco em Jetpack Compose para criar
-                            interfaces de usuário modernas e dinâmicas.
-                            Experiência na implementação de arquiteturas como
-                            MVVM e integração de APIs RESTful para obtenção de
-                            dados do backend.
+                            Development in Kotlin and Java for Android
+                            applications, with a focus on Jetpack Compose to
+                            create modern and dynamic user interfaces.
+                            Experience in implementing architectures such as
+                            MVVM and integrating RESTful APIs to retrieve
+                            backend data.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <AndroidIcon />
@@ -178,19 +175,16 @@ export default function ExpecienciasPage() {
 
                 {databaseLink && (
                     <ExperienciasTechContent>
-                        <ExperienciasTechTitle>
-                            Banco de Dados
-                        </ExperienciasTechTitle>
+                        <ExperienciasTechTitle>Database</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento e gerenciamento de sistemas de banco
-                            de dados utilizando Oracle, PostgreSQL, MySQL,
-                            Hibernate e Prisma. Experiência em design e
-                            modelagem de esquemas de banco de dados, criação e
-                            otimização de consultas SQL, e implementação de
-                            mapeamento objeto-relacional (ORM) com Hibernate,
-                            JPA e Prisma. Utilização de ferramentas de migração
-                            como Flyway para garantir versões consistentes dos
-                            esquemas de banco de dados.
+                            Development and management of database systems using
+                            Oracle, PostgreSQL, MySQL, Hibernate, and Prisma.
+                            Experience in designing and modeling database
+                            schemas, creating and optimizing SQL queries, and
+                            implementing object-relational mapping (ORM) with
+                            Hibernate, JPA, and Prisma. Migration tools such as
+                            Flyway were used to ensure consistent database
+                            schema versions.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Oracle />
