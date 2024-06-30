@@ -3,12 +3,12 @@ import Usuario from "@/app/model/Usuario";
 import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios"
 import { parseCookies } from "nookies";
 
-// export const vollmedApi: AxiosInstance = axios.create({
-//     baseURL: "https://vollmed-api-postgres-neontech.onrender.com/"
-// })
 export const vollmedApi: AxiosInstance = axios.create({
-    baseURL: "http://localhost:8080/"
+    baseURL: "https://vollmed-api-postgres-neontech.onrender.com/"
 })
+// export const vollmedApi: AxiosInstance = axios.create({
+//     baseURL: "http://localhost:8080/"
+// })
 
 // const { 'nextauth.token': token } = parseCookies()
 
@@ -22,8 +22,6 @@ export interface CustomError extends Error {
         data?: any
     };
 }
-
-
 
 export async function logUser(path: string, userData: Usuario) {
     try {

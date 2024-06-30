@@ -13,24 +13,25 @@ interface ProjectCardProps {
 
 export default function ProjectCard ( { title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
     return (
-        <div className="bg-white dark:bg-dark-secondary relative h-[16rem] sm:h-[18rem] lg:h-[20rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
-            <div className="text-center flex flex-col justify-between pt-4 md:pt-8 pe-1">
+        <div className="flex bg-white dark:bg-dark-secondary relative h-[16rem] sm:h-[18rem] lg:h-[20rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
+            <div className="text-center flex flex-col justify-between py-4 md:py-8 pe-1">
 
-                <div><h4 className="text-2xl pb-2">{title}</h4></div>
+                <div><h4 className="text-2xl ">{title}</h4></div>
 
-                <div className="overflow-y-auto  max-h-36 lg:max-h-40">
+                <div className="overflow-y-auto max-h-36 lg:max-h-40">
                     <p className={`${lusitana.className} px-4 text-sm lg:text-base text-zinc-800 dark:text-zinc-400`}>{description}</p>
                 </div>
 
-                <div className="flex w-full gap-2 justify-between items-center">
-                    <div className="flex absolute bottom-4 left-4">
+                <div className="flex justify-between w-full px-2 ">
+                    <div className="flex ">
                         {techIcons?.map((icon, index) => (
                             <div key={index} className="w-6 sm:w-8">
                                 {icon}
                             </div>
                         ))}
                     </div> 
-                    <div className="absolute bottom-4 right-4 flex gap-2 items-center">
+
+                    <div className="flex gap-2">
                         <Link
                             href={linkSite}
                             target="_blank"
@@ -52,7 +53,8 @@ export default function ProjectCard ( { title, description, techIcons, linkSite,
                             />
                         </Link>
                     </div>
-                </div>         
+                </div> 
+                        
             </div>
         </div>
     )

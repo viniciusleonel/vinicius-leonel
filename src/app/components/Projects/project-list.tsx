@@ -2,8 +2,11 @@ import React from "react";
 import ProjectCard from "./project-card";
 import {
     AndroidIcon,
+    CssIcon,
+    HtmlIcon,
     JackPackCompose,
     JavaIcon,
+    JavaScriptIcon,
     Kotlin,
     NextJsIcon,
     ReactIcon,
@@ -48,12 +51,16 @@ const projectsList = [
         linkGitHub: "https://github.com/viniciusleonel/weather-app-kotlin",
     },
     {
-        title: "Title4",
+        title: "Pokedex",
         description:
-            "Description Numquam minus quia nesciunt nemo explicabo magnam, iure accusamus iste delectus adipisci repellendus repellat fuga rem non impedit incidunt veniam. Nulla, autem.",
-        techIcons: [<JavaIcon key="java" />, <SpringIcon key="spring" />],
-        linkSite: "https://github.com/viniciusleonel",
-        linkGitHub: "https://github.com/viniciusleonel",
+            "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informaçes sobre os Pokémon, utilizando HTML, CSS e JavaScript",
+        techIcons: [
+            <HtmlIcon key="html" />,
+            <CssIcon key="css" />,
+            <JavaScriptIcon key="javascript" />,
+        ],
+        linkSite: "https://pokedex-viniciusleonel.vercel.app/",
+        linkGitHub: "https://github.com/viniciusleonel/pokedex/tree/main",
     },
     // {
     //     imgCardSrc: "/images/icons/html.svg",

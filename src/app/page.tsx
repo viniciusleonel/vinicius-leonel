@@ -6,6 +6,8 @@ import ExpecienciasPage from "./components/Expeciencias/page";
 import { ProjectCarousel } from "./components/Projects/project-carousel";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "./context/AuthContext";
+import { logUser } from "@/services/vollmedApi";
+import Usuario from "./model/Usuario";
 
 export default function Home() {
     const { signIn } = useContext(AuthContext);
@@ -13,11 +15,11 @@ export default function Home() {
     useEffect(() => {
         const signInAsync = async () => {
             try {
-                const data = {
-                    email: "",
-                    password: "",
+                const data: Usuario = {
+                    login: "",
+                    senha: "",
                 };
-                await signIn(data);
+                await logUser("/login", data);
             } catch (error) {
                 // Handle the error silently
                 console.error(error); // Optional: Log the error for debugging purposes
