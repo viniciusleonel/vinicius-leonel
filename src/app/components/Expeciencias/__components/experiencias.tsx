@@ -17,7 +17,7 @@ export function ExperienciasMain({ children, className }: ExperienciasProps) {
 
 export function ExperienciasTitle({ children, className }: ExperienciasProps) {
     return (
-        <div className="flex items-baseline m-2 ">
+        <div  className="flex items-baseline m-2 ">
             <span className="text-cyan-500 text-4xl">&#123;</span>
             <h2
                 className={cn([
