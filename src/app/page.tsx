@@ -35,7 +35,7 @@ export default function Home() {
                 <Nav />
             </nav>
             <main className=" bg-[#f5f9fb] dark:bg-dark-secondary">
-                <section className="mt-24 sm:mt-0">
+                <section className="pt-24 sm:pt-0">
                     <About />
                 </section>
 
