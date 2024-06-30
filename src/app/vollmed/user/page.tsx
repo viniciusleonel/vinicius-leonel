@@ -35,6 +35,7 @@ export default function VollMed () {
             
             <main className=" h-screen pt-8 flex flex-col flex-1 items-center justify-center mx-2 ">
                 <div className="">
+                    <span className="bg-red-500 text-2xl flex justify-center items-center">Em construção!</span>
                     <h2 className="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">VollMedApi</h2>
                     <div className="text-2xl py-6 flex justify-around">
                         

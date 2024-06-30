@@ -8,7 +8,7 @@ type ExperienciasProps<T = unknown> = {
 export function ExperienciasMain({ children, className }: ExperienciasProps) {
     return (
         <main
-            className={cn(["mx-8 sm:mx-10 md:mx-20 flex flex-col", className])}
+            className={cn(["sm:h-svh mx-8 sm:mx-10 md:mx-20 flex flex-col items-center sm:justify-center ", className])}
         >
             {children}
         </main>
@@ -21,7 +21,7 @@ export function ExperienciasTitle({ children, className }: ExperienciasProps) {
             <span className="text-cyan-500 text-4xl">&#123;</span>
             <h2
                 className={cn([
-                    "text-3xl mb-6 flex items-center justify-center md:justify-start",
+                    "text-3xl mb-6",
                     className,
                 ])}
             >

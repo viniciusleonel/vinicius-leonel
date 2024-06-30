@@ -31,21 +31,23 @@ export default function Home() {
 
     return (
         <>
-            <nav className="mb-5 sm:mb-0">
+            <nav className="">
                 <Nav />
             </nav>
-            <main className="bg-[#f5f9fb] dark:bg-dark-secondary">
-                <section className="min-h-screen flex items-center ">
+            <main className=" bg-[#f5f9fb] dark:bg-dark-secondary">
+                <section className="">
                     <About />
                 </section>
 
-                <section className="min-h-screen flex items-center bg-[#f5f9fb] dark:bg-dark-secondary ">
+                <section 
+                id="Conhecimentos"
+                className="bg-[#f5f9fb] dark:bg-dark-secondary ">
                     <ExpecienciasPage />
                 </section>
 
                 <section
                     id="Projects"
-                    className="min-h-screen pt-16"
+                    className="pb-8"
                 >
                     <ProjectCarousel />
                 </section>

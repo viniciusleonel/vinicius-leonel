@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from "react";
 import ProjectCard from "./project-card";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import projectsList from './project-list'; 
+import projectsList from "./project-list";
 
 export function ProjectCarousel() {
     const [startX, setStartX] = useState<number | null>(null);
@@ -21,10 +21,10 @@ export function ProjectCarousel() {
         };
 
         handleResize();
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
@@ -46,11 +46,16 @@ export function ProjectCarousel() {
     };
 
     const proximoProjeto = () => {
-        setCurrentIndex((indiceAnterior) => (indiceAnterior + 1) % projectsList.length);
+        setCurrentIndex(
+            (indiceAnterior) => (indiceAnterior + 1) % projectsList.length
+        );
     };
-    
+
     const projetoAnterior = () => {
-        setCurrentIndex((indiceAnterior) => (indiceAnterior - 1 + projectsList.length) % projectsList.length);
+        setCurrentIndex(
+            (indiceAnterior) =>
+                (indiceAnterior - 1 + projectsList.length) % projectsList.length
+        );
     };
 
     const indexesVisiveis = useMemo(() => {
@@ -63,14 +68,21 @@ export function ProjectCarousel() {
     }, [currentIndex, numVisibleProjects]);
 
     return (
-        <div className=" h-svh flex flex-col justify-center items-center">
-            <h2 className="-mt-20 pb-14 text-3xl">Projetos</h2>
+        <div className="sm:h-svh flex flex-col justify-center items-center">
+            <div className="flex items-center justify-center">
+                <span className="text-cyan-500 text-4xl">&#123;</span>
+                <h2 className="my-10 text-3xl">Projetos</h2>
+                <span className="text-cyan-500 text-4xl">&#125;</span>
+            </div>
+
             <div
                 className="flex overflow-hidden w-full px-8 xs:w-2/3 gap-2 justify-center"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
             >
-                <button onClick={projetoAnterior}><FaArrowLeft className='hover:text-cyan-500' /></button>
+                <button onClick={projetoAnterior}>
+                    <FaArrowLeft className="hover:text-cyan-500" />
+                </button>
                 {indexesVisiveis.map((index) => (
                     <ProjectCard
                         key={index}
@@ -81,7 +93,9 @@ export function ProjectCarousel() {
                         linkGitHub={projectsList[index].linkGitHub}
                     />
                 ))}
-                <button onClick={proximoProjeto}><FaArrowRight className='hover:text-cyan-500' /></button>
+                <button onClick={proximoProjeto}>
+                    <FaArrowRight className="hover:text-cyan-500" />
+                </button>
             </div>
         </div>
     );
