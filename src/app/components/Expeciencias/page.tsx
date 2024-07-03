@@ -40,12 +40,14 @@ export default function ExpecienciasPage() {
     const [nextLink, setNextLink] = useState(false);
     const [kotlinLink, setKotlinLink] = useState(false);
     const [databaseLink, setDatabaseLink] = useState(false);
+    const [techs, setTechs] = useState(false);
 
     const handleJavaClick = () => {
         setJavaLink(!javaLink);
         setNextLink(false);
         setKotlinLink(false);
         setDatabaseLink(false);
+        setTechs(false);
     };
 
     const handleNextClick = () => {
@@ -53,6 +55,7 @@ export default function ExpecienciasPage() {
         setJavaLink(false);
         setKotlinLink(false);
         setDatabaseLink(false);
+        setTechs(false);
     };
 
     const handleKotlinClick = () => {
@@ -60,6 +63,7 @@ export default function ExpecienciasPage() {
         setNextLink(false);
         setJavaLink(false);
         setDatabaseLink(false);
+        setTechs(false);
     };
 
     const handleDatabaseClick = () => {
@@ -67,6 +71,15 @@ export default function ExpecienciasPage() {
         setNextLink(false);
         setJavaLink(false);
         setKotlinLink(false);
+        setTechs(false);
+    };
+
+    const handleTechsClick = () => {
+        setTechs(!techs);
+        setNextLink(false);
+        setJavaLink(false);
+        setKotlinLink(false);
+        setDatabaseLink(false);
     };
 
     return (
@@ -98,6 +111,12 @@ export default function ExpecienciasPage() {
                     >
                         Database
                     </ExperienciasContentItemLink>
+                    <ExperienciasContentItemLink
+                        active={techs}
+                        onClick={handleTechsClick}
+                    >
+                        Bibliotecas e Frameworks
+                    </ExperienciasContentItemLink>
                 </ExperienciasContentItem>
 
                 {javaLink && (
@@ -108,13 +127,12 @@ export default function ExpecienciasPage() {
                         <ExperienciasTechDescription>
                             Development of robust and scalable APIs using Spring
                             Boot, Docker, JWT, Swagger, Hibernate, and
-                            PostgreSQL. Creation of RESTful endpoints,
-                            security configuration with JWT, interactive
-                            documentation with Swagger, and containerization with
-                            Docker to ensure consistency across environments.
-                            Hibernate and JPA were used for object-relational
-                            mapping and Flyway for database schema version
-                            management.
+                            PostgreSQL. Creation of RESTful endpoints, security
+                            configuration with JWT, interactive documentation
+                            with Swagger, and containerization with Docker to
+                            ensure consistency across environments. Hibernate
+                            and JPA were used for object-relational mapping and
+                            Flyway for database schema version management.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <JavaIcon />
@@ -161,7 +179,8 @@ export default function ExpecienciasPage() {
                             applications, with a focus on Jetpack Compose to
                             create modern and dynamic user interfaces.
                             Implementation of architectures such as MVVM and
-                            integration of RESTful APIs to retrieve backend data.
+                            integration of RESTful APIs to retrieve backend
+                            data.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <AndroidIcon />
@@ -190,6 +209,79 @@ export default function ExpecienciasPage() {
                             <Postgres />
                             <Prisma />
                         </ExperienciasTechIcons>
+                    </ExperienciasTechContent>
+                )}
+
+                {techs && (
+                    <ExperienciasTechContent>
+                        <ExperienciasTechTitle>
+                            Bibliotecas e Frameworks
+                        </ExperienciasTechTitle>
+                        <ExperienciasTechDescription>
+                            <ul>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        JWT
+                                    </span>
+                                    : JSON Web Token (JWT) is an open standard
+                                    (RFC 7519) that defines a compact and
+                                    self-contained way for securely transmitting
+                                    information between parties as a JSON
+                                    object.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Zod
+                                    </span>
+                                    : A schema validation library to ensure data
+                                    integrity and correctness.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Stripe
+                                    </span>
+                                    : A payment platform used for processing transactions and managing
+                                    subscriptions.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Radix UI
+                                    </span>
+                                    : Accessible and customizable user interface
+                                    components for building modern web
+                                    applications.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Shadcn/UI
+                                    </span>
+                                    : A library of accessible and customizable
+                                    user interface components.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Google OAuth
+                                    </span>
+                                    : An authentication service that allows
+                                    users to log in using their Google accounts.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        GitHub OAuth
+                                    </span>
+                                    : An authentication service that enables
+                                    users to log in using their GitHub accounts.
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Next-Auth/AuthJs
+                                    </span>
+                                    : A library for managing authentication in
+                                    Next.js applications, providing a seamless
+                                    and secure login experience.
+                                </li>
+                            </ul>
+                        </ExperienciasTechDescription>
                     </ExperienciasTechContent>
                 )}
             </ExperienciasContent>

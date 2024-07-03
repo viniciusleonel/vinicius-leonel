@@ -50,7 +50,7 @@ export function ExperienciasContentItem({
     return (
         <div
             className={cn([
-                "flex flex-col h-auto md:h-60 dark:bg-dark-primary min-w-52 ",
+                "flex flex-col h-auto dark:bg-dark-primary min-w-52 ",
                 className,
             ])}
         >

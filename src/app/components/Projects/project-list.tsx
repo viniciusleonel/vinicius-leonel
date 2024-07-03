@@ -19,10 +19,24 @@ const projectsList = [
         title: "VollMedAPI",
         description:
             "The VollMed API is an application developed in Java with Spring Framework, aimed at managing a medical clinic. With JWT authentication resources, the API allows the registration of doctors, patients, and appointments, providing public endpoints for user login and registration.",
-        techIcons: [<JavaIcon key="java" />, <SpringIcon key="spring" />],
-        linkSite:
-            "https://github.com/viniciusleonel/vollmed-api",
+        techIcons: [
+        <JavaIcon key="java" />, 
+        <SpringIcon key="spring" />],
+        linkSite: "https://github.com/viniciusleonel/vollmed-api",
         linkGitHub: "https://github.com/viniciusleonel/vollmed-api",
+    },
+    {
+        title: "Micro-Saas-ToDo",
+        description:
+            "This is a micro-saas task management application that allows users to create, update, delete, and view their tasks. The micro-saas also allows users to filter and sort their tasks, as well as mark tasks as completed or pending. Login can be done with a Google account, GitHub, or via email through a magic link in conjunction with mailtrap, requiring environment variables to be configured in the .env file. The micro-saas also uses Stripe to process payments, allowing users to upgrade their plan to create more tasks. Stripe CLI is needed to listen to webhooks, so the micro-saas receives the payment and plan update.",
+        techIcons: [
+        <NextJsIcon key="nextjs" />,
+        <ReactIcon key="react" />,
+        <TailwindIcon key="tailwind" />,
+        <TypeScriptIcon key="typescript" />,
+    ],
+        linkSite: "https://github.com/viniciusleonel/micro-saas-sample",
+        linkGitHub: "https://github.com/viniciusleonel/micro-saas-sample",
     },
     {
         title: "Covid19 Brazil API",
@@ -42,10 +56,10 @@ const projectsList = [
         description:
             "Development of an application that consumes a weather API from HGBrasil and uses Retrofit to query the weather forecast in a specific city, displaying data such as minimum and maximum temperature, chance of rain, wind speed, among others.",
         techIcons: [
-        <Kotlin key="kotlin" />, 
-        <JackPackCompose key="compose" />,
-        <AndroidIcon key="android" />,
-    ],
+            <Kotlin key="kotlin" />,
+            <JackPackCompose key="compose" />,
+            <AndroidIcon key="android" />,
+        ],
         linkSite: "https://github.com/viniciusleonel/weather-app-kotlin",
         linkGitHub: "https://github.com/viniciusleonel/weather-app-kotlin",
     },
