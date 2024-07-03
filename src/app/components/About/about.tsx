@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
+import { JavaIcon, SpringIcon } from "../Skills/tech-icons";
 
 export default function About() {
     return (
@@ -34,19 +35,16 @@ export default function About() {
                         <p
                             className={`${lusitana.className} mt-6 text-sm md:text-base text-zinc-800 dark:text-zinc-300`}
                         >
-                            Currently in the last year course of System
-                            Development and Analysis at FIAP.
+                            Currently in the final year of the System Development and Analysis course at FIAP.
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600"></span>
                             <br />
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                                Main skills: Java, Spring, NodeJs, NextJs,
-                                TypeScript, React, English.
-                            </span>
-                            <br />
-                            Living in São Paulo and looking for an opportunity
-                            to further develop my skills.
+                            Java backend developer using Spring to build
+                            RESTful APIs, with knowledge in frontend
+                            technologies such as Next.js, TypeScript, and React.
+                            Bilingual (Portuguese and English)
                         </p>
-                        <div className="flex justify-between mt-4 ">
-                            <div className="flex items-center gap-2 w-32 lg:w-40 -m-2 pt-6">
+                        <div className="flex items-center justify-between mt-4 ">
+                            <div className="flex  gap-2 w-32 lg:w-40 -m-2 pt-6">
                                 <Link
                                     href="https://www.linkedin.com/in/viniciuslps/"
                                     target="_blank"

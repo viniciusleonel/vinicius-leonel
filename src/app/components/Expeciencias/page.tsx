@@ -109,7 +109,7 @@ export default function ExpecienciasPage() {
                             Development of robust and scalable APIs using Spring
                             Boot, Docker, JWT, Swagger, Hibernate, and
                             PostgreSQL. Creation of RESTful endpoints,
-                            configuration of security with JWT, interactive
+                            security configuration with JWT, interactive
                             documentation with Swagger, and containerization with
                             Docker to ensure consistency across environments.
                             Hibernate and JPA were used for object-relational

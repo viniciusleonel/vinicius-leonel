@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectCard from "./project-card";
 import {
     AndroidIcon,
     CssIcon,
@@ -22,7 +21,7 @@ const projectsList = [
             "The VollMed API is an application developed in Java with Spring Framework, aimed at managing a medical clinic. With JWT authentication resources, the API allows the registration of doctors, patients, and appointments, providing public endpoints for user login and registration.",
         techIcons: [<JavaIcon key="java" />, <SpringIcon key="spring" />],
         linkSite:
-            "https://vollmed-api-postgres-neontech.onrender.com/swagger-ui/index.html",
+            "https://github.com/viniciusleonel/vollmed-api",
         linkGitHub: "https://github.com/viniciusleonel/vollmed-api",
     },
     {

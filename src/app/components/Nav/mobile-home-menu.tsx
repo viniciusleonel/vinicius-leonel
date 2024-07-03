@@ -63,13 +63,13 @@ export default function MobileHomeMenu() {
                                 Knowledge
                             </Link>
 
-                            <Link
+                            {/* <Link
                                 className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
                                 href="/vollmed/user"
                             >
                                 <TbBrandSass className="h-5 w-5" />
                                 Upcoming Feature
-                            </Link>
+                            </Link> */}
                         </nav>
                     </SheetContent>
                 </Sheet>

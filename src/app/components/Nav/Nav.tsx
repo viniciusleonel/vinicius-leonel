@@ -22,11 +22,11 @@ export default function Nav ({title} : NavProps) {
                 <Link href={"/"} className="text-2xl mt-1 md:ps-10 sm:text-3xl hover:text-cyan-700 dark:hover:text-cyan-300">{title || "Software Developer"}</Link>
                 <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
                 <div className="hidden md:flex">
-                        <Link 
+                        {/* <Link 
                             className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/vollmed/user"}
                             >Upcoming Feature        
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className="hidden md:flex" >
                         <Link 
