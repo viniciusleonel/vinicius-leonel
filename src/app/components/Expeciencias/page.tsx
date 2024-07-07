@@ -138,7 +138,7 @@ export default function ExpecienciasPage() {
                             <JavaIcon />
                             <SpringIcon />
                             <Postgres />
-                            <Docker link="https://hub.docker.com/r/viniciusleonel/vollmed-api" />
+                            <Docker />
                             <GitHub link="https://github.com/viniciusleonel/vollmed-api" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
