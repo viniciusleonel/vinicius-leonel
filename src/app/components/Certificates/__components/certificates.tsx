@@ -75,13 +75,16 @@ export function CertificatesContentItemLink({
             href={link}
             target="_blank"
             className={cn([
-                "w-full flex  p-4 text-base sm:text-xl "
+                "w-full flex p-4 text-base sm:text-xl "
             ])}
         >
             
-            <h3 className={cn(["flex hover:text-cyan-700 hover:underline dark:hover:text-cyan-500 gap-1", className])}>
+            <h3 className={cn(["w-full flex hover:text-cyan-700 hover:underline dark:hover:text-cyan-500 gap-1", className])}>
                 <FaCircle className="text-cyan-700 dark:text-cyan-500 pt-2" />
-                {title} <span className="text-cyan-700 dark:text-cyan-500">| {school}</span>
+                <div className="w-full flex flex-col ">
+                    {title}
+                    <span className="text-cyan-700 dark:text-cyan-500"> {school}</span>
+                </div>
             </h3>
         </a>
     );
