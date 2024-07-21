@@ -1,8 +1,12 @@
 import { cn } from "@/lib/utils";
+import { FaCircle } from "react-icons/fa";
 
 type CertificatesProps<T = unknown> = {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     className?: string;
+    title?: string;
+    school?: string;
+    link?: string;
 } & T;
 
 export function CertificatesMain({ children, className }: CertificatesProps) {
@@ -59,41 +63,29 @@ export function CertificatesContentItem({
     );
 }
 
-type CertificatesContentItemLinkProps = {
-    onClick?: () => void;
-    active?: boolean;
-};
-
-export function CertificatesContentItemTitle({ children, className }: CertificatesProps) {
-    return (
-        <h3 className={cn(["text-left hover:text-cyan-700 hover:underline dark:hover:text-cyan-500", className])}>
-            {children}
-        </h3>
-    );
-}
-
-export function CertificatesContentItemSchool({ children, className }: CertificatesProps) {
-    return (
-        <h3 className={cn([" text-right text-cyan-700 dark:text-cyan-500", className])}>
-            {children}
-        </h3>
-    );
-}
-
 export function CertificatesContentItemLink({
     children,
     className,
-    active,
-    onClick,
-}: CertificatesProps<CertificatesContentItemLinkProps>) {
+    link,
+    title,
+    school
+}: CertificatesProps) {
     return (
-        <button
-            onClick={onClick}
+        <a
+            href={link}
+            target="_blank"
             className={cn([
-                "w-full flex flex-col sm:flex-row justify-between p-4 text-base sm:text-xl "
+                "w-full flex flex-col sm:flex-row  p-4 text-base sm:text-xl "
             ])}
         >
-                {children}
-            </button>
+            
+            <h3 className={cn(["flex hover:text-cyan-700 hover:underline dark:hover:text-cyan-500 gap-1", className])}>
+                <FaCircle className="text-cyan-700 dark:text-cyan-500 pt-2" />
+                {title}
+            </h3>
+            <h3 className={cn([" text-cyan-700 dark:text-cyan-500", className])}>
+                {"  - " + school}
+            </h3>
+        </a>
     );
 }

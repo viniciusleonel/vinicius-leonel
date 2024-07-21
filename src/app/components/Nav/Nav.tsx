@@ -28,6 +28,15 @@ export default function Nav ({title} : NavProps) {
                             >Upcoming Feature        
                         </Link> */}
                     </div>
+
+                    <div className="hidden md:flex" >
+                        <Link 
+                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
+                            href={"/#Certificates"}
+                        >Certificates
+                        </Link>
+                    </div>
+
                     <div className="hidden md:flex" >
                         <Link 
                             className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"

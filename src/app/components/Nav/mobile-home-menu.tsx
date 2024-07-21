@@ -8,8 +8,8 @@ import { Button } from "@/app/vollmed/user/dashboard/ui/button";
 import { UserIcon } from "lucide-react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineLibraryBooks } from "react-icons/md";
-import { TbBrandSass } from "react-icons/tb";
 import { MdOutlineWorkHistory } from "react-icons/md";
+import { TbCertificate } from "react-icons/tb";
 
 export default function MobileHomeMenu() {
     return (
@@ -61,6 +61,14 @@ export default function MobileHomeMenu() {
                             >
                                 <MdOutlineLibraryBooks className="h-5 w-5 " />
                                 Knowledge
+                            </Link>
+
+                            <Link
+                                className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
+                                href="/#Certificates"
+                            >
+                                <TbCertificate className="h-5 w-5 " />
+                                Certificates
                             </Link>
 
                             {/* <Link
