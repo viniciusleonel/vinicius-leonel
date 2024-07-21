@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { logUser } from "@/services/vollmedApi";
 import Usuario from "./model/Usuario";
+import Certificates from "./components/Certificates/page";
 
 export default function Home() {
     const { signIn } = useContext(AuthContext);
@@ -54,6 +55,13 @@ export default function Home() {
                     className="pb-8"
                 >
                     <ProjectCarousel />
+                </section>
+
+                <section
+                    id="Certificates"
+                    className="pb-8"
+                >
+                    <Certificates />
                 </section>
 
                 {/* <Skills />     */}
