@@ -30,7 +30,7 @@ const list = [
         link: "https://www.linkedin.com/in/viniciuslps/details/certifications/1721588914144/single-media-viewer/?profileId=ACoAAAr7p1sBt3xwkAh0jVGufACmI8TcSY0kBh0"
     },
     {
-        title: "Certification in ESOL internacional (Speaking and Listening - English) CEFR Level B2.1",
+        title: "Certification in ESOL international (Speaking and Listening - English) CEFR Level B2.1",
         school: "TRINITY COLLEGE LONDON - 2017",
         link: "https://www.linkedin.com/in/viniciuslps/details/certifications/1721589148711/single-media-viewer/?profileId=ACoAAAr7p1sBt3xwkAh0jVGufACmI8TcSY0kBh0"
     }
