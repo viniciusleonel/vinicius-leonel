@@ -31,10 +31,10 @@ export default function MobileHomeMenu() {
                 </Button>
             </SheetTrigger>
             <SheetContent
-                className="sm:max-w-xs"
+                className="sm:max-w-xs flex flex-col"
                 side="left"
             >
-                <nav className="grid gap-6 text-lg font-medium">
+                <nav className="grid gap-6 text-lg font-medium ">
                     <Link
                         className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-gray-200 text-lg font-semibold text-gray-50 md:text-base dark:bg-gray-800 dark:text-gray-900"
                         href="#"
@@ -83,7 +83,7 @@ export default function MobileHomeMenu() {
                             </Link> */}
                 </nav>
 
-                <div className="fixed bottom-0 pb-6 gap-2 flex left-0 right-0 justify-evenly max-w-[24rem] sm:max-w-xs">
+                <div className="flex justify-around items-center mt-auto">
                     <TypeScriptIcon />
                     <TailwindIcon />
                     <ReactIcon />
