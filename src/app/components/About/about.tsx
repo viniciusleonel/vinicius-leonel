@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
-import { JavaIcon, SpringIcon } from "../Skills/tech-icons";
 
 export default function About() {
     return (
