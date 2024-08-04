@@ -1,7 +1,7 @@
 "use client";
 
 import Nav from "../components/Nav/Nav";
-import Dashboard from "./__components/dashboard";
+import Sidebar from "./__components/sidebar";
 
 export default function LiveProjects() {
     return (
@@ -9,9 +9,7 @@ export default function LiveProjects() {
             <nav>
                 <Nav />
             </nav>
-            <main className=" pt-16">
-                <Dashboard />
-            </main>
+            
         </div>
     );
 }

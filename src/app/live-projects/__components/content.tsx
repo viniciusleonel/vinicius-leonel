@@ -8,7 +8,7 @@ export default function Content() {
     return (
         <ResizablePanelGroup direction="horizontal">
             <ResizablePanel>One</ResizablePanel>
-            <ResizableHandle withHandle />
+            <ResizableHandle />
             <ResizablePanel>Two</ResizablePanel>
         </ResizablePanelGroup>
     );
