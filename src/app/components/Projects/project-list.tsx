@@ -1,13 +1,16 @@
 import React from "react";
 import {
     AndroidIcon,
+    BootstrapIcon,
     CssIcon,
     HtmlIcon,
     JackPackCompose,
     JavaIcon,
     JavaScriptIcon,
+    JspIcon,
     Kotlin,
     NextJsIcon,
+    Oracle,
     ReactIcon,
     SpringIcon,
     TailwindIcon,
@@ -37,6 +40,19 @@ const projectsList = [
     ],
         linkSite: "https://github.com/viniciusleonel/micro-saas-sample",
         linkGitHub: "https://github.com/viniciusleonel/micro-saas-sample",
+    },
+    {
+        title: "Fintech",
+        description:
+            "The Fintech application is a platform that allows users to manage their personal finances, including registering and controlling income, expenses, and investments. The system offers a user-friendly interface and features to facilitate financial tracking. The application was developed in Java with JSP.",
+        techIcons: [
+        <JavaIcon key="java"/>,
+        <JspIcon key="jsp" />,
+        <BootstrapIcon key="bootstrap" />,
+        <Oracle key="oracle" />
+    ],
+        linkSite: "https://github.com/viniciusleonel/crud-fintech",
+        linkGitHub: "https://github.com/viniciusleonel/crud-fintech",
     },
     {
         title: "Covid19 Brazil API",

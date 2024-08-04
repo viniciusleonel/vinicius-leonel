@@ -252,6 +252,35 @@ export function GitHub({ link, className }: TechIconsWithLinkProps) {
         </Link>
     );
 }
+
+export function JspIcon({ link, className }: TechIconsWithLinkProps) {
+    return (
+        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+            <Image
+                src="/images/icons/jsp-icon.svg"
+                alt="jsp icon"
+                height={40}
+                width={40}
+                className={cn(className, "")}
+            />
+        </Link>
+    );
+}
+
+export function BootstrapIcon({ link, className }: TechIconsWithLinkProps) {
+    return (
+        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+            <Image
+                src="/images/icons/bootstrap-icon.svg"
+                alt="jsp icon"
+                height={40}
+                width={40}
+                className={cn(className, "")}
+            />
+        </Link>
+    );
+}
+
 export function TechIcons({ className }: TechIconsProps) {
     return (
         <>
