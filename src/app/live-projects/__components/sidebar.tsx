@@ -3,9 +3,9 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { IoIosArrowDown } from "react-icons/io";
+import { TbMedicalCross } from "react-icons/tb";
+import { GrMoney } from "react-icons/gr";
 import { MdOutlineWorkHistory } from "react-icons/md";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
     SidebarContainer,
@@ -13,6 +13,8 @@ import {
     SidebarTitle,
 } from "./sidebar-layout";
 import { useState } from "react";
+import Vollmed from "../vollmed/page";
+import Fintech from "../fintech/page";
 
 export default function Sidebar() {
     const pathname = usePathname();
@@ -59,7 +61,7 @@ export default function Sidebar() {
                         active={vollmedActive}
                         itensList={["Vollmed 1", "Item 2", "Item 3"]}
                     >
-                        <MdOutlineWorkHistory className="h-5 w-5" />
+                        <TbMedicalCross className="h-5 w-5" />
                         VollMed
                     </SidebarNavButton>
 
@@ -68,16 +70,16 @@ export default function Sidebar() {
                         active={fintechActive}
                         itensList={["fintech 1", "Item 2", "Item 3"]}
                     >
-                        <MdOutlineWorkHistory className="h-5 w-5" />
+                        <GrMoney className="h-5 w-5" />
                         Fintech
                     </SidebarNavButton>
                 </SidebarContainer>
             </ResizablePanel>
             <ResizableHandle className="bg-cyan-700 dark:bg-cyan-400" />
             <ResizablePanel defaultSize={80}>
-                <div className="flex h-full items-center justify-center p-6">
-                    {vollmedActive && <span className="font-semibold">Vollmed</span>}
-                    {fintechActive && <span className="font-semibold">Fintech</span>}
+                <div className="flex h-full items-center justify-center">
+                    {vollmedActive && <Vollmed />}
+                    {fintechActive && <Fintech />}
                 </div>
             </ResizablePanel>
         </ResizablePanelGroup>
