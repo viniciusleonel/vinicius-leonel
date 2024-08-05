@@ -65,7 +65,7 @@ export function SidebarNavButton({
             {active && (
                 <ul className="mt-2 ml-8 list-disc ">
                     {itensList?.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li className="hover:text-cyan-700 dark:hover:text-cyan-300 cursor-pointer" key={index}>{item}</li>
                     ))}
                 </ul>
             )}

@@ -59,7 +59,7 @@ export default function Sidebar() {
                     <SidebarNavButton
                         onClick={() => handleProjectClick("vollmed")}
                         active={vollmedActive}
-                        itensList={["Vollmed 1", "Item 2", "Item 3"]}
+                        itensList={["Usuários", "Médicos", "Pacientes", "Consultas"]}
                     >
                         <TbMedicalCross className="h-5 w-5" />
                         VollMed
@@ -68,7 +68,7 @@ export default function Sidebar() {
                     <SidebarNavButton
                         onClick={() => handleProjectClick("fintech")}
                         active={fintechActive}
-                        itensList={["fintech 1", "Item 2", "Item 3"]}
+                        itensList={["Usuários", "Receitas", "Despesas", "Investimentos"]}
                     >
                         <GrMoney className="h-5 w-5" />
                         Fintech
