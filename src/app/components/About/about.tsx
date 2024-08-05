@@ -2,6 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
+import { FaFilePdf } from "react-icons/fa6";
+import { Avatar } from "@nextui-org/react";
+import { AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@radix-ui/react-hover-card";
+import { PdfIcon } from "../Skills/tech-icons";
 
 export default function About() {
     return (
@@ -34,16 +39,17 @@ export default function About() {
                         <p
                             className={`${lusitana.className} mt-6 text-sm md:text-base text-zinc-800 dark:text-zinc-300`}
                         >
-                            Currently in the final year of the System Development and Analysis course at FIAP.
+                            Currently in the final year of the System
+                            Development and Analysis course at FIAP.
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600"></span>
                             <br />
-                            Java backend developer using Spring to build
-                            RESTful APIs, with knowledge in frontend
-                            technologies such as Next.js, TypeScript, and React.
-                            Bilingual (Portuguese and English)
+                            Java backend developer using Spring to build RESTful
+                            APIs, with knowledge in frontend technologies such
+                            as Next.js, TypeScript, and React. Bilingual
+                            (Portuguese and English)
                         </p>
                         <div className="flex items-center justify-between mt-4 ">
-                            <div className="flex  gap-2 w-32 lg:w-40 -m-2 pt-6">
+                            <div className="flex items-center gap-2 w-32 lg:w-40 -m-2 pt-6">
                                 <Link
                                     href="https://www.linkedin.com/in/viniciuslps/"
                                     target="_blank"
@@ -80,6 +86,15 @@ export default function About() {
                                         width={50}
                                     />
                                 </Link>
+
+                                <Link
+                                    href="/viniciusleonel-en.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <PdfIcon />
+                                </Link>
+                                
                             </div>
                             <div className="me-6 md:hidden">
                                 <Image

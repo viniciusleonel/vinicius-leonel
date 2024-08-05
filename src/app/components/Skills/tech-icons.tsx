@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFilePdf } from "react-icons/fa6";
 
 interface TechIconsProps {
     className?: string;
@@ -217,13 +219,13 @@ export function Prisma({ className }: TechIconsProps) {
 export function Docker({ link, className }: TechIconsWithLinkProps) {
     return (
         <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
-        <Image
-            src="/images/icons/docker.svg"
-            alt="docker icon"
-            height={40}
-            width={40}
-            className={cn(className, "")}
-        />
+            <Image
+                src="/images/icons/docker.svg"
+                alt="docker icon"
+                height={40}
+                width={40}
+                className={cn(className, "")}
+            />
         </Link>
     );
 }
@@ -278,6 +280,19 @@ export function BootstrapIcon({ link, className }: TechIconsWithLinkProps) {
                 className={cn(className, "")}
             />
         </Link>
+    );
+}
+
+export function PdfIcon({ className }: TechIconsProps) {
+    return (
+        <HoverCard>
+            <HoverCardTrigger>
+                <FaFilePdf className="h-5 w-5 md:h-6 md:w-6 text-red-500 cursor-pointer" />
+            </HoverCardTrigger>
+            <HoverCardContent >
+                Click to open my english CV 
+            </HoverCardContent>
+        </HoverCard>
     );
 }
 
