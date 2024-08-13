@@ -19,8 +19,8 @@ export default function Nav ({title} : NavProps) {
                     <MobileHomeMenu />
                     
                 </div>
-                <Link href={"/"} className="text-2xl mt-1 md:ps-10 sm:text-3xl hover:text-cyan-700 dark:hover:text-cyan-300">{title || "Software Developer"}</Link>
-                <div className="pt-2 text-lg flex gap-12 items-baseline sm:pr-10">
+                <Link href={"/"} className="text-2xl mt-1 md:ps-10 md:text-3xl hover:text-cyan-700 dark:hover:text-cyan-300">{title || "Software Developer"}</Link>
+                <div className="pt-2 text-lg flex gap-4 lg:gap-12 items-baseline sm:pr-10">
                 <div className="hidden md:flex">
                         {/* <Link 
                             className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
@@ -31,7 +31,7 @@ export default function Nav ({title} : NavProps) {
 
                     <div className="hidden md:flex" >
                         <Link 
-                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
+                            className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#Certificates"}
                         >Certificates
                         </Link>
@@ -39,7 +39,7 @@ export default function Nav ({title} : NavProps) {
 
                     <div className="hidden md:flex" >
                         <Link 
-                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
+                            className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#Projects"}
                         >Projects
                         </Link>
@@ -47,14 +47,14 @@ export default function Nav ({title} : NavProps) {
                     
                     <div className="hidden md:flex">
                         <Link 
-                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
+                            className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#Knowledge"}
                             >Knowledge
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link 
-                            className="hidden md:flex cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
+                            className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#About"}    
                             >About
                         </Link>

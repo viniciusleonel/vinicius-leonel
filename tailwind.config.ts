@@ -11,8 +11,9 @@ const config: Config = {
       'xxs': '340px',
       'xs': '449px',
       'sm': '576px',
-      'md': '800px',
-      'lg': '1240px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px'
     },
     extend: {
       keyframes: {

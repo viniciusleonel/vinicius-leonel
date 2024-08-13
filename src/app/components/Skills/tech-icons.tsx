@@ -286,7 +286,11 @@ export function BootstrapIcon({ link, className }: TechIconsWithLinkProps) {
 export function PdfIcon({ className }: TechIconsProps) {
     return (
         <HoverCard>
-            <HoverCardTrigger>
+            <HoverCardTrigger 
+                href="/viniciusleonel-en.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <FaFilePdf className="h-5 w-5 md:h-6 md:w-6 text-red-500 cursor-pointer" />
             </HoverCardTrigger>
             <HoverCardContent >
@@ -294,6 +298,18 @@ export function PdfIcon({ className }: TechIconsProps) {
             </HoverCardContent>
         </HoverCard>
     );
+}
+
+export function MongoDBIcon({ className }: TechIconsProps) {
+    return (
+        <Image
+            src="/images/icons/mongodb.svg"
+            alt="mongodb icon"
+            height={35}
+            width={35}
+            className={cn(className, "")}
+        />
+    )
 }
 
 export function TechIcons({ className }: TechIconsProps) {

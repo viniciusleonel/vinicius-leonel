@@ -28,7 +28,7 @@ export function SidebarTitle({ children, className }: SidebarProps) {
     return (
         <h1
             className={cn(
-                "text-2xl border font-semibold mx-2 p-4 flex items-center justify-start gap-2  rounded-md",
+                "text-2xl border font-semibold mx-2 p-4 flex items-center justify-center gap-2  rounded-md",
                 className
             )}
         >
@@ -50,16 +50,16 @@ export function SidebarNavButton({
                 variant="outline"
                 onClick={onClick}
                 className={cn([
-                    "w-full flex items-center justify-start gap-2 hover:bg-cyan-200 dark:hover:bg-cyan-700",
+                    "w-full flex items-center justify-between gap-2 hover:bg-cyan-200 dark:hover:bg-cyan-700",
                     className,
                     active ? "bg-cyan-200 dark:bg-cyan-700" : "bg-transparent",
                 ])}
             >
                 {children}
                 {active ? (
-                    <IoIosArrowDown className="h-5 w-5" />
+                    <IoIosArrowDown className="h-5 w-5 flex " />
                 ) : (
-                    <IoIosArrowUp className="h-5 w-5" />
+                    <IoIosArrowUp className="h-5 w-5 flex " />
                 )}
             </Button>
             {active && (

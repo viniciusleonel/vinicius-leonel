@@ -41,7 +41,7 @@ export default function About() {
                         >
                             Currently in the final year of the System
                             Development and Analysis course at FIAP.
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600"></span>
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r text-zinc-800 dark:text-zinc-400 from-cyan-400 to-blue-600"></span>
                             <br />
                             Java backend developer using Spring to build RESTful
                             APIs, with knowledge in frontend technologies such
@@ -86,14 +86,8 @@ export default function About() {
                                         width={50}
                                     />
                                 </Link>
-
-                                <Link
-                                    href="/viniciusleonel-en.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <PdfIcon />
-                                </Link>
+                    
+                                <PdfIcon />
                                 
                             </div>
                             <div className="me-6 md:hidden">
