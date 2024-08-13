@@ -1,6 +1,5 @@
 import User from "@/app/model/Usuario"
 import { Button } from "@/components/ui/button"
-import { UserProps } from "@nextui-org/react"
 
 interface ToastRegisterUserProps {
     user: User

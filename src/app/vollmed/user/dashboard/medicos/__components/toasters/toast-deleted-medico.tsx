@@ -19,7 +19,7 @@ export function ToastDeletedMedico({
         }, 3000);
 
         return () => clearTimeout(timer);
-    }, []);
+    },);
 
     const handleOnClick = () => {
         closeToaster();

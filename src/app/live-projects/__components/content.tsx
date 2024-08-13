@@ -7,7 +7,7 @@ type ContentProps<T = unknown> = {
 
 export function ContentMain({ children, className }: ContentProps) {
     return (
-        <main className={cn("h-full w-full pt-16", className)}>{children}</main>
+        <main className={cn("h-full w-full sm:pt-16", className)}>{children}</main>
     );
 }
 
@@ -25,11 +25,11 @@ export function ContentHeader({ children, className }: ContentProps) {
 }
 
 export function ContentHeaderTitle({ children, className }: ContentProps) {
-    return <h1 className={cn("text-2xl lg:text-4xl font-bold pt-2", className)}>{children}</h1>;
+    return <h1 className={cn("text-lg sm:text-2xl lg:text-4xl font-bold pt-2", className)}>{children}</h1>;
 }
 
 export function ContentHeaderTechList({ children, className }: ContentProps) {
-    return <div className={cn("flex items-center gap-4", className)}>{children}</div>;
+    return <div className={cn("flex items-center gap-4 ", className)}>{children}</div>;
 }
 
 export function ContentBody({ children, className }: ContentProps) {
@@ -37,5 +37,5 @@ export function ContentBody({ children, className }: ContentProps) {
 }
 
 export function ContentBodyDescription({ children, className }: ContentProps) {
-    return <p className={cn("text-lg text-zinc-800 dark:text-zinc-400", className)}>{children}</p>;
+    return <p className={cn("sm:text-lg text-zinc-800 dark:text-zinc-400", className)}>{children}</p>;
 }

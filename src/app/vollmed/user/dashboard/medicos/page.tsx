@@ -57,7 +57,7 @@ export default function Medicos () {
             getAllMedicos()
         }
 
-    }, [])
+    }, )
 
     const [isLoading, setIsLoading] = useState(false);
 

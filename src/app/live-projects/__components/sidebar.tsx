@@ -1,8 +1,3 @@
-import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-} from "@/components/ui/resizable";
 import { TbMedicalCross } from "react-icons/tb";
 import { GrMoney } from "react-icons/gr";
 import { MdOutlineWorkHistory } from "react-icons/md";
@@ -11,6 +6,7 @@ import { usePathname } from "next/navigation";
 import {
     SidebarContainer,
     SidebarNavButton,
+    SidebarNavButtonText,
     SidebarTitle,
 } from "./sidebar-layout";
 import { useState } from "react";
@@ -49,11 +45,7 @@ export default function Sidebar() {
     };
 
     return (
-        <div className="min-h-screen w-full flex">
-            <div
-                className="min-h-screen flex flex-col border-r-2 border-cyan-700  dark:border-cyan-400"
-                
-            >
+        <div className="min-h-screen w-full flex flex-col sm:flex-row">
                 <SidebarContainer>
                     <SidebarTitle>
                         <MdOutlineWorkHistory className="h-7 w-7" />
@@ -66,8 +58,7 @@ export default function Sidebar() {
                         itensList={["Médicos", "Pacientes", "Consultas"]}
                     >
                         <TbMedicalCross className="h-5 w-5" />
-                        
-                        <span className="hidden sm:flex">VollMed</span>
+                        <SidebarNavButtonText>VollMed</SidebarNavButtonText>
                     </SidebarNavButton>
 
                     <SidebarNavButton
@@ -76,7 +67,7 @@ export default function Sidebar() {
                         itensList={["Receitas", "Despesas", "Investimentos"]}
                     >
                         <GrMoney className="h-5 w-5" />
-                        <span className="hidden sm:flex">Fintech</span>
+                        <SidebarNavButtonText>Fintech</SidebarNavButtonText>
                     </SidebarNavButton>
 
                     <SidebarNavButton
@@ -85,10 +76,10 @@ export default function Sidebar() {
                         itensList={["Accident", "Vehicles", "Addresses", "Injured"]}
                     >
                         <FaCarCrash className="h-5 w-5" />
-                        <span className="hidden sm:flex">Incident Report</span>
+                        <SidebarNavButtonText>Incident Report</SidebarNavButtonText>
                     </SidebarNavButton>
                 </SidebarContainer>
-            </div>
+
             <div className="flex-grow flex h-full items-center justify-center">
                 {vollmedActive && <Vollmed />}
                 {fintechActive && <Fintech />}

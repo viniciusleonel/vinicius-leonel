@@ -19,7 +19,7 @@ export function ToastUserLogin({
         }, 3000);
 
         return () => clearTimeout(timer);
-    }, []);
+    }, );
 
     const handleOnClick = () => {
         closeToaster();

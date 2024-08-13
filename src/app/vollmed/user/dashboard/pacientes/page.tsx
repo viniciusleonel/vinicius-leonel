@@ -38,7 +38,7 @@ export default function Pacientes () {
         if (pathname == "/vollmed/user/dashboard/pacientes"){
             getAllPacientes()
         }
-    }, []);
+    }, );
 
     const [isLoading, setIsLoading] = useState(false);
 

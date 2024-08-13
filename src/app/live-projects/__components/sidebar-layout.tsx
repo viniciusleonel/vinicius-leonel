@@ -18,7 +18,7 @@ type SidebarButtonProps = {
 
 export function SidebarContainer({ children, className }: SidebarProps) {
     return (
-        <aside className={cn("pt-20 flex flex-col gap-2", className)}>
+        <aside className={cn("pt-20 pb-4 flex sm:flex-col gap-2 sm:min-h-screen border-b-2 sm:border-r-2 border-cyan-700  dark:border-cyan-400", className)}>
             {children}
         </aside>
     );
@@ -28,12 +28,25 @@ export function SidebarTitle({ children, className }: SidebarProps) {
     return (
         <h1
             className={cn(
-                "text-2xl border font-semibold mx-2 p-4 flex items-center justify-center gap-2  rounded-md",
+                "text-2xl border font-semibold mx-2 p-4 hidden sm:flex  gap-2  rounded-md",
                 className
             )}
         >
             {children}
         </h1>
+    );
+}
+
+export function SidebarNavButtonText ({ children, className }: SidebarProps) {
+    return (
+        <span
+            className={cn(
+                "hidden sm:flex",
+                className
+            )}
+        >
+            {children}
+        </span>
     );
 }
 
@@ -50,7 +63,7 @@ export function SidebarNavButton({
                 variant="outline"
                 onClick={onClick}
                 className={cn([
-                    "w-full flex items-center justify-between gap-2 hover:bg-cyan-200 dark:hover:bg-cyan-700",
+                    "sm:w-full flex items-center justify-between gap-2 hover:bg-cyan-200 dark:hover:bg-cyan-700",
                     className,
                     active ? "bg-cyan-200 dark:bg-cyan-700" : "bg-transparent",
                 ])}
