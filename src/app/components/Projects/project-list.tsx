@@ -1,16 +1,19 @@
 import React from "react";
-import {
+import JetPackCompose, {
     AndroidIcon,
     BootstrapIcon,
     CssIcon,
+    Docker,
     HtmlIcon,
-    JackPackCompose,
     JavaIcon,
     JavaScriptIcon,
     JspIcon,
     Kotlin,
+    MongoDBIcon,
+    MySql,
     NextJsIcon,
     Oracle,
+    Postgres,
     ReactIcon,
     SpringIcon,
     TailwindIcon,
@@ -19,12 +22,49 @@ import {
 
 const projectsList = [
     {
+        title: "Locaweb APP",
+        description:"The Locaweb Email App is a comprehensive email client leveraging the Locaweb API for seamless user communication. It allows users to send, receive, and delete emails effortlessly, with secure login and registration processes. Users can personalize their experience with customizable themes and color schemes, and receive real-time notifications for new emails and important events. The app features robust error handling and an intuitive, user-friendly interface for efficient email management. It integrates Retrofit for API communication, uses Jetpack Compose for a modern UI, leverages Kotlin Coroutines for smooth performance, and employs ViewModels and LiveData for effective state management.",
+        techIcons: [
+        <Kotlin key="kotlin" />, 
+        <AndroidIcon key="android" />,
+        <JetPackCompose key="JetPackCompose" />
+    ],
+        linkSite: "https://github.com/viniciusleonel/locaweb-fiap",
+        linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
+    },
+    {
+        title: "Locaweb API",
+        description:"The Locaweb API, developed in Kotlin and Spring, manages users, user preferences, and emails within the Locaweb application. It provides CRUD endpoints for users and their preferences, and functionalities for sending and managing emails.Tailored for Locaweb, the API allows user registration, preference saving (e.g., custom settings and themes), and facilitates data migrations. It also enables secure email communication between users, ensuring operations are performed only by active, logged-in users.",
+        techIcons: [
+        <Kotlin key="kotlin" />, 
+        <SpringIcon key="spring" />,
+        <MySql key="mysql" />,
+        <Docker key="docker" />
+    ],
+        linkSite: "https://github.com/viniciusleonel/locaweb-fiap",
+        linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
+    },
+    {
+        title: "Traffic Incident Management API",
+        description:"The Traffic Incident Management API is a Spring Boot application designed to manage traffic incidents efficiently. It uses Spring Data MongoDB for data persistence and Spring Security for authentication and authorization, with role-based access control and password encryption. The system includes models for users, vehicles, injured individuals, addresses, and accidents, supporting CRUD operations and using DTOs for data transfer. Comprehensive API documentation is provided using OpenAPI and Swagger, with JWT authentication. ",
+        techIcons: [
+        <JavaIcon key="java" />, 
+        <SpringIcon key="spring" />,
+        <MongoDBIcon key="mongodb" />,
+        <Docker key="docker" />
+    ],
+        linkSite: "https://github.com/viniciusleonel/traffic-incident-management-api",
+        linkGitHub: "https://github.com/viniciusleonel/traffic-incident-management-api",
+    },
+    {
         title: "VollMedAPI",
         description:
             "The VollMed API is an application developed in Java with Spring Framework, aimed at managing a medical clinic. With JWT authentication resources, the API allows the registration of doctors, patients, and appointments, providing public endpoints for user login and registration.",
         techIcons: [
         <JavaIcon key="java" />, 
-        <SpringIcon key="spring" />],
+        <SpringIcon key="spring" />,
+        <Postgres key="postgres" />
+    ],
         linkSite: "https://github.com/viniciusleonel/vollmed-api",
         linkGitHub: "https://github.com/viniciusleonel/vollmed-api",
     },
@@ -38,8 +78,8 @@ const projectsList = [
         <TailwindIcon key="tailwind" />,
         <TypeScriptIcon key="typescript" />,
     ],
-        linkSite: "https://github.com/viniciusleonel/micro-saas-sample",
-        linkGitHub: "https://github.com/viniciusleonel/micro-saas-sample",
+        linkSite: "https://github.com/viniciusleonel/locaweb-app-kotlin",
+        linkGitHub: "https://github.com/viniciusleonel/locaweb-app-kotlin",
     },
     {
         title: "Fintech",
@@ -73,7 +113,7 @@ const projectsList = [
             "Development of an application that consumes a weather API from HGBrasil and uses Retrofit to query the weather forecast in a specific city, displaying data such as minimum and maximum temperature, chance of rain, wind speed, among others.",
         techIcons: [
             <Kotlin key="kotlin" />,
-            <JackPackCompose key="compose" />,
+            <JetPackCompose key="compose" />,
             <AndroidIcon key="android" />,
         ],
         linkSite: "https://github.com/viniciusleonel/weather-app-kotlin",

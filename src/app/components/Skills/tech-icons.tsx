@@ -147,7 +147,7 @@ export function AndroidIcon({ className }: TechIconsProps) {
     );
 }
 
-export function JackPackCompose({ className }: TechIconsProps) {
+export default function JetPackCompose({ className }: TechIconsProps) {
     return (
         <Image
             src="/images/icons/jetpack-compose.svg"

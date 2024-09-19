@@ -13,14 +13,13 @@ import {
     ExperienciasTechIcons,
 } from "./__components/experiencias";
 import { cn } from "@/lib/utils";
-import {
+import JackPackCompose, {
     AndroidIcon,
     CssIcon,
     Docker,
     Git,
     GitHub,
     HtmlIcon,
-    JackPackCompose,
     JavaIcon,
     Kotlin,
     MySql,
@@ -175,18 +174,12 @@ export default function ExpecienciasPage() {
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>Kotlin</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Development in Kotlin and Java for Android
-                            applications, with a focus on Jetpack Compose to
-                            create modern and dynamic user interfaces.
-                            Implementation of architectures such as MVVM and
-                            integration of RESTful APIs to retrieve backend
-                            data.
+                        Development in Kotlin and Java for Android applications, with a focus on Jetpack Compose to create modern and dynamic user interfaces. Implementation of MVVM architecture and integration of RESTful APIs using Retrofit for efficient backend communication. Leveraging Kotlin Coroutines for asynchronous operations to ensure smooth performance and responsiveness. Effective state management with ViewModels and LiveData to keep UI components in sync with underlying data.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
-                            <AndroidIcon />
                             <Kotlin />
+                            <AndroidIcon />
                             <JackPackCompose />
-                            <JavaIcon />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
