@@ -29,8 +29,8 @@ const projectsList = [
         <AndroidIcon key="android" />,
         <JetPackCompose key="JetPackCompose" />
     ],
-        linkSite: "https://github.com/viniciusleonel/locaweb-fiap",
-        linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
+        linkSite: "https://github.com/viniciusleonel/locaweb-app-kotlin",
+        linkGitHub: "https://github.com/viniciusleonel/locaweb-app-kotlin",
     },
     {
         title: "Locaweb API",
