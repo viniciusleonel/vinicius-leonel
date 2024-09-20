@@ -22,6 +22,7 @@ import JackPackCompose, {
     HtmlIcon,
     JavaIcon,
     Kotlin,
+    MongoDBIcon,
     MySql,
     NextJsIcon,
     Oracle,
@@ -80,10 +81,9 @@ export default function ExpecienciasPage() {
         setKotlinLink(false);
         setDatabaseLink(false);
     };
-
     return (
         <ExperienciasMain>
-            <ExperienciasTitle>Knowledge</ExperienciasTitle>
+            <ExperienciasTitle>Conhecimentos</ExperienciasTitle>
             <ExperienciasContent>
                 <ExperienciasContentItem>
                     <ExperienciasContentItemLink
@@ -108,7 +108,7 @@ export default function ExpecienciasPage() {
                         active={databaseLink}
                         onClick={handleDatabaseClick}
                     >
-                        Database
+                        Banco de Dados
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={techs}
@@ -121,23 +121,24 @@ export default function ExpecienciasPage() {
                 {javaLink && (
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>
-                            Java + Spring
+                            Java/Kotlin + Spring
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Development of robust and scalable APIs using Spring
-                            Boot, Docker, JWT, Swagger, Hibernate, and
-                            PostgreSQL. Creation of RESTful endpoints, security
-                            configuration with JWT, interactive documentation
-                            with Swagger, and containerization with Docker to
-                            ensure consistency across environments. Hibernate
-                            and JPA were used for object-relational mapping and
-                            Flyway for database schema version management.
+                            Desenvolvimento de APIs robustas e escaláveis com
+                            Spring Boot, JWT e Docker. Criação de endpoints
+                            RESTful, configuração de segurança com JWT e
+                            documentação interativa via Swagger. Uso de Docker
+                            para garantir consistência entre ambientes.
+                            Experiência com Hibernate e JPA para mapeamento de
+                            dados, além de gerenciamento de versões de esquema
+                            de banco de dados com Flyway.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <JavaIcon />
                             <SpringIcon />
                             <Postgres />
                             <Docker />
+                            <Git />
                             <GitHub link="https://github.com/viniciusleonel/vollmed-api" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
@@ -145,18 +146,23 @@ export default function ExpecienciasPage() {
 
                 {nextLink && (
                     <ExperienciasTechContent>
-                        <ExperienciasTechTitle>Next.js</ExperienciasTechTitle>
+                        <ExperienciasTechTitle>
+                            Reactjs/Nextjs/TypeScript
+                        </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Frontend - Next.js / TypeScript / React Development
-                            of modern and responsive web applications using
-                            Next.js and React. Next.js offers optimized
-                            performance, pre-rendering of pages, simplified
-                            routing, and SSR (Server-Side Rendering) support.
-                            React provides an efficient way to build interactive
-                            and reusable user interfaces, facilitating code
-                            development and maintenance. TypeScript was used for
-                            static typing, aiding in error detection during
-                            development and improving code maintainability.
+                            Desenvolvimento Frontend com Reactjs, Nextjs e
+                            TypeScript. Criação de aplicações web modernas,
+                            responsivas e de alta performance utilizando
+                            Next.js, que proporciona pré-renderização de
+                            páginas, roteamento simplificado e suporte a SSR
+                            (Server-Side Rendering). Com React, desenvolvo
+                            interfaces de usuário interativas e reutilizáveis,
+                            otimizando tanto a experiência do usuário quanto a
+                            eficiência do desenvolvimento. O uso de TypeScript
+                            permite uma tipagem estática robusta, ajudando a
+                            identificar e corrigir erros durante o
+                            desenvolvimento, além de melhorar a manutenibilidade
+                            e a escalabilidade do código.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <HtmlIcon />
@@ -165,6 +171,7 @@ export default function ExpecienciasPage() {
                             <TailwindIcon />
                             <NextJsIcon />
                             <ReactIcon />
+                            <Git />
                             <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
@@ -172,35 +179,56 @@ export default function ExpecienciasPage() {
 
                 {kotlinLink && (
                     <ExperienciasTechContent>
-                        <ExperienciasTechTitle>Kotlin</ExperienciasTechTitle>
+                        <ExperienciasTechTitle>
+                            Kotlin + Jetpack Compose
+                        </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                        Development in Kotlin and Java for Android applications, with a focus on Jetpack Compose to create modern and dynamic user interfaces. Implementation of MVVM architecture and integration of RESTful APIs using Retrofit for efficient backend communication. Leveraging Kotlin Coroutines for asynchronous operations to ensure smooth performance and responsiveness. Effective state management with ViewModels and LiveData to keep UI components in sync with underlying data.
+                            Desenvolvimento em Kotlin para aplicações Android,
+                            com foco no Jetpack Compose para criar interfaces de
+                            usuário modernas e dinâmicas. Implementação da
+                            arquitetura MVVM e integração de APIs RESTful usando
+                            Retrofit para comunicação eficiente com o backend.
+                            Aproveitamento das Coroutines do Kotlin para
+                            operações assíncronas, garantindo desempenho suave e
+                            responsividade. Gerenciamento eficaz de estado com
+                            ViewModels e LiveData para manter os componentes da
+                            UI sincronizados com os dados subjacentes.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Kotlin />
                             <AndroidIcon />
                             <JackPackCompose />
+                            <Git />
+                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
 
                 {databaseLink && (
                     <ExperienciasTechContent>
-                        <ExperienciasTechTitle>Database</ExperienciasTechTitle>
+                        <ExperienciasTechTitle>
+                            Banco de Dados
+                        </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Development and management of database systems using
-                            Oracle, PostgreSQL, MySQL, Hibernate, and Prisma.
-                            Designing and modeling database schemas, creating
-                            and optimizing SQL queries, and implementing
-                            object-relational mapping (ORM) with Hibernate, JPA,
-                            and Prisma. Migration tools such as Flyway were used
-                            to ensure consistent database schema versions.
+                            Experiência com bancos de dados relacionais e não
+                            relacionais, incluindo Oracle, PostgreSQL, MySQL e
+                            MongoDB. Habilidade em modelar esquemas eficientes,
+                            otimizar consultas SQL e implementar ORM com
+                            Hibernate, JPA e Prisma. Com MongoDB, foco na gestão
+                            de dados não estruturados para construir aplicações
+                            escaláveis. Utilização de ferramentas de migração e
+                            versionamento, como Flyway e Prisma Migrate, para
+                            garantir consistência nas mudanças do banco de
+                            dados.
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Oracle />
                             <MySql />
                             <Postgres />
                             <Prisma />
+                            <MongoDBIcon />
+                            <Git />
+                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
@@ -216,62 +244,66 @@ export default function ExpecienciasPage() {
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         JWT
                                     </span>
-                                    : JSON Web Token (JWT) is an open standard
-                                    (RFC 7519) that defines a compact and
-                                    self-contained way for securely transmitting
-                                    information between parties as a JSON
-                                    object.
+                                    : JSON Web Token (JWT) é um padrão aberto
+                                    (RFC 7519) que define uma maneira compacta e
+                                    autocontida de transmitir informações com
+                                    segurança entre as partes como um objeto
+                                    JSON.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Zod
                                     </span>
-                                    : A schema validation library to ensure data
-                                    integrity and correctness.
+                                    : Uma biblioteca de validação de esquemas
+                                    para garantir a integridade e a correção dos
+                                    dados.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Stripe
                                     </span>
-                                    : A payment platform used for processing transactions and managing
-                                    subscriptions.
+                                    : Uma plataforma de pagamento usada para
+                                    processar transações e gerenciar
+                                    assinaturas.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Radix UI
                                     </span>
-                                    : Accessible and customizable user interface
-                                    components for building modern web
-                                    applications.
+                                    : Componentes de interface de usuário
+                                    acessíveis e personalizáveis para construir
+                                    aplicações web modernas.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Shadcn/UI
                                     </span>
-                                    : A library of accessible and customizable
-                                    user interface components.
+                                    : Uma biblioteca de componentes de interface
+                                    de usuário acessíveis e personalizáveis.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Google OAuth
                                     </span>
-                                    : An authentication service that allows
-                                    users to log in using their Google accounts.
+                                    : Um serviço de autenticação que permite aos
+                                    usuários fazer login usando suas contas do
+                                    Google.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         GitHub OAuth
                                     </span>
-                                    : An authentication service that enables
-                                    users to log in using their GitHub accounts.
+                                    : Um serviço de autenticação que permite aos
+                                    usuários fazer login usando suas contas do
+                                    GitHub.
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Next-Auth/AuthJs
                                     </span>
-                                    : A library for managing authentication in
-                                    Next.js applications, providing a seamless
-                                    and secure login experience.
+                                    : Uma biblioteca para gerenciar autenticação
+                                    em aplicações Next.js, proporcionando uma
+                                    experiência de login perfeita e segura.
                                 </li>
                             </ul>
                         </ExperienciasTechDescription>

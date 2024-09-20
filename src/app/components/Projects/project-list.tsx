@@ -23,7 +23,7 @@ import JetPackCompose, {
 const projectsList = [
     {
         title: "Locaweb APP",
-        description:"The Locaweb Email App is a comprehensive email client leveraging the Locaweb API for seamless user communication. It allows users to send, receive, and delete emails effortlessly, with secure login and registration processes. Users can personalize their experience with customizable themes and color schemes, and receive real-time notifications for new emails and important events. The app features robust error handling and an intuitive, user-friendly interface for efficient email management. It integrates Retrofit for API communication, uses Jetpack Compose for a modern UI, leverages Kotlin Coroutines for smooth performance, and employs ViewModels and LiveData for effective state management.",
+        description:"O Locaweb App é um aplicativo Android desenvolvido com Kotlin e Jetpack Compose, que usa a Locaweb API para gerenciar e enviar e-mails de forma intuitiva e eficiente. Com uma interface moderna e responsiva, o aplicativo permite que os usuários se registrem, façam login, enviem e recebam e-mails, além de gerenciar suas configurações de perfil e regras de controle de spam.",
         techIcons: [
         <Kotlin key="kotlin" />, 
         <AndroidIcon key="android" />,
@@ -34,7 +34,7 @@ const projectsList = [
     },
     {
         title: "Locaweb API",
-        description:"The Locaweb API, developed in Kotlin and Spring, manages users, user preferences, and emails within the Locaweb application. It provides CRUD endpoints for users and their preferences, and functionalities for sending and managing emails.Tailored for Locaweb, the API allows user registration, preference saving (e.g., custom settings and themes), and facilitates data migrations. It also enables secure email communication between users, ensuring operations are performed only by active, logged-in users.",
+        description:"A API Locaweb é uma solução desenvolvida em Kotlin e Spring para o aplicativo Locaweb APP, feita para gerenciar usuários, preferências de usuários e emails em um aplicativo Kotlin da Locaweb. A API oferece endpoints para operações CRUD (Create, Read, Update, Delete) em usuários e suas preferências, além de funcionalidades para envio e gerenciamento de emails com controle de spam.",
         techIcons: [
         <Kotlin key="kotlin" />, 
         <SpringIcon key="spring" />,
@@ -46,7 +46,7 @@ const projectsList = [
     },
     {
         title: "Traffic Incident Management API",
-        description:"The Traffic Incident Management API is a Spring Boot application designed to manage traffic incidents efficiently. It uses Spring Data MongoDB for data persistence and Spring Security for authentication and authorization, with role-based access control and password encryption. The system includes models for users, vehicles, injured individuals, addresses, and accidents, supporting CRUD operations and using DTOs for data transfer. Comprehensive API documentation is provided using OpenAPI and Swagger, with JWT authentication. ",
+        description:"A API de Gerenciamento de Incidentes de Tráfego, oferece soluções para o gerenciamento de acidentes de trânsito, usuários e autenticação. Com endpoints públicos e privados, permite o registro detalhado de acidentes, incluindo veículos, localização, data, hora, gravidade e feridos, armazenando os dados validados em um banco MongoDB.",
         techIcons: [
         <JavaIcon key="java" />, 
         <SpringIcon key="spring" />,
@@ -59,7 +59,7 @@ const projectsList = [
     {
         title: "VollMedAPI",
         description:
-            "The VollMed API is an application developed in Java with Spring Framework, aimed at managing a medical clinic. With JWT authentication resources, the API allows the registration of doctors, patients, and appointments, providing public endpoints for user login and registration.",
+            "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica. Com recursos de autenticação JWT, a API permite o cadastro de médicos, pacientes e consultas, fornecendo endpoints públicos para login e cadastro de usuários.",
         techIcons: [
         <JavaIcon key="java" />, 
         <SpringIcon key="spring" />,
@@ -71,7 +71,7 @@ const projectsList = [
     {
         title: "Micro-Saas-ToDo",
         description:
-            "This is a micro-saas task management application that allows users to create, update, delete, and view their tasks. The micro-saas also allows users to filter and sort their tasks, as well as mark tasks as completed or pending. Login can be done with a Google account, GitHub, or via email through a magic link in conjunction with mailtrap, requiring environment variables to be configured in the .env file. The micro-saas also uses Stripe to process payments, allowing users to upgrade their plan to create more tasks. Stripe CLI is needed to listen to webhooks, so the micro-saas receives the payment and plan update.",
+            "Esta é um micro-saas de gerenciamento de tarefas que permite aos usuários criar, atualizar, excluir e visualizar suas tarefas que utiliza o Stripe para processar pagamentos, permitindo que os usuários façam um upgrade no plano para conseguir criar mais tarefas.",
         techIcons: [
         <NextJsIcon key="nextjs" />,
         <ReactIcon key="react" />,
@@ -84,7 +84,7 @@ const projectsList = [
     {
         title: "Fintech",
         description:
-            "The Fintech application is a platform that allows users to manage their personal finances, including registering and controlling income, expenses, and investments. The system offers a user-friendly interface and features to facilitate financial tracking. The application was developed in Java with JSP.",
+            "A aplicação Fintech é uma plataforma que permite aos usuários gerenciar suas finanças pessoais, incluindo o cadastro e controle de receitas, despesas e investimentos. O sistema oferece uma interface amigável e funcionalidades para facilitar o acompanhamento financeiro.",
         techIcons: [
         <JavaIcon key="java"/>,
         <JspIcon key="jsp" />,
@@ -97,7 +97,7 @@ const projectsList = [
     {
         title: "Covid19 Brazil API",
         description:
-            "Front-end consuming Covid19 Brazil API, making requests to search for cases in Brazil or worldwide, with added filters and search by date, using Next.JS, React.JS, and TailWindCSS",
+            "Este projeto é um front-end que consome a API Covid19 Brasil, permitindo a busca de casos de Covid-19 no Brasil e no mundo. O projeto oferece filtros adicionais e pesquisa por data.",
         techIcons: [
             <NextJsIcon key="nextjs" />,
             <ReactIcon key="react" />,
@@ -110,7 +110,7 @@ const projectsList = [
     {
         title: "WheaterApp",
         description:
-            "Development of an application that consumes a weather API from HGBrasil and uses Retrofit to query the weather forecast in a specific city, displaying data such as minimum and maximum temperature, chance of rain, wind speed, among others.",
+            "Desenvolvimento de um aplicativo Android com Jetpack Compose que consome uma API de clima da HGBrasil e usa Retrofit para consultar a previsão do tempo em uma cidade específica, exibindo dados como temperatura mínima e máxima, chance de chuva, velocidade do vento, entre outros.",
         techIcons: [
             <Kotlin key="kotlin" />,
             <JetPackCompose key="compose" />,
@@ -122,7 +122,7 @@ const projectsList = [
     {
         title: "Pokedex",
         description:
-            "Development of a web application that consumes the PokeAPI to display information about Pokémon, using HTML, CSS, and JavaScript",
+            "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informações sobre Pokémon, usando HTML, CSS e JavaScript",
         techIcons: [
             <HtmlIcon key="html" />,
             <CssIcon key="css" />,

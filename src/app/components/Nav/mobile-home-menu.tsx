@@ -44,34 +44,34 @@ export default function MobileHomeMenu() {
                     </Link>
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#About"
+                        href="/#Sobre"
                     >
                         <UserIcon className="h-5 w-5" />
-                        About
+                        Sobre
                     </Link>
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Projects"
+                        href="/#Projetos"
                     >
                         <MdOutlineWorkHistory className="h-5 w-5" />
-                        Projects
+                        Projetos
                     </Link>
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Knowledge"
+                        href="/#Conhecimentos"
                     >
                         <MdOutlineLibraryBooks className="h-5 w-5 " />
-                        Knowledge
+                        Conhecimentos
                     </Link>
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Certificates"
+                        href="/#Certificados"
                     >
                         <TbCertificate className="h-5 w-5 " />
-                        Certificates
+                        Certificados
                     </Link>
 
                     {/* <Link

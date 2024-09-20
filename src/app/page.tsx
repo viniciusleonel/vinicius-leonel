@@ -38,28 +38,28 @@ export default function Home() {
             </nav>
             <main className=" bg-[#f5f9fb] dark:bg-dark-secondary">
                 <section
-                    id="About"
+                    id="Sobre"
                     className="pt-24 sm:pt-0"
                 >
                     <About />
                 </section>
 
                 <section
-                    id="Knowledge"
+                    id="Conhecimentos"
                     className=" bg-[#f5f9fb] dark:bg-dark-secondary "
                 >
                     <ExpecienciasPage />
                 </section>
 
                 <section
-                    id="Projects"
+                    id="Projetos"
                     className="pb-8"
                 >
                     <ProjectCarousel />
                 </section>
 
                 <section
-                    id="Certificates"
+                    id="Certificados"
                     className="pb-8"
                 >
                     <Certificates />

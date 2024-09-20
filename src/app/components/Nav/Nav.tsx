@@ -32,16 +32,16 @@ export default function Nav ({title} : NavProps) {
                     <div className="hidden md:flex" >
                         <Link 
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Certificates"}
-                        >Certificates
+                            href={"/#Certificados"}
+                        >Certificados
                         </Link>
                     </div>
 
                     <div className="hidden md:flex" >
                         <Link 
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Projects"}
-                        >Projects
+                            href={"/#Conhecimentos"}
+                        >Conhecimentos
                         </Link>
                     </div>
                     
@@ -49,14 +49,14 @@ export default function Nav ({title} : NavProps) {
                         <Link 
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"/#Knowledge"}
-                            >Knowledge
+                            >Projetos
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link 
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#About"}    
-                            >About
+                            href={"/#Sobre"}    
+                            >Sobre
                         </Link>
                     </div>
                     <ToggleButton />
