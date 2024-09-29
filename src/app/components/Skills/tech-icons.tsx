@@ -312,6 +312,18 @@ export function MongoDBIcon({ className }: TechIconsProps) {
     )
 }
 
+export function AzureIcon({ className }: TechIconsProps) {
+    return (
+        <Image
+            src="/images/icons/azure.svg"
+            alt="azure icon"
+            height={35}
+            width={35}
+            className={cn(className, "")}
+        />
+    )
+}
+
 export function TechIcons({ className }: TechIconsProps) {
     return (
         <>

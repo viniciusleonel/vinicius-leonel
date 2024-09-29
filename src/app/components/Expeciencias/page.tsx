@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import JackPackCompose, {
     AndroidIcon,
+    AzureIcon,
     CssIcon,
     Docker,
     Git,
@@ -40,6 +41,7 @@ export default function ExpecienciasPage() {
     const [nextLink, setNextLink] = useState(false);
     const [kotlinLink, setKotlinLink] = useState(false);
     const [databaseLink, setDatabaseLink] = useState(false);
+    const [devOps, setDevOps] = useState(false);
     const [techs, setTechs] = useState(false);
 
     const handleJavaClick = () => {
@@ -48,6 +50,7 @@ export default function ExpecienciasPage() {
         setKotlinLink(false);
         setDatabaseLink(false);
         setTechs(false);
+        setDevOps(false);
     };
 
     const handleNextClick = () => {
@@ -56,6 +59,7 @@ export default function ExpecienciasPage() {
         setKotlinLink(false);
         setDatabaseLink(false);
         setTechs(false);
+        setDevOps(false);
     };
 
     const handleKotlinClick = () => {
@@ -64,6 +68,7 @@ export default function ExpecienciasPage() {
         setJavaLink(false);
         setDatabaseLink(false);
         setTechs(false);
+        setDevOps(false);
     };
 
     const handleDatabaseClick = () => {
@@ -72,6 +77,16 @@ export default function ExpecienciasPage() {
         setJavaLink(false);
         setKotlinLink(false);
         setTechs(false);
+        setDevOps(false);
+    };
+
+    const handleDevOpsClick = () => {
+        setDevOps(!devOps);
+        setTechs(false);
+        setNextLink(false);
+        setJavaLink(false);
+        setKotlinLink(false);
+        setDatabaseLink(false);
     };
 
     const handleTechsClick = () => {
@@ -80,6 +95,7 @@ export default function ExpecienciasPage() {
         setJavaLink(false);
         setKotlinLink(false);
         setDatabaseLink(false);
+        setDevOps(false);
     };
     return (
         <ExperienciasMain>
@@ -110,6 +126,13 @@ export default function ExpecienciasPage() {
                     >
                         Banco de Dados
                     </ExperienciasContentItemLink>
+                    <ExperienciasContentItemLink
+                        active={devOps}
+                        onClick={handleDevOpsClick}
+                    >
+                        DevOps
+                    </ExperienciasContentItemLink>
+
                     <ExperienciasContentItemLink
                         active={techs}
                         onClick={handleTechsClick}
@@ -227,6 +250,31 @@ export default function ExpecienciasPage() {
                             <Postgres />
                             <Prisma />
                             <MongoDBIcon />
+                            <Git />
+                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
+                        </ExperienciasTechIcons>
+                    </ExperienciasTechContent>
+                )}
+
+                {devOps && (
+                    <ExperienciasTechContent>
+                        <ExperienciasTechTitle>DevOps</ExperienciasTechTitle>
+                        <ExperienciasTechDescription>
+                            Experiência em Azure e GitHub Actions, incluindo a
+                            criação de pipelines CI/CD abrangendo tanto
+                            integração contínua (CI) quanto entrega contínua
+                            (CD). Realizei integração contínua configurando o
+                            ambiente Java com GitHub Actions e automatizando
+                            testes unitários, bem como entrega contínua, gerando
+                            imagens Docker, publicando no Docker Hub e
+                            implantando em aplicativos Web do Azure. Habilidade
+                            em automatizar o ciclo de entrega contínua para
+                            garantir atualizações eficientes e confiáveis de
+                            aplicações em nuvem.
+                        </ExperienciasTechDescription>
+                        <ExperienciasTechIcons>
+                            <Docker />
+                            <AzureIcon />
                             <Git />
                             <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
