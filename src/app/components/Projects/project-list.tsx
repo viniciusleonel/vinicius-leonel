@@ -66,13 +66,15 @@ const projectsList = [
     {
         title: "VollMedAPI",
         description:
-            "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica. Com recursos de autenticação JWT, a API permite o cadastro de médicos, pacientes e consultas, fornecendo endpoints públicos para login e cadastro de usuários.",
+            "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica. Com recursos de autenticação JWT, a API permite o cadastro de médicos, pacientes e consultas, fornecendo endpoints públicos para login e cadastro de usuários. Foi implementado um workflow de Integração Contínua (CI) utilizando GitHub Actions para testes e builds em pull requests, e um processo de Entrega Contínua (CD) que realiza o deploy automático da aplicação em produção. A aplicação é containerizada com Docker e implantada na Azure, garantindo atualizações rápidas e escalabilidade.",
         techIcons: [
             <JavaIcon key="java" />,
             <SpringIcon key="spring" />,
             <Postgres key="postgres" />,
+            <Docker key="docker" />,
+            <AzureIcon key="azure" />
         ],
-        linkSite: "https://github.com/viniciusleonel/vollmed-api",
+        linkSite: "https://vollmed-api-hza2gbbsedfchrer.eastus2-01.azurewebsites.net/swagger-ui/index.html",
         linkGitHub: "https://github.com/viniciusleonel/vollmed-api",
     },
     {
