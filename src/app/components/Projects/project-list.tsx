@@ -37,14 +37,15 @@ const projectsList = [
     {
         title: "Locaweb API",
         description:
-            "A API Locaweb é uma solução desenvolvida em Kotlin e Spring para o aplicativo Locaweb APP, feita para gerenciar usuários, preferências de usuários e emails em um aplicativo Kotlin da Locaweb. A API oferece endpoints para operações CRUD (Create, Read, Update, Delete) em usuários e suas preferências, além de funcionalidades para envio e gerenciamento de emails com controle de spam.",
+            "A API Locaweb é uma aplicação desenvolvida em Kotlin e Spring, projetada especificamente para o aplicativo da Locaweb, permite o envio de emails entre usuários, garantindo um controle rigoroso de acesso e leitura, assegurando que apenas usuários ativos e logados possam realizar essas operações. Além disso, os usuários podem se cadastrar, salvar suas preferências do aplicativo, como configurações personalizadas e temas, facilitando futuras migrações de dados. Foi implementado um workflow de Integração Contínua (CI) utilizando GitHub Actions para testes e builds em pull requests, e um processo de Entrega Contínua (CD) que realiza o deploy automático da aplicação em produção. A aplicação é containerizada com Docker e implantada na Azure, garantindo atualizações rápidas e escalabilidade.",
         techIcons: [
             <Kotlin key="kotlin" />,
             <SpringIcon key="spring" />,
-            <MySql key="mysql" />,
+            <Postgres key="postgres" />,
             <Docker key="docker" />,
+            <AzureIcon key="azure" />
         ],
-        linkSite: "https://github.com/viniciusleonel/locaweb-fiap",
+        linkSite: "https://locaweb-api-a9amgke0dmgth0ej.eastus2-01.azurewebsites.net/swagger-ui/index.html",
         linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
     },
     {
