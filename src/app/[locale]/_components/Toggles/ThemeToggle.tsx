@@ -23,12 +23,12 @@ export default function ThemeToggle() {
 
     if (!mounted) {
         return (
-            <IoBulbOutline className=' animate-pulse text-yellow-400' />
+            <IoBulbOutline className=' animate-pulse  text-yellow-400' />
         );
     }
 
     return (
-        <div className=''>
+        <div className='mt-1'>
             {resolvedTheme === 'dark' ? (
                 <button onClick={() => { setTheme('light'); playClickSound(clickOn);}} 
                 className='transition duration-500  '>

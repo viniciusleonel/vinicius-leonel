@@ -23,7 +23,7 @@ export function LanguageToggle() {
     const { locale } = useParams();
 
     const [language, setLanguage] = useState(locale || 'pt');
-
+    
     useEffect(() => {
         setLanguage(locale || 'pt');
     }, [locale]);
@@ -39,17 +39,17 @@ export function LanguageToggle() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" >
                     {language === "en" ? <UsFlag alt={t('en-alt')} />  : <BrFlag alt={t('pt-alt')} />}
                     <span className="sr-only">Toggle language</span>
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => toggleLanguage('pt')}>
+                <DropdownMenuItem className="gap-2" onClick={() => toggleLanguage('pt')}>
                     {t('pt')}
                     <BrFlag alt={t('pt-alt')}/>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => toggleLanguage('en')}>
+                <DropdownMenuItem className="gap-2" onClick={() => toggleLanguage('en')}>
                     {t('en')}
                     <UsFlag alt={t('en-alt')}/>
                 </DropdownMenuItem>

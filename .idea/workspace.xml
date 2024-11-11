@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="feat: iniciando inserção da funcionalidade de multi-idiomas" />
+    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="feat: iniciando inserção da funcionalidade de multi-idiomas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/LanguageToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/LanguageToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/ThemeToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Nav/Nav.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +85,7 @@
       <updated>1731269164950</updated>
       <workItem from="1731269166043" duration="5865000" />
       <workItem from="1731354473619" duration="425000" />
-      <workItem from="1731355083315" duration="1563000" />
+      <workItem from="1731355083315" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="feat: iniciando insercao da funcionalidade de multi-idiomas">
       <option name="closed" value="true" />
