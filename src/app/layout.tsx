@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import { lusitana } from "@/app/ui/fonts";
-import { Providers } from "./providers";
+import { ThemeProvider } from "../theme-provider";
 import "./globals.css";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -18,7 +18,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body className={`${lusitana.className} dark:bg-dark-primary`}>
-        <Providers>{children}</Providers>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+            {children}
+        </ThemeProvider>
       </body>
     </html>
   );

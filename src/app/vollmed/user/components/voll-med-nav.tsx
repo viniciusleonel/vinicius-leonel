@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Input } from "@/app/vollmed/user/dashboard/ui/input"
 import { Button } from "@/app/vollmed/user/dashboard/ui/button"
-import ToggleButton from "@/app/components/ToggleThemeButton/toggle-theme-button"
+import ThemeToggle from "@/app/[locale]/_components/Toggles/ThemeToggle"
 import MobileVollMedMenu from "./mobile-vollmed-menu"
 import { InputHTMLAttributes, ReactElement, SetStateAction, useState } from "react"
 
@@ -45,7 +45,7 @@ export default function VollMedNav({title, handleRegister, handleList, user,  in
             {user}
           </div>
           
-        <ToggleButton />
+        <ThemeToggle />
       </div>
     </header>
   )
