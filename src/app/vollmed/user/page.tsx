@@ -1,7 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
-import Nav from "@/app/components/Nav/Nav"
+import Nav from "@/app/[locale]/_components/NavBar/Nav"
 import UserRegister from "./forms/user-register"
 import UserLogin from "./forms/user-login"
 import { useEffect, useState } from 'react'

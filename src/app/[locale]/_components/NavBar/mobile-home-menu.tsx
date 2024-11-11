@@ -44,7 +44,7 @@ export default function MobileHomeMenu() {
                     </Link>
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Sobre"
+                        href="#Sobre"
                     >
                         <UserIcon className="h-5 w-5" />
                         Sobre
@@ -52,7 +52,7 @@ export default function MobileHomeMenu() {
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Projetos"
+                        href="#Projetos"
                     >
                         <MdOutlineWorkHistory className="h-5 w-5" />
                         Projetos
@@ -60,7 +60,7 @@ export default function MobileHomeMenu() {
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Conhecimentos"
+                        href="#Conhecimentos"
                     >
                         <MdOutlineLibraryBooks className="h-5 w-5 " />
                         Conhecimentos
@@ -68,7 +68,7 @@ export default function MobileHomeMenu() {
 
                     <Link
                         className="flex items-center gap-4 px-2.5 hover:text-cyan-700 dark:hover:text-cyan-300"
-                        href="/#Certificados"
+                        href="#Certificados"
                     >
                         <TbCertificate className="h-5 w-5 " />
                         Certificados

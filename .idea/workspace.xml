@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="feat: iniciando inserção da funcionalidade de multi-idiomas">
+    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="fix: corrigindo layout dos toggles de theme e de language">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/LanguageToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/LanguageToggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Toggles/ThemeToggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/About/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/About/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Certificates/__components/certificates-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Certificates/__components/certificates-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Certificates/__components/certificates.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Certificates/__components/certificates.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Certificates/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Certificates/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Expeciencias/__components/experiencias.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Experiences/__components/experiencias.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Expeciencias/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Experiences/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Nav/mobile-home-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/mobile-home-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Projects/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Projects/project-carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Projects/project-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Skills/skills.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Skills/skills.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Skills/skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Skills/skills.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Skills/tech-icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Skills/tech-icons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/live-projects/fintech/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/live-projects/fintech/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/live-projects/incident-report/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/live-projects/incident-report/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/live-projects/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/live-projects/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/live-projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/live-projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/live-projects/vollmed/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/live-projects/vollmed/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vollmed/user/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/pt.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +82,11 @@
       <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\public\images\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]" />
-      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Toggles" />
-      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src" />
+      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Skills" />
+      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Projects" />
+      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\NavBar" />
+      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Footer" />
       <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Experiences" />
-      <recent name="C:\Users\vinicius\Desktop\my-portfolio\vinicius-leonel\src\app\[locale]\_components\Certificates" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -85,7 +106,7 @@
       <updated>1731269164950</updated>
       <workItem from="1731269166043" duration="5865000" />
       <workItem from="1731354473619" duration="425000" />
-      <workItem from="1731355083315" duration="3012000" />
+      <workItem from="1731355083315" duration="3719000" />
     </task>
     <task id="LOCAL-00001" summary="feat: iniciando insercao da funcionalidade de multi-idiomas">
       <option name="closed" value="true" />
@@ -111,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731356608219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: corrigindo layout dos toggles de theme e de language">
+      <option name="closed" value="true" />
+      <created>1731358449951</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731358449951</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +161,7 @@
     <MESSAGE value="feat: iniciando insercao da funcionalidade de multi-idiomas" />
     <MESSAGE value="feat: refatorando ThemeToggle" />
     <MESSAGE value="feat: iniciando inserção da funcionalidade de multi-idiomas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: iniciando inserção da funcionalidade de multi-idiomas" />
+    <MESSAGE value="fix: corrigindo layout dos toggles de theme e de language" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: corrigindo layout dos toggles de theme e de language" />
   </component>
 </project>

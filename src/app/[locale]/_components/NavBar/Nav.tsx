@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 import {GiHamburgerMenu} from "react-icons/gi";
-import ThemeToggle from "../../[locale]/_components/Toggles/ThemeToggle";
+import ThemeToggle from "../Toggles/ThemeToggle";
 import Link from "next/link"
 import MobileHomeMenu from "./mobile-home-menu";
 import {LanguageToggle} from "@/app/[locale]/_components/Toggles/LanguageToggle";
@@ -35,7 +35,7 @@ export default function Nav({title}: NavProps) {
                     <div className="hidden md:flex">
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Certificados"}
+                            href={"#Certificados"}
                         >Certificados
                         </Link>
                     </div>
@@ -43,7 +43,7 @@ export default function Nav({title}: NavProps) {
                     <div className="hidden md:flex">
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Conhecimentos"}
+                            href={"#Conhecimentos"}
                         >Conhecimentos
                         </Link>
                     </div>
@@ -51,14 +51,14 @@ export default function Nav({title}: NavProps) {
                     <div className="hidden md:flex">
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Knowledge"}
+                            href={"#Projetos"}
                         >Projetos
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
-                            href={"/#Sobre"}
+                            href={"#Sobre"}
                         >Sobre
                         </Link>
                     </div>

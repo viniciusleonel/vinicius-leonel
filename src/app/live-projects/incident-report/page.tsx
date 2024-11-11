@@ -1,4 +1,4 @@
-import { JavaIcon, SpringIcon, Postgres, TypeScriptIcon, NextJsIcon, MongoDBIcon } from "@/app/components/Skills/tech-icons";
+import { JavaIcon, SpringIcon, Postgres, TypeScriptIcon, NextJsIcon, MongoDBIcon } from "@/app/[locale]/_components/Skills/tech-icons";
 import {
     ContentMain,
     ContentHeader,

@@ -1,4 +1,4 @@
-import { JavaIcon, SpringIcon, Postgres } from "@/app/components/Skills/tech-icons";
+import { JavaIcon, SpringIcon, Postgres } from "@/app/[locale]/_components/Skills/tech-icons";
 import {
     ContentMain,
     ContentHeader,

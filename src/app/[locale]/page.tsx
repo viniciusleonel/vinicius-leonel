@@ -1,15 +1,15 @@
 "use client";
 
-import Nav from "../components/Nav/Nav";
-import About from "../components/About/about";
-import ExpecienciasPage from "../components/Expeciencias/page";
-import { ProjectCarousel } from "../components/Projects/project-carousel";
+import Nav from "./_components/NavBar/Nav";
+import About from "./_components/About/about";
+import ExpecienciasPage from "./_components/Experiences/page";
+import { ProjectCarousel } from "./_components/Projects/project-carousel";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { logUser } from "@/services/vollmedApi";
 import Usuario from "../model/Usuario";
-import Certificates from "../components/Certificates/page";
-import Footer from "../components/Footer/footer";
+import Certificates from "./_components/Certificates/page";
+import Footer from "./_components/Footer/footer";
 
 export default function Home() {
     const { signIn } = useContext(AuthContext);

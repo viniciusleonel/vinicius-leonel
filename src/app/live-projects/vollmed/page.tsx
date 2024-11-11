@@ -2,7 +2,7 @@ import {
     JavaIcon,
     Postgres,
     SpringIcon,
-} from "@/app/components/Skills/tech-icons";
+} from "@/app/[locale]/_components/Skills/tech-icons";
 import { ContentMain, ContentHeader, ContentHeaderTitle, ContentHeaderTechList, ContentBody, ContentBodyDescription } from "../__components/content";
 
 export default function Vollmed() {
