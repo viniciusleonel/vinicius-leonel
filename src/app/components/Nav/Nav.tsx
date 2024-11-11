@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import ToggleButton from "../ToggleThemeButton/toggle-theme-button";
+import ThemeToggle from "../../[locale]/_components/Toggles/ThemeToggle";
 import Link from "next/link"
 import MobileHomeMenu from "./mobile-home-menu";
 
@@ -59,7 +59,11 @@ export default function Nav ({title} : NavProps) {
                             >Sobre
                         </Link>
                     </div>
-                    <ToggleButton />
+                    <div className="flex justify-center items-center gap-1">
+                        <ThemeToggle />
+
+                    </div>
+
                 </div>
             </div>  
         </nav>
