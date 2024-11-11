@@ -1,16 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
+import {useTranslations} from 'next-intl';
 import Image from "next/image";
 import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
 import { PdfIcon } from "../Skills/tech-icons";
 
 export default function About() {
+
+    const t = useTranslations('HomePage');
+
     return (
         <div className="sm:h-svh w-full  my-8 flex justify-center items-center">
             <div className="w-full  mx-8 lg:mx-20  dark:bg-dark-secondary border-2 border-cyan-700 dark:border-cyan-500 rounded-3xl">
                 <div className="mt-10 text-2xl md:text-3xl flex items-center justify-center w-full">
                     <span className="text-cyan-500 text-4xl">&#123;</span>
-                    <h2 className="pt-1"> HELLO WORLD </h2>
+                    <h2 className="pt-1"> {t('title')} </h2>
                     <span className="text-cyan-500 text-4xl">&#125;</span>
                 </div>
                 <div className="p-4 sm:px-8 md:px-10 lg:px-14 flex flex-col sm:flex-row items-center justify-center  w-full">

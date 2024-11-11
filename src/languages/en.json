@@ -1,0 +1,46 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "User": {
+      "title": "User",
+      "description": "Booking services has never been easier! With our scheduling system, you can quickly connect with trusted service providers and choose times that fit perfectly into your schedule. Simplify the booking process and enjoy a personalized, efficient experience."
+    },
+    "ServiceProvider": {
+      "title": "Service Provider",
+      "description": "Get discovered by customers looking for the exact services you offer. Our scheduling system connects service providers to users who value convenience and quality. Simplify your schedule management and let your clients book your services quickly and easily, enhancing your visibility and optimizing your time."
+    },
+    "about": "Adding a paragraph with a <TesteComponent> code tag </TesteComponent>"
+  },
+  "RegisterPage" : {
+    "title" : "Register",
+    "User" : {
+      "title" : "User",
+      "nameLabel": "Name",
+      "namePlaceholder" : "Insert your name",
+      "nameError": "Name is required!",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Insert your email",
+      "emailError": "Email is required!",
+      "invalidEmailError": "Insert a valid email!",
+      "formButton": "Register",
+      "description" : "Description"
+    },
+    "ServiceProvider": {
+      "button" : "Service provider",
+      "description" : "Description"
+    }
+  },
+  "About": {
+    "title": "About!",
+    "about": "Adding a paragraph with a <TesteComponent> code tag </TesteComponent>"
+  },
+  "Languages": {
+    "pt": "Portuguese",
+    "pt-alt": "Brazilian Flag",
+    "en": "English",
+    "en-alt" : "Flag of the United States of America"
+  },
+  "Footer": {
+    "text": "Made by <p> Vinicius Leonel </p>"
+  }
+}
