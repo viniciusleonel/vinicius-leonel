@@ -1,19 +1,30 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import {routing} from './i18n/routing';
 
-export function middleware(request: NextRequest) {
-    
-    const token = request.cookies.get('nextauth.token');
 
-    // Verifica se não há token e se a pathname da próxima URL começa com '/vollmed/user'
-    if (!token && request.nextUrl.pathname.startsWith('/vollmed/user/dashboard')) {
-        // Redireciona para a página de autenticação
-        return NextResponse.redirect(new URL('/vollmed/user', request.url));
-    }
-
-    return NextResponse.next();
-}
+export default createMiddleware(routing);
 
 export const config = {
-    matcher: ['/vollmed/user/:path*'],
+    // Match only internationalized pathnames
+    matcher: ['/', '/(pt|en)/:path*']
 };
+
+// import { NextResponse } from 'next/server';
+// import type { NextRequest } from 'next/server';
+//
+// export function middleware(request: NextRequest) {
+//
+//     const token = request.cookies.get('nextauth.token');
+//
+//     // Verifica se não há token e se a pathname da próxima URL começa com '/vollmed/user'
+//     if (!token && request.nextUrl.pathname.startsWith('/vollmed/user/dashboard')) {
+//         // Redireciona para a página de autenticação
+//         return NextResponse.redirect(new URL('/vollmed/user', request.url));
+//     }
+//
+//     return NextResponse.next();
+// }
+//
+// export const config = {
+//     matcher: ['/vollmed/user/:path*'],
+// };

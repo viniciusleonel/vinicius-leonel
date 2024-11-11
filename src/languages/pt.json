@@ -1,0 +1,50 @@
+{
+  "HomePage": {
+    "title": "Ola Mundo!",
+    "User": {
+      "title": "Usuário",
+      "description": "Agendar serviços nunca foi tão fácil! Com nosso sistema de agendamentos, você pode se conectar rapidamente com prestadores de serviços de confiança e escolher horários que se encaixam perfeitamente na sua agenda. Simplifique o processo de agendamento e aproveite uma experiência personalizada e eficiente."
+    },
+    "ServiceProvider": {
+      "title": "Provedor de Serviços",
+      "description": "Seja encontrado por clientes que estão buscando exatamente os serviços que você oferece. Nosso sistema de agendamento conecta prestadores de serviços a usuários em busca de conveniência e qualidade. Simplifique a gestão dos seus horários e permita que seus clientes marquem serviços de forma rápida e prática, aumentando sua visibilidade e otimizando seu tempo."
+    },
+    "about": "Adicionando um paragrafo com uma <TesteComponent> tag de codigo </TesteComponent>"
+  },
+
+  "RegisterPage" : {
+    "title" : "Cadastre-se",
+    "User" : {
+      "title" : "Usuário",
+      "nameLabel": "Nome",
+      "namePlaceholder" : "Insira seu nome",
+      "nameError": "Nome é obrigatório!",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Insira seu email",
+      "emailError": "Email é obrigatório!",
+      "invalidEmailError": "Digite um email válido!",
+      "formButton": "Cadastrar",
+      "description" : "Description"
+    },
+    "ServiceProvider": {
+      "button" : "Prestador",
+      "description" : "Description"
+    }
+  },
+
+  "About": {
+    "title": "Sobre!",
+    "about": "Adicionando um paragrafo com uma <TesteComponent> tag de codigo </TesteComponent>"
+  },
+
+  "Languages": {
+    "pt": "Português",
+    "pt-alt": "Bandeira do Brasil",
+    "en": "Inglês",
+    "en-alt" : "Bandeira dos Estados Unidos"
+  },
+
+  "Footer": {
+    "text": "Feito por <p> Vinicius Leonel </p>"
+  }
+}
