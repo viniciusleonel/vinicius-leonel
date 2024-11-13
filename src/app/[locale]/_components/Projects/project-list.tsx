@@ -24,8 +24,7 @@ import JetPackCompose, {
 const projectsList = [
     {
         title: "Locaweb APP",
-        description:
-            "O Locaweb App é um aplicativo Android desenvolvido com Kotlin e Jetpack Compose, que usa a Locaweb API para gerenciar e enviar e-mails de forma intuitiva e eficiente. Com uma interface moderna e responsiva, o aplicativo permite que os usuários se registrem, façam login, enviem e recebam e-mails, além de gerenciar suas configurações de perfil e regras de controle de spam.",
+        description: "",
         techIcons: [
             <Kotlin key="kotlin" />,
             <AndroidIcon key="android" />,
@@ -36,8 +35,7 @@ const projectsList = [
     },
     {
         title: "Locaweb API",
-        description:
-            "A API Locaweb é uma aplicação desenvolvida em Kotlin e Spring, projetada especificamente para o aplicativo da Locaweb, permite o envio de emails entre usuários, garantindo um controle rigoroso de acesso e leitura, assegurando que apenas usuários ativos e logados possam realizar essas operações. Além disso, os usuários podem se cadastrar, salvar suas preferências do aplicativo, como configurações personalizadas e temas, facilitando futuras migrações de dados. Foi implementado um workflow de Integração Contínua (CI) utilizando GitHub Actions para testes e builds em pull requests, e um processo de Entrega Contínua (CD) que realiza o deploy automático da aplicação em produção. A aplicação é containerizada com Docker e implantada na Azure, garantindo atualizações rápidas e escalabilidade.",
+        description: "",
         techIcons: [
             <Kotlin key="kotlin" />,
             <SpringIcon key="spring" />,
@@ -50,8 +48,7 @@ const projectsList = [
     },
     {
         title: "Traffic Incident Management API",
-        description:
-            "A API de Gerenciamento de Incidentes de Tráfego foi desenvolvida com Java e Spring, oferecendo soluções para o gerenciamento de acidentes de trânsito, usuários e autenticação. Com endpoints públicos e privados, permite o registro detalhado de acidentes, incluindo veículos, localização, data, hora, gravidade e feridos, armazenando os dados validados em um banco MongoDB. Foi implementado um workflow de Integração Contínua (CI) utilizando GitHub Actions para testes e builds em pull requests, e um processo de Entrega Contínua (CD) que realiza o deploy automático da aplicação em produção. A aplicação é containerizada com Docker e implantada na Azure, garantindo atualizações rápidas e escalabilidade.",
+        description: "",
         techIcons: [
             <JavaIcon key="java" />,
             <SpringIcon key="spring" />,
@@ -66,8 +63,7 @@ const projectsList = [
     },
     {
         title: "VollMedAPI",
-        description:
-            "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica. Com recursos de autenticação JWT, a API permite o cadastro de médicos, pacientes e consultas, fornecendo endpoints públicos para login e cadastro de usuários. Foi implementado um workflow de Integração Contínua (CI) utilizando GitHub Actions para testes e builds em pull requests, e um processo de Entrega Contínua (CD) que realiza o deploy automático da aplicação em produção. A aplicação é containerizada com Docker e implantada na Azure, garantindo atualizações rápidas e escalabilidade.",
+        description: "",
         techIcons: [
             <JavaIcon key="java" />,
             <SpringIcon key="spring" />,
@@ -80,8 +76,7 @@ const projectsList = [
     },
     {
         title: "Micro-Saas-ToDo",
-        description:
-            "Esta é um micro-saas de gerenciamento de tarefas que permite aos usuários criar, atualizar, excluir e visualizar suas tarefas que utiliza o Stripe para processar pagamentos, permitindo que os usuários façam um upgrade no plano para conseguir criar mais tarefas.",
+        description: "",
         techIcons: [
             <NextJsIcon key="nextjs" />,
             <ReactIcon key="react" />,
@@ -93,8 +88,7 @@ const projectsList = [
     },
     {
         title: "Fintech",
-        description:
-            "A aplicação Fintech é uma plataforma que permite aos usuários gerenciar suas finanças pessoais, incluindo o cadastro e controle de receitas, despesas e investimentos. O sistema oferece uma interface amigável e funcionalidades para facilitar o acompanhamento financeiro.",
+        description: "",
         techIcons: [
             <JavaIcon key="java" />,
             <JspIcon key="jsp" />,
@@ -106,8 +100,7 @@ const projectsList = [
     },
     {
         title: "Covid19 Brazil API",
-        description:
-            "Este projeto é um front-end que consome a API Covid19 Brasil, permitindo a busca de casos de Covid-19 no Brasil e no mundo. O projeto oferece filtros adicionais e pesquisa por data.",
+        description: "",
         techIcons: [
             <NextJsIcon key="nextjs" />,
             <ReactIcon key="react" />,
@@ -118,9 +111,8 @@ const projectsList = [
         linkGitHub: "https://github.com/viniciusleonel/covid-api",
     },
     {
-        title: "WheaterApp",
-        description:
-            "Desenvolvimento de um aplicativo Android com Jetpack Compose que consome uma API de clima da HGBrasil e usa Retrofit para consultar a previsão do tempo em uma cidade específica, exibindo dados como temperatura mínima e máxima, chance de chuva, velocidade do vento, entre outros.",
+        title: "WeatherApp",
+        description: "",
         techIcons: [
             <Kotlin key="kotlin" />,
             <JetPackCompose key="compose" />,
@@ -131,8 +123,7 @@ const projectsList = [
     },
     {
         title: "Pokedex",
-        description:
-            "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informações sobre Pokémon, usando HTML, CSS e JavaScript",
+        description: "",
         techIcons: [
             <HtmlIcon key="html" />,
             <CssIcon key="css" />,

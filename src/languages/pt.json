@@ -53,7 +53,35 @@
       "nextintl": "O Next-intl é uma biblioteca para gerenciar a internacionalização (i18n) em aplicações Next.js, facilitando a tradução e localização de conteúdo."
     }
   },
-  "Projects": "",
+  "Projects": {
+    "LocawebAPP": {
+      "description": "O Locaweb App é um aplicativo Android desenvolvido com Kotlin e Jetpack Compose, que usa a Locaweb API para gerenciar e enviar e-mails de forma intuitiva e eficiente."
+    },
+    "LocawebAPI": {
+      "description": "A API Locaweb é uma aplicação desenvolvida em Kotlin e Spring, projetada especificamente para o aplicativo da Locaweb, permitindo o envio de e-mails entre usuários, garantindo um controle rigoroso de acesso e leitura."
+    },
+    "TrafficIncidentManagementAPI": {
+      "description": "A API de Gerenciamento de Incidentes de Tráfego foi desenvolvida com Java e Spring, oferecendo soluções para o gerenciamento de acidentes de trânsito, usuários e autenticação."
+    },
+    "VollMedAPI": {
+      "description": "A VollMed API é uma aplicação desenvolvida em Java com Spring Framework, destinada à gestão de uma clínica médica."
+    },
+    "MicroSaasToDo": {
+      "description": "Este é um micro-SaaS de gerenciamento de tarefas que permite aos usuários criar, atualizar, excluir e visualizar tarefas, utilizando o Stripe para processar pagamentos para planos premium."
+    },
+    "Fintech": {
+      "description": "A aplicação Fintech é uma plataforma que permite aos usuários gerenciar suas finanças pessoais, incluindo o cadastro e controle de receitas, despesas e investimentos."
+    },
+    "Covid19BrazilAPI": {
+      "description": "Este projeto é um frontend que consome a API Covid19 Brasil, permitindo a busca de casos de Covid-19 no Brasil e no mundo."
+    },
+    "WeatherApp": {
+      "description": "Desenvolvimento de um aplicativo Android com Jetpack Compose que consome uma API de clima para exibir a previsão do tempo de uma cidade específica."
+    },
+    "Pokedex": {
+      "description": "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informações sobre Pokémon, utilizando HTML, CSS e JavaScript."
+    }
+  },
   "Languages": {
     "pt": "Português",
     "pt-alt": "Bandeira do Brasil",

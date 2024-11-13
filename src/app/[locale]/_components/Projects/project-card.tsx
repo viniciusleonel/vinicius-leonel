@@ -13,9 +13,12 @@ interface ProjectCardProps {
     linkGitHub: string
 }
 
-export default function ProjectCard ( { title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
+export default function ProjectCard ( { title, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
 
     const t = useTranslations('Projects');
+
+    const nextIntlPath = `${title.trim().replace(/[\s-]+/g, '')}.description`;
+    const description = t(nextIntlPath);
 
     return (
         <div className="flex bg-white dark:bg-dark-secondary relative h-[16rem] sm:h-[18rem] lg:h-[20rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">

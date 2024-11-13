@@ -4,75 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="refatorando paginas e componentes">
+    <list default="true" id="a668af3e-b6df-4847-b006-9db226236376" name="Changes" comment="feat: continuando implementacao da funcionalidade da troca de idiomas(traducao)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/About/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/About/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Certificates/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Certificates/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Experiences/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Experiences/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/mobile-home-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/NavBar/mobile-home-menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/Projects/project-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/__components/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/__components/content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/__components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/__components/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/__components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/__components/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/__components/sidebar-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/__components/sidebar-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/__components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/__components/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/fintech/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/fintech/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/incident-report/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/incident-report/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/live-projects/vollmed/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/live-projects/vollmed/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/__components/Toast/toast-fail-login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/__components/Toast/toast-fail-login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/__components/Toast/toast-fail-register-user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/__components/Toast/toast-fail-register-user.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/__components/Toast/toast-register-user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/__components/Toast/toast-register-user.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/__components/Toast/toast-user-login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/__components/Toast/toast-user-login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/components/menu-links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/components/menu-links.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/components/mobile-vollmed-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/components/mobile-vollmed-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/components/nav-links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/components/nav-links.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/components/side-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/components/side-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/components/voll-med-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/components/voll-med-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/components/LoadingSkeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/components/LoadingSkeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/consultas/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/consultas/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-empty-table-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-empty-table-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-empty-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-empty-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-list-body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-list-body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-list-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-list-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/medico-not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/medico-not-found.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/register-doctor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/register-doctor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/toasters/toast-deleted-medico.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/toasters/toast-deleted-medico.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/toasters/toast-register-medico-fail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/toasters/toast-register-medico-fail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/__components/toasters/toast-register-medico.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/__components/toasters/toast-register-medico.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/medicos/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/medicos/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/__components/paciente-body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/__components/paciente-body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/__components/paciente-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/__components/paciente-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/__components/paciente-list-body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/__components/paciente-list-body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/__components/paciente-list-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/__components/paciente-list-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/__components/paciente-list-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/__components/paciente-list-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/pacientes/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/pacientes/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/dropdown-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/search-api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/search-api.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/sheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/dashboard/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/dashboard/ui/tooltip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/forms/user-login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/forms/user-login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/forms/user-register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/forms/user-register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vollmed/user/schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/vollmed/user/schemas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/languages/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/languages/pt.json" afterDir="false" />
     </list>
@@ -151,7 +86,7 @@
       <updated>1731269164950</updated>
       <workItem from="1731269166043" duration="5865000" />
       <workItem from="1731354473619" duration="425000" />
-      <workItem from="1731355083315" duration="17208000" />
+      <workItem from="1731355083315" duration="20327000" />
     </task>
     <task id="LOCAL-00001" summary="feat: iniciando insercao da funcionalidade de multi-idiomas">
       <option name="closed" value="true" />
@@ -193,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731358915017</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: continuando implementacao da funcionalidade da troca de idiomas(traducao)">
+      <option name="closed" value="true" />
+      <created>1731528685873</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731528685873</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +159,7 @@
     <MESSAGE value="feat: iniciando inserção da funcionalidade de multi-idiomas" />
     <MESSAGE value="fix: corrigindo layout dos toggles de theme e de language" />
     <MESSAGE value="refatorando paginas e componentes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refatorando paginas e componentes" />
+    <MESSAGE value="feat: continuando implementacao da funcionalidade da troca de idiomas(traducao)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: continuando implementacao da funcionalidade da troca de idiomas(traducao)" />
   </component>
 </project>

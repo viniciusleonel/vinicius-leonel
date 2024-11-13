@@ -3,6 +3,11 @@ import ProjectCard from "./project-card";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import projectsList from "./project-list";
 import {useTranslations} from 'next-intl';
+import {Project} from "next/dist/build/swc";
+
+interface ProjectListProps {
+    projects: Project[];
+}
 
 export function ProjectCarousel() {
 
@@ -90,7 +95,7 @@ export function ProjectCarousel() {
                     <ProjectCard
                         key={index}
                         title={projectsList[index].title}
-                        description={projectsList[index].description}
+                        description={projectsList[index].title.trim().replace(/\s+/g, '')}
                         techIcons={projectsList[index].techIcons}
                         linkSite={projectsList[index].linkSite}
                         linkGitHub={projectsList[index].linkGitHub}

@@ -53,6 +53,35 @@
       "nextintl": "Next-intl is a library for handling internationalization (i18n) in Next.js applications, enabling easy translation and localization of content."
     }
   },
+  "Projects": {
+    "LocawebAPP": {
+      "description": "The Locaweb App is an Android app developed with Kotlin and Jetpack Compose, which uses the Locaweb API to manage and send emails in an intuitive and efficient way."
+    },
+    "LocawebAPI": {
+      "description": "The Locaweb API is an application developed in Kotlin and Spring, designed specifically for the Locaweb app, enabling email sending between users, ensuring strict access and read control."
+    },
+    "TrafficIncidentManagementAPI": {
+      "description": "The Traffic Incident Management API was developed with Java and Spring, offering solutions for managing traffic accidents, users, and authentication."
+    },
+    "VollMedAPI": {
+      "description": "VollMed API is an application developed in Java with the Spring Framework, aimed at managing a medical clinic."
+    },
+    "MicroSaasToDo": {
+      "description": "This is a micro-SaaS task management app that allows users to create, update, delete, and view tasks using Stripe to process payments for premium plans."
+    },
+    "Fintech": {
+      "description": "The Fintech app is a platform that allows users to manage their personal finances, including tracking incomes, expenses, and investments."
+    },
+    "Covid19BrazilAPI": {
+      "description": "This project is a frontend that consumes the Covid19 Brazil API, allowing users to search for Covid-19 cases in Brazil and worldwide."
+    },
+    "WeatherApp": {
+      "description": "Development of an Android app with Jetpack Compose that consumes a weather API to display the weather forecast for a specific city."
+    },
+    "Pokedex": {
+      "description": "Development of a web app that consumes the PokeAPI to display information about Pokémon using HTML, CSS, and JavaScript."
+    }
+  },
   "Languages": {
     "pt": "Portuguese",
     "pt-alt": "Brazilian Flag",
