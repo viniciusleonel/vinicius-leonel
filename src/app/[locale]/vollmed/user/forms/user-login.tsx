@@ -5,8 +5,8 @@ import { LoginUserFormData, loginSchema } from "../schemas"
 import { useContext, useState } from "react"
 import { AuthContext } from "@/app/context/AuthContext"
 import { parseCookies } from "nookies"
-import { ToastFailLogin } from "@/app/vollmed/user/__components/Toast/toast-fail-login"
-import { ToastUserLogin } from "../__components/Toast/toast-user-login"
+import { ToastFailLogin } from "@/app/[locale]/vollmed/user/__components/Toast/toast-fail-login"
+import { ToastUserLogin } from "@/app/[locale]/vollmed/user/__components/Toast/toast-user-login"
 
 interface UserLoginProps {
     passwordState: () => void

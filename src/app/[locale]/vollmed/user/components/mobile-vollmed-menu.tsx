@@ -2,9 +2,9 @@ import {
     SheetTrigger,
     SheetContent,
     Sheet,
-} from "@/app/vollmed/user/dashboard/ui/sheet";
+} from "@/app/[locale]/vollmed/user/dashboard/ui/sheet";
 import Link from "next/link";
-import { Button } from "@/app/vollmed/user/dashboard/ui/button";
+import { Button } from "@/app/[locale]/vollmed/user/dashboard/ui/button";
 import { destroyCookie, parseCookies } from "nookies";
 import { useRouter } from "next/navigation";
 import {

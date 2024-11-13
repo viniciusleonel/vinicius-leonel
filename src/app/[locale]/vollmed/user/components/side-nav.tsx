@@ -2,9 +2,9 @@ import {
     SheetTrigger,
     SheetContent,
     Sheet,
-} from "@/app/vollmed/user/dashboard/ui/sheet";
+} from "@/app/[locale]/vollmed/user/dashboard/ui/sheet";
 import Link from "next/link";
-import { Button } from "@/app/vollmed/user/dashboard/ui/button";
+import { Button } from "@/app/[locale]/vollmed/user/dashboard/ui/button";
 import {
     DropdownMenuTrigger,
     DropdownMenuLabel,
@@ -12,11 +12,11 @@ import {
     DropdownMenuItem,
     DropdownMenuContent,
     DropdownMenu,
-} from "@/app/vollmed/user/dashboard/ui/dropdown-menu";
+} from "@/app/[locale]/vollmed/user/dashboard/ui/dropdown-menu";
 import Image from "next/image";
 import { destroyCookie, parseCookies } from "nookies";
 import { useRouter } from "next/navigation";
-import NavLinks from "@/app/vollmed/user/components/nav-links";
+import NavLinks from "@/app/[locale]/vollmed/user/components/nav-links";
 import MenuNavLinks from "./menu-links";
 import { LogOutIcon } from "lucide-react";
 

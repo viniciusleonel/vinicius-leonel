@@ -2,6 +2,8 @@ import Image from "next/image"
 import { lusitana } from '@/app/ui/fonts'
 import Link from "next/link"
 import { MdScreenShare } from "react-icons/md";
+import {useTranslations} from 'next-intl';
+
 
 interface ProjectCardProps {
     title: string,
@@ -12,6 +14,9 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard ( { title, description, techIcons, linkSite, linkGitHub} : ProjectCardProps) {
+
+    const t = useTranslations('Projects');
+
     return (
         <div className="flex bg-white dark:bg-dark-secondary relative h-[16rem] sm:h-[18rem] lg:h-[20rem] w-full xs:w-[14rem] sm:w-[18rem] lg:w-[20rem] border-2 rounded-3xl border-cyan-500">
             <div className="text-center flex flex-col justify-between py-4 md:py-8 pe-1">

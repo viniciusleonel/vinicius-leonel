@@ -2,8 +2,11 @@ import React, { useState, useEffect, useMemo } from "react";
 import ProjectCard from "./project-card";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import projectsList from "./project-list";
+import {useTranslations} from 'next-intl';
 
 export function ProjectCarousel() {
+
+    const t = useTranslations('NavBar');
     const [startX, setStartX] = useState<number | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [numVisibleProjects, setNumVisibleProjects] = useState(3);
@@ -71,7 +74,7 @@ export function ProjectCarousel() {
         <div className="sm:h-svh flex flex-col justify-center items-center">
             <div className="flex items-center justify-center">
                 <span className="text-cyan-500 text-4xl">&#123;</span>
-                <h2 className="my-10 text-3xl">Projetos</h2>
+                <h2 className="my-10 text-3xl">{t('projects')}</h2>
                 <span className="text-cyan-500 text-4xl">&#125;</span>
             </div>
 

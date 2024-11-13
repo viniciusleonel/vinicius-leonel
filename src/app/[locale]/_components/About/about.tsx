@@ -8,6 +8,7 @@ import { PdfIcon } from "../Skills/tech-icons";
 export default function About() {
 
     const t = useTranslations('HomePage');
+    const tAbout = useTranslations('About');
 
     return (
         <div className="sm:h-svh w-full  my-8 flex justify-center items-center">
@@ -22,7 +23,7 @@ export default function About() {
                         <div className="">
                             <div className=" flex flex-col md:flex-row items-baseline">
                                 <p className="dark:text-cyan-100">
-                                    Meu nome é{" "}
+                                    {tAbout('name')}{" "}
                                 </p>
                                 <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
                                     {" "}
@@ -30,20 +31,18 @@ export default function About() {
                                 </h1>
                             </div>
                             <div className="flex flex-col md:flex-row items-baseline">
-                                <p className="dark:text-cyan-100">Eu sou um</p>
+                                <p className="dark:text-cyan-100">{tAbout('iam')}</p>
                                 <h2 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                                    Desenvolvedor de Software
+                                    {tAbout('job')}
                                 </h2>
                             </div>
                         </div>
                         <p
-                            className={`${lusitana.className} mt-6 text-sm md:text-base text-zinc-800 dark:text-zinc-300`}
+                            className={`${lusitana.className}  mt-6 text-sm md:text-base text-zinc-800 dark:text-zinc-400`}
                         >
-                            Atualmente no último ano do curso de Desenvolvimento
-                            e Análise de Sistemas na FIAP.
+                            {tAbout('description')}
                             <span className="bg-clip-text text-transparent bg-gradient-to-r text-zinc-800 dark:text-zinc-400 from-cyan-400 to-blue-600"></span>
                             <br />
-                            Desenvolvedor backend Java/Kotlin usando Spring para construir APIs RESTful, com conhecimento em Kotlin Android e Jetpack Compose, além de tecnologias frontend como Reactjs, TypeScript e Nextjs. Bilíngue (Português e Inglês)
                         </p>
                         <div className="flex items-center justify-between mt-4 ">
                             <div className="flex items-center gap-2 w-32 lg:w-40 -m-2 pt-6">
@@ -54,7 +53,7 @@ export default function About() {
                                 >
                                     <Image
                                         src="/images/icons/linkedin.svg"
-                                        alt="ícone do linkedin"
+                                        alt={tAbout('linkedin-alt')}
                                         height={50}
                                         width={50}
                                     />
@@ -66,7 +65,7 @@ export default function About() {
                                 >
                                     <Image
                                         src="/images/icons/github.svg"
-                                        alt="ícone do github"
+                                        alt={tAbout('github-alt')}
                                         height={50}
                                         width={50}
                                     />
@@ -78,7 +77,7 @@ export default function About() {
                                 >
                                     <Image
                                         src="/images/icons/whatsapp.svg"
-                                        alt="ícone do whatsapp"
+                                        alt={tAbout('whatsapp-alt')}
                                         height={50}
                                         width={50}
                                     />
@@ -92,7 +91,7 @@ export default function About() {
                                     src="/images/vinicius.jpeg"
                                     height={100}
                                     width={400}
-                                    alt="Foto de perfil de Vinicius"
+                                    alt={tAbout('picture-alt')}
                                     className="w-20 border-2 border-cyan-700 dark:border-cyan-500 rounded-full"
                                 />
                             </div>
@@ -103,7 +102,7 @@ export default function About() {
                             src="/images/vinicius.jpeg"
                             height={100}
                             width={400}
-                            alt="Foto de perfil de Vinicius"
+                            alt={tAbout('picture-alt')}
                             className=" border-2 border-cyan-700 dark:border-cyan-500 rounded-full"
                         />
                     </div>

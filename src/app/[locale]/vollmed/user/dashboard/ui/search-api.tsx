@@ -1,4 +1,4 @@
-import { Input } from "@/app/vollmed/user/dashboard/ui/input"
+import { Input } from "@/app/[locale]/vollmed/user/dashboard/ui/input"
 
 export default function SearchApi () {
     return (

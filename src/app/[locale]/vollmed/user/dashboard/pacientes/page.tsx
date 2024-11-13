@@ -1,11 +1,11 @@
 'use client'
 
 import { SetStateAction, useContext, useEffect, useState } from "react"
-import { AuthContext } from "../../../../context/AuthContext"
+import { AuthContext } from "../../../../../context/AuthContext"
 import { parseCookies } from "nookies"
 import { usePathname, useRouter } from 'next/navigation'
 import { getDataById, getPacientes } from "@/services/vollmedApi"
-import VollMedNav from "../../components/voll-med-nav"
+import VollMedNav from "@/app/[locale]/vollmed/user/components/voll-med-nav"
 import RegisterDoctor from "../medicos/__components/register-doctor"
 import PacienteListCabecalho from "./__components/paciente-list-nav"
 import PacienteListHeader from "./__components/paciente-list-header"

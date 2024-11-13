@@ -1,11 +1,11 @@
 'use client'
 
-import LoadingSkeleton from '@/app/vollmed/user/dashboard/components/LoadingSkeleton';
+import LoadingSkeleton from '@/app/[locale]/vollmed/user/dashboard/components/LoadingSkeleton';
 import { SetStateAction, useContext, useEffect, useState } from "react"
 import { parseCookies } from "nookies"
 import { usePathname, useRouter } from 'next/navigation'
 import RegisterDoctor from "./__components/register-doctor"
-import VollMedNav from "../../components/voll-med-nav"
+import VollMedNav from "@/app/[locale]/vollmed/user/components/voll-med-nav"
 import MedicoListHeader from "./__components/medico-list-header"
 import MedicoListBody from "./__components/medico-list-body"
 import MedicoNav from "./__components/medico-nav"

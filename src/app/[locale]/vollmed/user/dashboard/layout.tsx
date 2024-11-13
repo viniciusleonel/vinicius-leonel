@@ -1,8 +1,8 @@
 'use client'
 
 import { parseCookies } from "nookies";
-import SideNav from "../components/side-nav";
-import VollMedNav from "../components/voll-med-nav";
+import SideNav from "@/app/[locale]/vollmed/user/components/side-nav";
+import VollMedNav from "@/app/[locale]/vollmed/user/components/voll-med-nav";
 import { useEffect, useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

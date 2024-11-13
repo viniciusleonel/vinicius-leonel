@@ -2,9 +2,9 @@ import {
     SheetTrigger,
     SheetContent,
     Sheet,
-} from "@/app/vollmed/user/dashboard/ui/sheet";
+} from "@/app/[locale]/vollmed/user/dashboard/ui/sheet";
 import Link from "next/link";
-import { Button } from "@/app/vollmed/user/dashboard/ui/button";
+import { Button } from "@/app/[locale]/vollmed/user/dashboard/ui/button";
 import { UserIcon } from "lucide-react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineLibraryBooks } from "react-icons/md";
@@ -16,8 +16,13 @@ import {
     TailwindIcon,
     TypeScriptIcon,
 } from "../Skills/tech-icons";
+import {useTranslations} from 'next-intl';
+
 
 export default function MobileHomeMenu() {
+
+    const t = useTranslations('NavBar');
+
     return (
         <Sheet>
             <SheetTrigger asChild>
@@ -47,7 +52,7 @@ export default function MobileHomeMenu() {
                         href="#Sobre"
                     >
                         <UserIcon className="h-5 w-5" />
-                        Sobre
+                        {t('about')}
                     </Link>
 
                     <Link
@@ -55,7 +60,7 @@ export default function MobileHomeMenu() {
                         href="#Projetos"
                     >
                         <MdOutlineWorkHistory className="h-5 w-5" />
-                        Projetos
+                        {t('projects')}
                     </Link>
 
                     <Link
@@ -63,7 +68,7 @@ export default function MobileHomeMenu() {
                         href="#Conhecimentos"
                     >
                         <MdOutlineLibraryBooks className="h-5 w-5 " />
-                        Conhecimentos
+                        {t('knowledge')}
                     </Link>
 
                     <Link
@@ -71,7 +76,7 @@ export default function MobileHomeMenu() {
                         href="#Certificados"
                     >
                         <TbCertificate className="h-5 w-5 " />
-                        Certificados
+                        {t('certificates')}
                     </Link>
 
                     {/* <Link

@@ -1,50 +1,66 @@
 {
   "HomePage": {
-    "title": "OLÁ MUNDO!",
-    "User": {
-      "title": "Usuário",
-      "description": "Agendar serviços nunca foi tão fácil! Com nosso sistema de agendamentos, você pode se conectar rapidamente com prestadores de serviços de confiança e escolher horários que se encaixam perfeitamente na sua agenda. Simplifique o processo de agendamento e aproveite uma experiência personalizada e eficiente."
-    },
-    "ServiceProvider": {
-      "title": "Provedor de Serviços",
-      "description": "Seja encontrado por clientes que estão buscando exatamente os serviços que você oferece. Nosso sistema de agendamento conecta prestadores de serviços a usuários em busca de conveniência e qualidade. Simplifique a gestão dos seus horários e permita que seus clientes marquem serviços de forma rápida e prática, aumentando sua visibilidade e otimizando seu tempo."
-    },
-    "about": "Adicionando um paragrafo com uma <TesteComponent> tag de codigo </TesteComponent>"
+    "title": "OLÁ MUNDO!"
   },
-
-  "RegisterPage" : {
-    "title" : "Cadastre-se",
-    "User" : {
-      "title" : "Usuário",
-      "nameLabel": "Nome",
-      "namePlaceholder" : "Insira seu nome",
-      "nameError": "Nome é obrigatório!",
-      "emailLabel": "Email",
-      "emailPlaceholder": "Insira seu email",
-      "emailError": "Email é obrigatório!",
-      "invalidEmailError": "Digite um email válido!",
-      "formButton": "Cadastrar",
-      "description" : "Description"
+  "NavBar": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "knowledge": "Conhecimentos",
+    "certificates": "Certificados"
+  },
+  "About": {
+    "name": "Meu nome é",
+    "iam": "Eu sou um",
+    "job": "Desenvolvedor de Software",
+    "description": "Desenvolvedor full-stack com 5 anos de experiência, com forte foco no desenvolvimento backend usando Java e Spring, incluindo amplo trabalho com desenvolvimento de APIs REST. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na FIAP, complementado por aprendizado contínuo em diversas plataformas online. Contribuí para o desenvolvimento e manutenção de produtos diversos, destacando soluções escaláveis e eficientes voltadas para a otimização da experiência do usuário. Tenho proficiência em desenvolvimento frontend e backend, além de gerenciamento de banco de dados e automação de testes para garantir entregas de alta qualidade. Possuo experiência com metodologias ágeis, promovendo uma colaboração eficaz e produtividade nas equipes.",
+    "linkedin-alt": "Icone do LinkedIn",
+    "github-alt": "Icone do Github",
+    "whatsapp-alt": "Icone do Whatsapp",
+    "picture-alt": "Foto de Vinicius Leonel"
+  },
+  "Knowledge": {
+    "title": "Knowledge",
+    "backend": {
+      "title": "Backend",
+      "description": "Desenvolvimento de APIs robustas e escaláveis com Spring Boot, JWT e Docker. Criação de endpoints RESTful, configuração de segurança com JWT e documentação interativa via Swagger. Uso de Docker para garantir consistência entre ambientes. Experiência com Hibernate e JPA para mapeamento de dados, além de gerenciamento de versões de esquema de banco de dados com Flyway."
     },
-    "ServiceProvider": {
-      "button" : "Prestador",
-      "description" : "Description"
+    "frontend": {
+      "title": "Frontend",
+      "description": "Desenvolvimento Frontend com Reactjs, Nextjs e TypeScript. Criação de aplicações web modernas, responsivas e de alta performance utilizando Next.js, que proporciona pré-renderização de páginas, roteamento simplificado e suporte a SSR (Server-Side Rendering). Com React, desenvolvo interfaces de usuário interativas e reutilizáveis, otimizando tanto a experiência do usuário quanto a eficiência do desenvolvimento. O uso de TypeScript permite uma tipagem estática robusta, ajudando a identificar e corrigir erros durante o desenvolvimento, além de melhorar a manutenibilidade e a escalabilidade do código."
+    },
+    "mobile": {
+      "title": "Mobile",
+      "description": "Desenvolvimento em Kotlin para aplicações Android, com foco no Jetpack Compose para criar interfaces de usuário modernas e dinâmicas. Implementação da arquitetura MVVM e integração de APIs RESTful usando Retrofit para comunicação eficiente com o backend. Aproveitamento das Coroutines do Kotlin para operações assíncronas, garantindo desempenho suave e responsividade. Gerenciamento eficaz de estado com ViewModels e LiveData para manter os componentes da UI sincronizados com os dados subjacentes."
+    },
+    "database": {
+      "title": "Banco de Dados",
+      "description": "Experiência com bancos de dados relacionais e não relacionais, incluindo Oracle, PostgreSQL, MySQL e MongoDB. Habilidade em modelar esquemas eficientes, otimizar consultas SQL e implementar ORM com Hibernate, JPA e Prisma. Com MongoDB, foco na gestão de dados não estruturados para construir aplicações escaláveis. Utilização de ferramentas de migração e versionamento, como Flyway e Prisma Migrate, para garantir consistência nas mudanças do banco de dados."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Experiência em Azure e GitHub Actions, incluindo a criação de pipelines CI/CD abrangendo tanto integração contínua (CI) quanto entrega contínua (CD). Realizei integração contínua configurando o ambiente Java com GitHub Actions e automatizando testes unitários, bem como entrega contínua, gerando imagens Docker, publicando no Docker Hub e implantando em aplicativos Web do Azure. Habilidade em automatizar o ciclo de entrega contínua para garantir atualizações eficientes e confiáveis de aplicações em nuvem."
+    },
+    "libs-framework": {
+      "title": "Bibliotecas e Frameworks",
+      "jwt": "JSON Web Token (JWT) é um padrão aberto (RFC 7519) que define uma maneira compacta e autocontida de transmitir informações com segurança entre as partes como um objeto JSON.",
+      "zod": "Uma biblioteca de validação de esquemas para garantir a integridade e a correção dos dados.",
+      "stripe": "Uma plataforma de pagamento usada para processar transações e gerenciar assinaturas.",
+      "radixui": "Componentes de interface de usuário acessíveis e personalizáveis para construir aplicações web modernas.",
+      "shadcnui": "Uma biblioteca de componentes de interface de usuário acessíveis e personalizáveis.",
+      "googleoauth": "Um serviço de autenticação que permite aos usuários fazer login usando suas contas do Google.",
+      "githuboauth": "Um serviço de autenticação que permite aos usuários fazer login usando suas contas do GitHub.",
+      "nextauth": "Uma biblioteca para gerenciar autenticação em aplicações Next.js, proporcionando uma experiência de login perfeita e segura.",
+      "nextintl": "O Next-intl é uma biblioteca para gerenciar a internacionalização (i18n) em aplicações Next.js, facilitando a tradução e localização de conteúdo."
     }
   },
-
-  "About": {
-    "title": "Sobre!",
-    "about": "Adicionando um paragrafo com uma <TesteComponent> tag de codigo </TesteComponent>"
-  },
-
+  "Projects": "",
   "Languages": {
     "pt": "Português",
     "pt-alt": "Bandeira do Brasil",
     "en": "Inglês",
-    "en-alt" : "Bandeira dos Estados Unidos"
+    "en-alt": "Bandeira dos Estados Unidos"
   },
-
   "Footer": {
-    "text": "Feito por <p> Vinicius Leonel </p>"
+    "text": "Em desenvolvimento - Vinicius Leonel"
   }
 }

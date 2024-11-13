@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { TooltipTrigger, TooltipContent, Tooltip, TooltipProvider } from "@/app/vollmed/user/dashboard/ui/tooltip"
+import { TooltipTrigger, TooltipContent, Tooltip, TooltipProvider } from "@/app/[locale]/vollmed/user/dashboard/ui/tooltip"
 import { GoHomeFill  } from "react-icons/go";
 import { FaUserMd } from "react-icons/fa";
 import { FaUserInjured } from "react-icons/fa";

@@ -1,5 +1,6 @@
 "use client";
 
+import {useTranslations} from 'next-intl';
 import { useState } from "react";
 import {
     ExperienciasMain,
@@ -12,7 +13,6 @@ import {
     ExperienciasTechContent,
     ExperienciasTechIcons,
 } from "./__components/experiencias";
-import { cn } from "@/lib/utils";
 import JackPackCompose, {
     AndroidIcon,
     AzureIcon,
@@ -34,9 +34,13 @@ import JackPackCompose, {
     TailwindIcon,
     TypeScriptIcon,
 } from "../Skills/tech-icons";
-import Image from "next/image";
 
 export default function ExpecienciasPage() {
+
+
+
+    const t = useTranslations('Knowledge');
+
     const [javaLink, setJavaLink] = useState(true);
     const [nextLink, setNextLink] = useState(false);
     const [kotlinLink, setKotlinLink] = useState(false);
@@ -99,45 +103,45 @@ export default function ExpecienciasPage() {
     };
     return (
         <ExperienciasMain>
-            <ExperienciasTitle>Conhecimentos</ExperienciasTitle>
+            <ExperienciasTitle>{t('title')}</ExperienciasTitle>
             <ExperienciasContent>
                 <ExperienciasContentItem>
                     <ExperienciasContentItemLink
                         active={javaLink}
                         onClick={handleJavaClick}
                     >
-                        Backend
+                        {t('backend.title')}
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={nextLink}
                         onClick={handleNextClick}
                     >
-                        Frontend
+                        {t('frontend.title')}
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={kotlinLink}
                         onClick={handleKotlinClick}
                     >
-                        Mobile
+                        {t('mobile.title')}
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={databaseLink}
                         onClick={handleDatabaseClick}
                     >
-                        Banco de Dados
+                        {t('database.title')}
                     </ExperienciasContentItemLink>
                     <ExperienciasContentItemLink
                         active={devOps}
                         onClick={handleDevOpsClick}
                     >
-                        DevOps
+                        {t('devops.title')}
                     </ExperienciasContentItemLink>
 
                     <ExperienciasContentItemLink
                         active={techs}
                         onClick={handleTechsClick}
                     >
-                        Bibliotecas e Frameworks
+                        {t('libs-framework.title')}
                     </ExperienciasContentItemLink>
                 </ExperienciasContentItem>
 
@@ -147,14 +151,7 @@ export default function ExpecienciasPage() {
                             Java/Kotlin + Spring
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento de APIs robustas e escaláveis com
-                            Spring Boot, JWT e Docker. Criação de endpoints
-                            RESTful, configuração de segurança com JWT e
-                            documentação interativa via Swagger. Uso de Docker
-                            para garantir consistência entre ambientes.
-                            Experiência com Hibernate e JPA para mapeamento de
-                            dados, além de gerenciamento de versões de esquema
-                            de banco de dados com Flyway.
+                            {t('backend.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <JavaIcon />
@@ -173,19 +170,7 @@ export default function ExpecienciasPage() {
                             Reactjs/Nextjs/TypeScript
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento Frontend com Reactjs, Nextjs e
-                            TypeScript. Criação de aplicações web modernas,
-                            responsivas e de alta performance utilizando
-                            Next.js, que proporciona pré-renderização de
-                            páginas, roteamento simplificado e suporte a SSR
-                            (Server-Side Rendering). Com React, desenvolvo
-                            interfaces de usuário interativas e reutilizáveis,
-                            otimizando tanto a experiência do usuário quanto a
-                            eficiência do desenvolvimento. O uso de TypeScript
-                            permite uma tipagem estática robusta, ajudando a
-                            identificar e corrigir erros durante o
-                            desenvolvimento, além de melhorar a manutenibilidade
-                            e a escalabilidade do código.
+                            {t('frontend.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <HtmlIcon />
@@ -206,16 +191,7 @@ export default function ExpecienciasPage() {
                             Kotlin + Jetpack Compose
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Desenvolvimento em Kotlin para aplicações Android,
-                            com foco no Jetpack Compose para criar interfaces de
-                            usuário modernas e dinâmicas. Implementação da
-                            arquitetura MVVM e integração de APIs RESTful usando
-                            Retrofit para comunicação eficiente com o backend.
-                            Aproveitamento das Coroutines do Kotlin para
-                            operações assíncronas, garantindo desempenho suave e
-                            responsividade. Gerenciamento eficaz de estado com
-                            ViewModels e LiveData para manter os componentes da
-                            UI sincronizados com os dados subjacentes.
+                            {t('mobile.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Kotlin />
@@ -233,16 +209,7 @@ export default function ExpecienciasPage() {
                             Banco de Dados
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Experiência com bancos de dados relacionais e não
-                            relacionais, incluindo Oracle, PostgreSQL, MySQL e
-                            MongoDB. Habilidade em modelar esquemas eficientes,
-                            otimizar consultas SQL e implementar ORM com
-                            Hibernate, JPA e Prisma. Com MongoDB, foco na gestão
-                            de dados não estruturados para construir aplicações
-                            escaláveis. Utilização de ferramentas de migração e
-                            versionamento, como Flyway e Prisma Migrate, para
-                            garantir consistência nas mudanças do banco de
-                            dados.
+                            {t('database.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Oracle />
@@ -260,17 +227,7 @@ export default function ExpecienciasPage() {
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>DevOps</ExperienciasTechTitle>
                         <ExperienciasTechDescription>
-                            Experiência em Azure e GitHub Actions, incluindo a
-                            criação de pipelines CI/CD abrangendo tanto
-                            integração contínua (CI) quanto entrega contínua
-                            (CD). Realizei integração contínua configurando o
-                            ambiente Java com GitHub Actions e automatizando
-                            testes unitários, bem como entrega contínua, gerando
-                            imagens Docker, publicando no Docker Hub e
-                            implantando em aplicativos Web do Azure. Habilidade
-                            em automatizar o ciclo de entrega contínua para
-                            garantir atualizações eficientes e confiáveis de
-                            aplicações em nuvem.
+                            {t('devops.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
                             <Docker />
@@ -284,7 +241,7 @@ export default function ExpecienciasPage() {
                 {techs && (
                     <ExperienciasTechContent>
                         <ExperienciasTechTitle>
-                            Bibliotecas e Frameworks
+                            {t('libs-framework.title')}
                         </ExperienciasTechTitle>
                         <ExperienciasTechDescription>
                             <ul>
@@ -292,66 +249,55 @@ export default function ExpecienciasPage() {
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         JWT
                                     </span>
-                                    : JSON Web Token (JWT) é um padrão aberto
-                                    (RFC 7519) que define uma maneira compacta e
-                                    autocontida de transmitir informações com
-                                    segurança entre as partes como um objeto
-                                    JSON.
+                                    : {t('libs-framework.jwt')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Zod
                                     </span>
-                                    : Uma biblioteca de validação de esquemas
-                                    para garantir a integridade e a correção dos
-                                    dados.
+                                    : {t('libs-framework.zod')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Stripe
                                     </span>
-                                    : Uma plataforma de pagamento usada para
-                                    processar transações e gerenciar
-                                    assinaturas.
+                                    : {t('libs-framework.stripe')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Radix UI
                                     </span>
-                                    : Componentes de interface de usuário
-                                    acessíveis e personalizáveis para construir
-                                    aplicações web modernas.
+                                    : {t('libs-framework.radixui')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Shadcn/UI
                                     </span>
-                                    : Uma biblioteca de componentes de interface
-                                    de usuário acessíveis e personalizáveis.
+                                    : {t('libs-framework.shadcnui')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Google OAuth
                                     </span>
-                                    : Um serviço de autenticação que permite aos
-                                    usuários fazer login usando suas contas do
-                                    Google.
+                                    : {t('libs-framework.googleoauth')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         GitHub OAuth
                                     </span>
-                                    : Um serviço de autenticação que permite aos
-                                    usuários fazer login usando suas contas do
-                                    GitHub.
+                                    : {t('libs-framework.githuboauth')}
                                 </li>
                                 <li>
                                     <span className="text-cyan-700 dark:text-cyan-500">
                                         Next-Auth/AuthJs
                                     </span>
-                                    : Uma biblioteca para gerenciar autenticação
-                                    em aplicações Next.js, proporcionando uma
-                                    experiência de login perfeita e segura.
+                                    : {t('libs-framework.nextauth')}
+                                </li>
+                                <li>
+                                    <span className="text-cyan-700 dark:text-cyan-500">
+                                        Next-intl
+                                    </span>
+                                    : {t('libs-framework.nextintl')}
                                 </li>
                             </ul>
                         </ExperienciasTechDescription>

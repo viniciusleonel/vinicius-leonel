@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Input } from "@/app/vollmed/user/dashboard/ui/input"
-import { Button } from "@/app/vollmed/user/dashboard/ui/button"
+import { Input } from "@/app/[locale]/vollmed/user/dashboard/ui/input"
+import { Button } from "@/app/[locale]/vollmed/user/dashboard/ui/button"
 import ThemeToggle from "@/app/[locale]/_components/Toggles/ThemeToggle"
 import MobileVollMedMenu from "./mobile-vollmed-menu"
 import { InputHTMLAttributes, ReactElement, SetStateAction, useState } from "react"

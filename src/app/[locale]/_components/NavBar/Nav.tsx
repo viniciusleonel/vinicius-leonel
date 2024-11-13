@@ -1,15 +1,17 @@
-import {useEffect, useRef, useState} from "react";
-import {GiHamburgerMenu} from "react-icons/gi";
+import {useTranslations} from 'next-intl';
 import ThemeToggle from "../Toggles/ThemeToggle";
 import Link from "next/link"
 import MobileHomeMenu from "./mobile-home-menu";
 import {LanguageToggle} from "@/app/[locale]/_components/Toggles/LanguageToggle";
+
 
 interface NavProps {
     title?: string
 }
 
 export default function Nav({title}: NavProps) {
+
+    const t = useTranslations('NavBar');
 
     return (
         <nav
@@ -36,7 +38,7 @@ export default function Nav({title}: NavProps) {
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"#Certificados"}
-                        >Certificados
+                        >{t('certificates')}
                         </Link>
                     </div>
 
@@ -44,7 +46,7 @@ export default function Nav({title}: NavProps) {
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"#Conhecimentos"}
-                        >Conhecimentos
+                        >{t('knowledge')}
                         </Link>
                     </div>
 
@@ -52,14 +54,14 @@ export default function Nav({title}: NavProps) {
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"#Projetos"}
-                        >Projetos
+                        >{t('projects')}
                         </Link>
                     </div>
                     <div className="hidden md:flex">
                         <Link
                             className=" cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-300"
                             href={"#Sobre"}
-                        >Sobre
+                        >{t('about')}
                         </Link>
                     </div>
                     <div className="flex justify-center items-center gap-1">

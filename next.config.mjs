@@ -1,3 +1,4 @@
+import nextIntl from 'next-intl';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();

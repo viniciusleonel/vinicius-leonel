@@ -2,8 +2,8 @@
 
 import clsx from 'clsx'
 import Nav from "@/app/[locale]/_components/NavBar/Nav"
-import UserRegister from "./forms/user-register"
-import UserLogin from "./forms/user-login"
+import UserRegister from "@/app/[locale]/vollmed/user/forms/user-register"
+import UserLogin from "@/app/[locale]/vollmed/user/forms/user-login"
 import { useEffect, useState } from 'react'
 import { destroyCookie, parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'

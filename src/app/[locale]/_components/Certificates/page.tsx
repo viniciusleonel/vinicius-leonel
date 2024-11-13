@@ -6,11 +6,15 @@ import {
     CertificatesContentItemLink,
 } from "./__components/certificates";
 import certificatesList from "./__components/certificates-list";
+import {useTranslations} from 'next-intl';
 
 export default function Certificates() {
+
+    const t = useTranslations('NavBar');
+
     return (
         <CertificatesMain>
-            <CertificatesTitle>Certificados</CertificatesTitle>
+            <CertificatesTitle>{t('certificates')}</CertificatesTitle>
             <CertificatesContent>
                 {certificatesList.map((certificate, index) => (
                     <CertificatesContentItem key={index}>
