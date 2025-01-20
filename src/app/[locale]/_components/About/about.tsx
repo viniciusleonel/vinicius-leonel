@@ -83,7 +83,7 @@ export default function About() {
                                     />
                                 </Link>
                     
-                                <PdfIcon />
+                                {/* <PdfIcon /> */}
                                 
                             </div>
                             <div className="me-6 md:hidden">
