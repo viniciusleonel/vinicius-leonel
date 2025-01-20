@@ -80,6 +80,9 @@
     },
     "Pokedex": {
       "description": "Development of a web app that consumes the PokeAPI to display information about Pokémon using HTML, CSS, and JavaScript."
+    },
+    "RubyAPI":{
+      "description": "This API was developed to integrate two systems, enabling the transformation of a denormalized order file from a legacy system into a normalized JSON file. The API provides functionalities to access and manage order data, including the ability to perform general queries and apply specific filters."
     }
   },
   "Languages": {

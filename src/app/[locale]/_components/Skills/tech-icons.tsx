@@ -324,6 +324,18 @@ export function AzureIcon({ className }: TechIconsProps) {
     )
 }
 
+export function RubyIcon({ className }: TechIconsProps) {
+    return (
+        <Image
+            src="/images/icons/ruby.svg"
+            alt="ruby icon"
+            height={35}
+            width={35}
+            className={cn(className, "")}
+        />
+    )
+}
+
 export function TechIcons({ className }: TechIconsProps) {
     return (
         <>

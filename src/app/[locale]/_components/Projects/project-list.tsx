@@ -19,6 +19,7 @@ import JetPackCompose, {
     SpringIcon,
     TailwindIcon,
     TypeScriptIcon,
+    RubyIcon
 } from "../Skills/tech-icons";
 
 const projectsList = [
@@ -60,6 +61,19 @@ const projectsList = [
             "https://traffic-incident-api-dev-dtbtfvg2e7e7a8eq.eastus2-01.azurewebsites.net/swagger-ui/index.html",
         linkGitHub:
             "https://github.com/viniciusleonel/traffic-incident-management-api",
+    },
+    {
+        title: "RubyAPI",
+        description: "",
+        techIcons: [
+            <RubyIcon key="ruby" />,
+            <Docker key="docker" />,
+            <AzureIcon key="azure" />
+        ],
+        linkSite:
+            "https://luizalabs-ruby-a7dghshjbkcahyg3.eastus-01.azurewebsites.net/",
+        linkGitHub:
+            "https://github.com/viniciusleonel/first-ruby-api",
     },
     {
         title: "VollMedAPI",

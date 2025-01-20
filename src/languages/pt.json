@@ -80,6 +80,9 @@
     },
     "Pokedex": {
       "description": "Desenvolvimento de uma aplicação web que consome a PokeAPI para exibir informações sobre Pokémon, utilizando HTML, CSS e JavaScript."
+    },
+    "RubyAPI":{
+      "description": "Esta API foi desenvolvida para integrar dois sistemas, permitindo a transformação de um arquivo de pedidos desnormalizado proveniente de um sistema legado em um arquivo JSON normalizado. A API oferece funcionalidades para acessar e gerenciar dados de pedidos, incluindo a capacidade de realizar consultas gerais e aplicar filtros específicos."
     }
   },
   "Languages": {
