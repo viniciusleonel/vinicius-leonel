@@ -1,19 +1,42 @@
-import Image from "next/image";
-import styles from "./skills.module.css"
-import { TechIcons } from "./tech-icons"
-import { useState } from "react";
+"use client";
 
-export default function Skills () {
+import { TechIcons } from "@/app/[locale]/_components/Skills/tech-icons";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+export function ScrollingTechIcons() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const controls = useAnimationControls();
+
+    useEffect(() => {
+        if (!containerRef.current) return;
+
+        const singleSetWidth = containerRef.current.children[0].clientWidth;
+        const pixelsPerSecond = 50;
+        const duration = singleSetWidth / pixelsPerSecond;
+
+        controls.start({
+            x: [0, -singleSetWidth],
+            transition: {
+                duration,
+                ease: "linear",
+                repeat: Number.POSITIVE_INFINITY,
+            },
+        });
+    }, [controls]);
 
     return (
-        <div className={`mb-1 overflow-hidden bg-white dark:bg-zinc-900 border-2 border-cyan-700 ${styles.skillsAnimationContainer}`}>
-        <div
-            className={`flex gap-5 sm:gap-10 lg:gap-24 h-10 sm:h-20 my-2 sm:m-0 animate-screenMove ${styles.skillsAnimation}`}
-
-        >
-            <TechIcons />
-            <TechIcons />
-        </div>
+        <div className="w-full my-1 overflow-hidden bg-white dark:bg-dark-secondary border-y-2 border-cyan-700">
+            <motion.div
+                ref={containerRef}
+                className="flex"
+                animate={controls}
+            >
+                <div className="flex py-1 space-x-10 ">
+                    <TechIcons />
+                    <TechIcons />
+                </div>
+            </motion.div>
         </div>
     );
-};
+}

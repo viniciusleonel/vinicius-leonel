@@ -10,6 +10,7 @@ import { logUser } from "@/services/vollmedApi";
 import Usuario from "../model/Usuario";
 import Certificates from "./_components/Certificates/page";
 import Footer from "./_components/Footer/footer";
+import { ScrollingTechIcons } from "./_components/Skills/skills";
 
 export default function Home() {
     const { signIn } = useContext(AuthContext);
@@ -65,9 +66,8 @@ export default function Home() {
                     <Certificates />
                 </section>
 
-                {/* <Skills />     */}
             </main>
-
+            
             <Footer />
         </>
     );

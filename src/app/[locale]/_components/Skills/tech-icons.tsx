@@ -1,5 +1,9 @@
 import { cn } from "@/lib/utils";
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import {
+    HoverCard,
+    HoverCardTrigger,
+    HoverCardContent,
+} from "@/components/ui/hover-card";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFilePdf } from "react-icons/fa6";
@@ -216,9 +220,13 @@ export function Prisma({ className }: TechIconsProps) {
     );
 }
 
-export function Docker({ link, className }: TechIconsWithLinkProps) {
+export function DockerLink({ link, className }: TechIconsWithLinkProps) {
     return (
-        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+        <Link
+            href={link ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <Image
                 src="/images/icons/docker.svg"
                 alt="docker icon"
@@ -227,6 +235,18 @@ export function Docker({ link, className }: TechIconsWithLinkProps) {
                 className={cn(className, "")}
             />
         </Link>
+    );
+}
+
+export function DockerIcon({ link, className }: TechIconsWithLinkProps) {
+    return (
+        <Image
+            src="/images/icons/docker.svg"
+            alt="docker icon"
+            height={40}
+            width={40}
+            className={cn(className, "")}
+        />
     );
 }
 export function Git({ className }: TechIconsProps) {
@@ -241,9 +261,13 @@ export function Git({ className }: TechIconsProps) {
     );
 }
 
-export function GitHub({ link, className }: TechIconsWithLinkProps) {
+export function GitHubLink({ link, className }: TechIconsWithLinkProps) {
     return (
-        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+        <Link
+            href={link ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <Image
                 src="/images/icons/github.svg"
                 alt="github icon"
@@ -255,9 +279,25 @@ export function GitHub({ link, className }: TechIconsWithLinkProps) {
     );
 }
 
+export function GitHubIcon({ link, className }: TechIconsWithLinkProps) {
+    return (
+        <Image
+            src="/images/icons/github.svg"
+            alt="github icon"
+            height={40}
+            width={40}
+            className={cn(className, "")}
+        />
+    );
+}
+
 export function JspIcon({ link, className }: TechIconsWithLinkProps) {
     return (
-        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+        <Link
+            href={link ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <Image
                 src="/images/icons/jsp-icon.svg"
                 alt="jsp icon"
@@ -271,7 +311,11 @@ export function JspIcon({ link, className }: TechIconsWithLinkProps) {
 
 export function BootstrapIcon({ link, className }: TechIconsWithLinkProps) {
     return (
-        <Link href={link ?? ""} target="_blank" rel="noopener noreferrer">
+        <Link
+            href={link ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <Image
                 src="/images/icons/bootstrap-icon.svg"
                 alt="jsp icon"
@@ -286,16 +330,14 @@ export function BootstrapIcon({ link, className }: TechIconsWithLinkProps) {
 export function PdfIcon({ className }: TechIconsProps) {
     return (
         <HoverCard>
-            <HoverCardTrigger 
+            <HoverCardTrigger
                 href="/viniciusleonel-en.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <FaFilePdf className="h-5 w-5 md:h-6 md:w-6 text-red-500 cursor-pointer" />
             </HoverCardTrigger>
-            <HoverCardContent >
-                Click to open my english CV 
-            </HoverCardContent>
+            <HoverCardContent>Click to open my english CV</HoverCardContent>
         </HoverCard>
     );
 }
@@ -309,7 +351,7 @@ export function MongoDBIcon({ className }: TechIconsProps) {
             width={35}
             className={cn(className, "")}
         />
-    )
+    );
 }
 
 export function AzureIcon({ className }: TechIconsProps) {
@@ -321,7 +363,7 @@ export function AzureIcon({ className }: TechIconsProps) {
             width={35}
             className={cn(className, "")}
         />
-    )
+    );
 }
 
 export function RubyIcon({ className }: TechIconsProps) {
@@ -329,11 +371,11 @@ export function RubyIcon({ className }: TechIconsProps) {
         <Image
             src="/images/icons/ruby.svg"
             alt="ruby icon"
-            height={35}
-            width={35}
-            className={cn(className, "")}
+            height={40}
+            width={40}
+            className={cn(className, "scale-150")}
         />
-    )
+    );
 }
 
 export function TechIcons({ className }: TechIconsProps) {
@@ -350,12 +392,16 @@ export function TechIcons({ className }: TechIconsProps) {
             <JavaIcon />
             <SpringIcon />
             <Kotlin />
+            <AndroidIcon />
             <Python />
+            <MongoDBIcon />
             <Postgres />
             <MySql />
             <Oracle />
-            <Docker />
             <Git />
+            <GitHubIcon />
+            <DockerIcon />
+            <AzureIcon />
         </>
     );
 }

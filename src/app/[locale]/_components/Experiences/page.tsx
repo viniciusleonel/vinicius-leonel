@@ -17,9 +17,9 @@ import JackPackCompose, {
     AndroidIcon,
     AzureIcon,
     CssIcon,
-    Docker,
+    DockerLink,
     Git,
-    GitHub,
+    GitHubLink,
     HtmlIcon,
     JavaIcon,
     Kotlin,
@@ -157,9 +157,9 @@ export default function ExpecienciasPage() {
                             <JavaIcon />
                             <SpringIcon />
                             <Postgres />
-                            <Docker />
+                            <DockerLink />
                             <Git />
-                            <GitHub link="https://github.com/viniciusleonel/vollmed-api" />
+                            <GitHubLink link="https://github.com/viniciusleonel/vollmed-api" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
@@ -180,7 +180,7 @@ export default function ExpecienciasPage() {
                             <NextJsIcon />
                             <ReactIcon />
                             <Git />
-                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
+                            <GitHubLink link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
@@ -198,7 +198,7 @@ export default function ExpecienciasPage() {
                             <AndroidIcon />
                             <JackPackCompose />
                             <Git />
-                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
+                            <GitHubLink link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
@@ -218,7 +218,7 @@ export default function ExpecienciasPage() {
                             <Prisma />
                             <MongoDBIcon />
                             <Git />
-                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
+                            <GitHubLink link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}
@@ -230,10 +230,10 @@ export default function ExpecienciasPage() {
                             {t('devops.description')}
                         </ExperienciasTechDescription>
                         <ExperienciasTechIcons>
-                            <Docker />
+                            <DockerLink />
                             <AzureIcon />
                             <Git />
-                            <GitHub link="https://github.com/viniciusleonel/vinicius-leonel" />
+                            <GitHubLink link="https://github.com/viniciusleonel/vinicius-leonel" />
                         </ExperienciasTechIcons>
                     </ExperienciasTechContent>
                 )}

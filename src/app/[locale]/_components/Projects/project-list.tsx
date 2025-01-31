@@ -4,7 +4,7 @@ import JetPackCompose, {
     AzureIcon,
     BootstrapIcon,
     CssIcon,
-    Docker,
+    DockerLink,
     HtmlIcon,
     JavaIcon,
     JavaScriptIcon,
@@ -41,7 +41,7 @@ const projectsList = [
             <Kotlin key="kotlin" />,
             <SpringIcon key="spring" />,
             <Postgres key="postgres" />,
-            <Docker key="docker" />,
+            <DockerLink key="docker" />,
             <AzureIcon key="azure" />
         ],
         linkSite: "https://locaweb-api-a9amgke0dmgth0ej.eastus2-01.azurewebsites.net/swagger-ui/index.html",
@@ -54,7 +54,7 @@ const projectsList = [
             <JavaIcon key="java" />,
             <SpringIcon key="spring" />,
             <MongoDBIcon key="mongodb" />,
-            <Docker key="docker" />,
+            <DockerLink key="docker" />,
             <AzureIcon key="azure" />
         ],
         linkSite:
@@ -67,7 +67,7 @@ const projectsList = [
         description: "",
         techIcons: [
             <RubyIcon key="ruby" />,
-            <Docker key="docker" />,
+            <DockerLink key="docker" />,
             <AzureIcon key="azure" />
         ],
         linkSite:
@@ -82,7 +82,7 @@ const projectsList = [
             <JavaIcon key="java" />,
             <SpringIcon key="spring" />,
             <Postgres key="postgres" />,
-            <Docker key="docker" />,
+            <DockerLink key="docker" />,
             <AzureIcon key="azure" />
         ],
         linkSite: "https://vollmed-api-hza2gbbsedfchrer.eastus2-01.azurewebsites.net/swagger-ui/index.html",
