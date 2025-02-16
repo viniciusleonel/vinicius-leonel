@@ -24,28 +24,16 @@ import JetPackCompose, {
 
 const projectsList = [
     {
-        title: "Locaweb APP",
+        title: "Micro-Saas-ToDo",
         description: "",
         techIcons: [
-            <Kotlin key="kotlin" />,
-            <AndroidIcon key="android" />,
-            <JetPackCompose key="JetPackCompose" />,
+            <NextJsIcon key="nextjs" />,
+            <ReactIcon key="react" />,
+            <TailwindIcon key="tailwind" />,
+            <TypeScriptIcon key="typescript" />,
         ],
-        linkSite: "https://github.com/viniciusleonel/locaweb-app-kotlin",
-        linkGitHub: "https://github.com/viniciusleonel/locaweb-app-kotlin",
-    },
-    {
-        title: "Locaweb API",
-        description: "",
-        techIcons: [
-            <Kotlin key="kotlin" />,
-            <SpringIcon key="spring" />,
-            <Postgres key="postgres" />,
-            <DockerLink key="docker" />,
-            <AzureIcon key="azure" />
-        ],
-        linkSite: "https://locaweb-api-a9amgke0dmgth0ej.eastus2-01.azurewebsites.net/swagger-ui/index.html",
-        linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
+        linkSite: "https://micro-saas-sample.vercel.app",
+        linkGitHub: "https://github.com/viniciusleonel/micro-saas-sample",
     },
     {
         title: "Traffic Incident Management API",
@@ -89,16 +77,28 @@ const projectsList = [
         linkGitHub: "https://github.com/viniciusleonel/vollmed-api",
     },
     {
-        title: "Micro-Saas-ToDo",
+        title: "Locaweb APP",
         description: "",
         techIcons: [
-            <NextJsIcon key="nextjs" />,
-            <ReactIcon key="react" />,
-            <TailwindIcon key="tailwind" />,
-            <TypeScriptIcon key="typescript" />,
+            <Kotlin key="kotlin" />,
+            <AndroidIcon key="android" />,
+            <JetPackCompose key="JetPackCompose" />,
         ],
         linkSite: "https://github.com/viniciusleonel/locaweb-app-kotlin",
         linkGitHub: "https://github.com/viniciusleonel/locaweb-app-kotlin",
+    },
+    {
+        title: "Locaweb API",
+        description: "",
+        techIcons: [
+            <Kotlin key="kotlin" />,
+            <SpringIcon key="spring" />,
+            <Postgres key="postgres" />,
+            <DockerLink key="docker" />,
+            <AzureIcon key="azure" />
+        ],
+        linkSite: "https://locaweb-api-a9amgke0dmgth0ej.eastus2-01.azurewebsites.net/swagger-ui/index.html",
+        linkGitHub: "https://github.com/viniciusleonel/locaweb-fiap",
     },
     {
         title: "Fintech",
