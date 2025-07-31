@@ -40,13 +40,13 @@ export default function ProjectCard ( { title, techIcons, linkSite, linkGitHub} 
                     </div> 
 
                     <div className="flex gap-2">
-                        <Link
+                        {/* <Link
                             href={linkSite}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <MdScreenShare className="size-6 sm:size-8" />
-                        </Link>
+                        </Link> */}
                         <Link
                             href={linkGitHub}
                             target="_blank"
