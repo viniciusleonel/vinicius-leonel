@@ -40,5 +40,5 @@ Para rodar a aplicação localmente, siga os passos abaixo:
 
 ## Links:
 
-- [Portfólio Online](https://viniciusleonel.dev.br/)
+- [Portfólio Online](https://vinicius-leonel-viniciusleonels-projects.vercel.app/pt)
 - [Repositório no GitHub](https://github.com/viniciusleonel/vinicius-leonel)
